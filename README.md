@@ -44,15 +44,15 @@ Operació que permet recuperar la documentació generada en el procés de tramit
 
 ### 3.1.1. Petició dades específiques
 <p align="center">
-<img align="center" src="img/peticio-dades-especifiques.png" />
+<img align="center" src="img/peticio-dades-especifiques_OVER_DOCUMENTACIO.png" />
 </p>  
 
 ### 3.1.2. Resposta dades específiques
 <p align="center">
-<img align="center" src="img/resposta-dades-especifiques_1.png" />
+<img align="center" src="img/resposta-dades-especifiques_1_OVER_DOCUMENTACIO.png" />
 </p>  
 <p align="center">
-<img align="center" src="img/resposta-dades-especifiques_2.png" />
+<img align="center" src="img/resposta-dades-especifiques_2_OVER_DOCUMENTACIO.png" />
 </p>  
 
 #### 3.1.2.1 Resultat de operació
