@@ -52,6 +52,8 @@ Documentació d'integració d'OVER
        - [4.4.1. MUX_DESCARREGA](#441-MUX_DESCARREGA)
        - [4.4.2. OVER_CONSULTA_EXPEDIENT](#442-OVER_CONSULTA_EXPEDIENT)
        - [4.4.3. OVER_DOCUMENTACIO](#443-OVER_DOCUMENTACIO)
+   * [4.5. Exemples XML](#45-Exemples-XML)
+       - [4.5.1. OVER_INTEGRACIO – Petició](#451-OVER_INTEGRACIO–Petició)
 
 
 # 1. Introducció
@@ -457,3 +459,143 @@ Si la documentació encara no està disponible, retornarà la següent resposta:
 </over:respostaDocumentacioTramit>
 ```
 
+## 4.3. Exemples XML
+
+
+### 4.3.1. OVER_INTEGRACIO–Petició
+
+```xml
+<Peticion>
+  <Atributos>
+    <IdPeticion>CU1-OVER_INTEGRACIO-1613995900878</IdPeticion>
+    <NumElementos>1</NumElementos>
+    <TimeStamp/>
+    <CodigoCertificado>OVER_INTEGRACIO</CodigoCertificado>
+    <CodigoProducto>OVER</CodigoProducto>
+    <DatosAutorizacion>
+      <IdentificadorSolicitante>800180001</IdentificadorSolicitante>
+      <NombreSolicitante>BCN</NombreSolicitante>
+      <Finalidad>PROVES</Finalidad>
+    </DatosAutorizacion>
+    <Funcionario>
+      <NombreCompletoFuncionario>Dolores Pardo</NombreCompletoFuncionario>
+      <NifFuncionario>40404040D</NifFuncionario>
+    </Funcionario>
+  </Atributos>
+  <Solicitudes>
+    <SolicitudTransmision>
+      <DatosGenericos>
+        <Emisor>
+          <NifEmisor>Q0801175A</NifEmisor>
+          <NombreEmisor>CAOC</NombreEmisor>
+        </Emisor>
+        <Solicitante>
+          <IdentificadorSolicitante>800180001</IdentificadorSolicitante>
+          <NombreSolicitante>BCN</NombreSolicitante>
+          <Finalidad>PROVES</Finalidad>
+          <Consentimiento>Si</Consentimiento>
+        </Solicitante>
+        <Transmision>
+          <CodigoCertificado>OVER_INTEGRACIO</CodigoCertificado>
+          <IdSolicitud>1</IdSolicitud>
+        </Transmision>
+        <Ficheros>
+          <Fichero>
+            <NombreFichero>holamon.pdf</NombreFichero>
+            <Contenido>cid:annex1</Contenido>
+            <Id>annex</Id>
+          </Fichero>
+        </Ficheros>
+      </DatosGenericos>
+      <DatosEspecificos>
+        <peticioIntegracio xmlns="http://www.aoc.cat/over">
+          <peticioFormulariTramit>
+            <codiCataleg>9610930008</codiCataleg>
+            <codiFuncionalServei>TGEN0001</codiFuncionalServei>
+            <codiFuncionalTramit>TGEN0001</codiFuncionalTramit>
+            <codiEns>800180001</codiEns>
+          </peticioFormulariTramit>
+          <dadesContingut>
+            <formulari>
+              <![CDATA[
+<PAG_DADES_INTEGRACIO xmlns="http://www.aoc.cat/over">
+  <TXT_EXPEDIENT>EXP-482G-2021</TXT_EXPEDIENT>
+  <TXT_ASSUMPTE>Assumpte ABC ob</TXT_ASSUMPTE>
+  <EXPOSO>Exposo ABC ob</EXPOSO>
+  <SOLLICITO>Sol·licito ABC opt</SOLLICITO>
+  <TIPUS_TRAMESA>
+    <TIPUS>DOCUMENTACIO_REGISTRADA_DESTINADA_A_ALTRES_AAPP</TIPUS>
+    <DOCUMENTACIO_REGISTRADA_DESTINADA_A_ALTRES_AAPP>
+      <ASSENTAMENT>
+        <DATA_HORA_ASSENTAMENT>2020-12-30T22:59:00.000Z</DATA_HORA_ASSENTAMENT>
+        <NUM_ASSENTAMENT>REG_SORT_1234</NUM_ASSENTAMENT>
+      </ASSENTAMENT>
+      <DADES_INTERESSAT>
+        <PERSONA_FISICA>
+          <NOM>Pere</NOM>
+          <PRIMER_COGNOM>Pi</PRIMER_COGNOM>
+          <SEGON_COGNOM>Puig</SEGON_COGNOM>
+          <DOCUMENT_NIF>
+            <DOCUMENT>40404040D</DOCUMENT>
+          </DOCUMENT_NIF>
+          <PERSONA_DADES_COMPLEMENTARIES>
+            <CANAL_PREFERENT_NOTIFICACIO>
+<ADRECA_ELECTRONICA_HABILITADA>perepi@mail.cat</ADRECA_ELECTRONICA_HABILITADA>
+            </CANAL_PREFERENT_NOTIFICACIO>
+            <FORA_CATALUNYA>NO</FORA_CATALUNYA>
+            <TELEFON_CONTACTE>935558744</TELEFON_CONTACTE>
+<CORREU_ELECTRONIC_CONTACTE>contacte@correo.org</CORREU_ELECTRONIC_CONTACTE>
+            <OBSERVACIONS>Sense cap observació</OBSERVACIONS>
+          </PERSONA_DADES_COMPLEMENTARIES>
+        </PERSONA_FISICA>
+      </DADES_INTERESSAT>
+      <DADES_REPRESENTAT>
+        <PERSONA_JURIDICA_ORGANISME>
+          <RAO_SOCIAL>Consorci Administració Oberta de Catalunya</RAO_SOCIAL>
+          <DOCUMENT_NIF>
+            <DOCUMENT>Q0801175A</DOCUMENT>
+          </DOCUMENT_NIF>
+          <PERSONA_DADES_COMPLEMENTARIES>
+            <CANAL_PREFERENT_NOTIFICACIO>
+              <ADRECA_POSTAL>
+                <CODI_POSTAL>08018</CODI_POSTAL>
+                <ADRECA>Carrer de Tànger, 98, bajo, 08018 Barcelona, B</ADRECA>
+              </ADRECA_POSTAL>
+            </CANAL_PREFERENT_NOTIFICACIO>
+            <FORA_CATALUNYA>NO</FORA_CATALUNYA>
+            <TELEFON_CONTACTE>932 72 40 00</TELEFON_CONTACTE>
+<CORREU_ELECTRONIC_CONTACTE>info@aocat.net</CORREU_ELECTRONIC_CONTACTE>
+            <OBSERVACIONS>El objetivo del consorcio aoc es impulsar la transformación digital de las administraciones catalanas para conseguir gobiernos abiertos, eficientes y transparentes.</OBSERVACIONS>
+          </PERSONA_DADES_COMPLEMENTARIES>
+        </PERSONA_JURIDICA_ORGANISME>
+      </DADES_REPRESENTAT>
+    </DOCUMENTACIO_REGISTRADA_DESTINADA_A_ALTRES_AAPP>
+  </TIPUS_TRAMESA>
+  <INFORMACIO_COMPLEMENTARIA>
+    <REFERENCIA_EXTERNA>Es tracta d'un camp de contingut lliure</REFERENCIA_EXTERNA>
+    <OBSERVACIONS>L'objectiu d'aquesta obra és observar una sèrie de fenòmens lingüístics del català actual</OBSERVACIONS>
+    <DOCUMENTACIO_ADJUNTA>SENSE_DOCUMENTACIO_ADJUNTA</DOCUMENTACIO_ADJUNTA>
+  </INFORMACIO_COMPLEMENTARIA>
+  <DOCUMENTACIO_FORMAT_ELECTRONIC_URL_DESCARREGA>
+    <DOCUMENTACIO>
+      <URL>http://admin3-pre.app.aoc.cat/over2-webadmin/detallInstanciaTramit.do?id=115681</URL>
+      <OBSERVACIONS>Instància del tràmit</OBSERVACIONS>
+    </DOCUMENTACIO>
+    <DOCUMENTACIO>
+      <URL>http://admin3-pre.app.aoc.cat/over2-webadmin/instanciaTramits.do?opId=filter&amp;filExecucio=100409</URL>
+      <OBSERVACIONS>Instància del servei</OBSERVACIONS>
+    </DOCUMENTACIO>
+  </DOCUMENTACIO_FORMAT_ELECTRONIC_URL_DESCARREGA>
+  <DOCUMENTACIO_POSTERIORI_NO_DIGITALITZABLE>
+    <DESCRIPCIO_DOCUMENTACIO>Catàleg del Centre de documentació de l'ICD, integrat dins el Catàleg de Biblioteques Especialitzades de la Generalitat (BEG)</DESCRIPCIO_DOCUMENTACIO>
+  </DOCUMENTACIO_POSTERIORI_NO_DIGITALITZABLE>
+</PAG_DADES_INTEGRACIO>
+                              ]]>
+            </formulari>
+          </dadesContingut>
+        </peticioIntegracio>
+      </DatosEspecificos>
+    </SolicitudTransmision>
+  </Solicitudes>
+</Peticion>
+```
