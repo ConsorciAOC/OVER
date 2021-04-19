@@ -13,8 +13,11 @@ Aquest document detalla la missatgeria associada al servei de l'Oficina Virtual 
 # 2. Transmissions de dades disponibles
 Les dades i operacions disponibles a través del servei són les que es presenten a continuació:
 
-
-|PRODUCTE | MODALITAT| DESCRIPCIO|
+|Camp | Descripció|
 |---- | ----------|
-|OVER	|OVER_DOCUMENTACIO	|Operació de descàrrega de documentació associada a un tràmit.|
+|identificadorLegal | Identificador únic de la representació. Usat per recuperar representacions úniques a _consultaRepresentacio_|
+
+|Camp | Descripció|
+|---- | ----------|
+|identificadorLegal | Identificador únic de la representació. Usat per recuperar representacions úniques a _consultaRepresentacio_|
 
