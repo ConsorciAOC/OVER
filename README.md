@@ -375,9 +375,13 @@ La signatura que es generarà serà XADES Enveloped amb segell de temps.
 Una vegada la tramitació s’hagi efectuat, podreu recuperar la documentació generada relacionada amb la tramitació. Els documents que s’obtindran seran:
 
 •	XML_TRAMIT: Les dades que composen el tràmit, generades a partir de les dades rebudes.
+
 •	XML_TRAMIT_SIGNAT: XML_TRAMIT signat amb el certificat cedit.
+
 •	PDF_ORIGINAL: PDF planxat amb les dades rebudes.
+
 •	ADJUNT: Documentació enviada per MTOM.
+
 •	TIQUET: PDF_ORIGINAL + dades rellevants de la tramitació (identificadors, data, registre,...)
 
 Aquesta documentació es pot recuperar per dues vies: MUX_DESCARREGA (requereix OVER_CONSULTA_EXPEDIENT previ) o OVER_DOCUMENTACIO.
