@@ -37,7 +37,7 @@ Documentació d'integració d'OVER
    * [3.10. Llista tràmits funcionals (OVER_LLISTA_TRAMITS)](#310-Llista-tràmits-funcionals-OVER_LLISTA_TRAMITS)
       - [3.10.1. Petició dades específiques](#3101-Petició-dades-específiques)
       - [3.10.2. Resposta dades específiques](#3102-Resposta-dades-específiques)    
-   * [3.11. Integració sense PDF (OVER_INTEGRACIO)](#31111-Integració-sense-PDF-OVER_INTEGRACIO)
+   * [3.11. Integració sense PDF (OVER_INTEGRACIO)](#311-Integració-sense-PDF-OVER_INTEGRACIO)
       - [3.11.1. Petició dades específiques](#3111-Petició-dades-específiques)
       - [3.11.2. Resposta dades específiques](#3112-Resposta-dades-específiques)    
 # 1. Introducció
@@ -225,7 +225,7 @@ Permet llistar tràmits funcionals a partir d’un catàleg i servei.
 <img align="center" src="img/resposta-dades-especifiques_OVER_LLISTA_TRAMITS.png" />
 </p> 
 
-## 3.11.1 Integració sense PDF OVER_INTEGRACIO
+## 3.11. Integració sense PDF OVER_INTEGRACIO
 Mètode de tramitació mitjançant integració sense necessitat d'omplir i manipular formularis PDF.
 
 ### 3.11.1. Petició dades específiques
