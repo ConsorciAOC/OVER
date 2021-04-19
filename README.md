@@ -111,5 +111,5 @@ Així, amb aquesta modalitat, es poden executar tant tràmits inicials com tràm
 
 ### 3.4.2. Resposta dades específiques
 <p align="center">
-<img align="center" src="img/resposta-dades-especifiques_OVER_TRAMITACIOT.png" />
+<img align="center" src="img/resposta-dades-especifiques_OVER_TRAMITACIO.png" />
 </p> 
