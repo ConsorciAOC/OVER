@@ -4,7 +4,7 @@ Documentació d'integració d'OVER
 # Taula de continguts
 
 - [1. Introduccio](#1-introduccio)
-- [2. Introduccio](#2-introduccio)
+- [2. Introduccio](#2-Transmissions)
 - [2. Transmissions de dades disponibles](#2-Transmissions)
 - [3. Missatgeria del servei](#3-MissatgeriaServei)
 
