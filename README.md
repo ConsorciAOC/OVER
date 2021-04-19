@@ -34,8 +34,12 @@ Documentació d'integració d'OVER
    * [3.9. Llista serveis funcionals (OVER_LLISTA_SERVEIS)](#39-Llista-serveis-funcionals-OVER_LLISTA_SERVEIS)
       - [3.9.1. Petició dades específiques](#391-Petició-dades-específiques)
       - [3.9.2. Resposta dades específiques](#392-Resposta-dades-específiques)    
-
-
+   * [3.10. Llista tràmits funcionals (OVER_LLISTA_TRAMITS)](#310-lista-tràmits-funcionals-OVER_LLISTA_TRAMITS)
+      - [3.10.1. Petició dades específiques](#3101-Petició-dades-específiques)
+      - [3.10.2. Resposta dades específiques](#3102-Resposta-dades-específiques)    
+   * [3.11. Integració sense PDF (OVER_INTEGRACIO)](#31111-Integració-sense-PDF-OVER_INTEGRACIO)
+      - [3.11.1. Petició dades específiques](#3111-Petició-dades-específiques)
+      - [3.11.2. Resposta dades específiques](#3112-Resposta-dades-específiques)    
 # 1. Introducció
 Aquest document detalla la missatgeria associada al servei de l'Oficina Virtual d’Emissió i Recepció, en endavant OVER. Per poder realitzar la integració cal conèixer prèviament la següent documentació:
 •	Document de Missatgeria Genèrica de la PCI del Consorci AOC.
@@ -206,4 +210,30 @@ Permet llistar serveis funcionals a partir d'un catàleg
 ### 3.9.2. Resposta dades específiques
 <p align="center">
 <img align="center" src="img/resposta-dades-especifiques_OVER_LLISTA_SERVEIS.png" />
+</p> 
+
+## 3.10. Llista tràmits funcionals OVER_LLISTA_TRAMITS
+Permet llistar tràmits funcionals a partir d’un catàleg i servei.
+
+### 3.10.1. Petició dades específiques
+<p align="center">
+<img align="center" src="img/peticio-dades-especifiques_OVER_LLISTA_TRAMITS.png" />
+</p>  
+
+### 3.10.2. Resposta dades específiques
+<p align="center">
+<img align="center" src="img/resposta-dades-especifiques_OVER_LLISTA_TRAMITS.png" />
+</p> 
+
+## 3.11.1 Integració sense PDF OVER_INTEGRACIO
+Mètode de tramitació mitjançant integració sense necessitat d'omplir i manipular formularis PDF.
+
+### 3.11.1. Petició dades específiques
+<p align="center">
+<img align="center" src="img/peticio-dades-especifiques_OVER_INTEGRACIO.png" />
+</p>  
+
+### 3.11.2. Resposta dades específiques
+<p align="center">
+<img align="center" src="img/resposta-dades-especifiques_OVER_INTEGRACIO.png" />
 </p> 
