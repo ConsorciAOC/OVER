@@ -222,7 +222,10 @@ Permet llistar tràmits funcionals a partir d’un catàleg i servei.
 
 ### 3.10.2. Resposta dades específiques
 <p align="center">
-<img align="center" src="img/resposta-dades-especifiques_OVER_LLISTA_TRAMITS.png" />
+<img align="center" src="img/resposta-dades-especifiques_1_OVER_LLISTA_TRAMITS.png" />
+</p> 
+<p align="center">
+<img align="center" src="img/resposta-dades-especifiques_2_OVER_LLISTA_TRAMITS.png" />
 </p> 
 
 ## 3.11. Integració sense PDF OVER_INTEGRACIO
