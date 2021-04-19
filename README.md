@@ -44,7 +44,10 @@ Documentació d'integració d'OVER
    * [4.1. Flux de tramitació](#41-Flux-de-tramitació)
    * [4.2. OVER_INTEGRACIO](#42-OVER_INTEGRACIO)
        - [4.2.1. OVER_FORMULARI](#421-OVER_FORMULARI)
-         
+       - [4.2.2. Contingut del formulari](#422-Contingut-del-formualari)
+       - [4.2.3. Registre d’entrada / sortida](#423-Registre-entrada-sortida)
+
+
 # 1. Introducció
 Aquest document detalla la missatgeria associada al servei de l'Oficina Virtual d’Emissió i Recepció, en endavant OVER. Per poder realitzar la integració cal conèixer prèviament la següent documentació:
 •	Document de Missatgeria Genèrica de la PCI del Consorci AOC.
@@ -316,4 +319,21 @@ En aquest cas cal indicar el tràmit predecessor ```<codiInstanciaTramitPredeces
   </peticioFormulariTramit>
 </DatosEspecificos>
 ``` 
+
+### 4.2.2. Contingut del formulari
+
+Dades en format XML que representen el contingut del formulari. Aquestes han de complir l’schema XSD que es proporcionarà per servei i tràmit funcional al que s’integra. Al mateix temps, si el tràmit ho requereix, es faran validacions lògiques sobre les dades, per exemple la validació d’un NIF.
+
+<b>Exemple de contingut del formulari:</b>
+
+```xml
+<PAG_DADES_INTEGRACIO xmlns="http://www.aoc.cat/over">
+  <TXT_EXPEDIENT>EXP-147F-2021</TXT_EXPEDIENT>
+  <COMUNIQUEN>Us comuniquem que en relació ...</COMUNIQUEN>
+</PAG_DADES_INTEGRACIO>
+```
+
+### 4.2.3. Registre entrada sortida
+
+
 
