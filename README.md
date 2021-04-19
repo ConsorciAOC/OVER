@@ -57,6 +57,8 @@ Documentació d'integració d'OVER
        - [4.5.2. OVER_INTEGRACIO - Resposta](#452-OVER_INTEGRACIO-resposta)
        - [4.5.3. MUX_DESCARREGA - Petició](#453-MUX_DESCARREGA-petició)
        - [4.5.4. MUX_DESCARREGA - Resposta](#454-MUX_DESCARREGA-resposta)
+       - [4.5.5. OVER_CONSULTA_EXPEDIENT - Petició](#455-OVER_CONSULTA_EXPEDIENT-resposta)
+       - [4.5.6. OVER_CONSULTA_EXPEDIENT - Resposta](#456-OVER_CONSULTA_EXPEDIENT-resposta)       
 
 # 1. Introducció
 Aquest document detalla la missatgeria associada al servei de l'Oficina Virtual d’Emissió i Recepció, en endavant OVER. Per poder realitzar la integració cal conèixer prèviament la següent documentació:
@@ -717,3 +719,89 @@ Si la documentació encara no està disponible, retornarà la següent resposta:
   </ns0:DocumentacioAssentament>
 </ns0:RespostaRegistre>
 ```
+
+### 4.5.5. OVER_CONSULTA_EXPEDIENT petició
+
+```xml
+<Peticion xmlns="http://gencat.net/scsp/esquemes/peticion">
+  <Atributos>
+    <IdPeticion>CU1-OVER_CONSULTA_EXPEDIENT</IdPeticion>
+    <NumElementos>1</NumElementos>
+    <TimeStamp/>
+    <CodigoCertificado>OVER_CONSULTA_EXPEDIENT</CodigoCertificado>
+    <CodigoProducto>OVER</CodigoProducto>
+    <DatosAutorizacion>
+      <IdentificadorSolicitante>800180001</IdentificadorSolicitante>
+      <NombreSolicitante>BCN</NombreSolicitante>
+      <Finalidad>PROVES</Finalidad>
+    </DatosAutorizacion>
+    <Emisor>
+      <NifEmisor>Q0801175A</NifEmisor>
+      <NombreEmisor>CAOC</NombreEmisor>
+    </Emisor>
+  </Atributos>
+  <Solicitudes>
+    <SolicitudTransmision>
+      <DatosGenericos>
+        <Emisor>
+          <NifEmisor>Q0801175A</NifEmisor>
+          <NombreEmisor>CAOC</NombreEmisor>
+        </Emisor>
+        <Solicitante>
+          <IdentificadorSolicitante>800180001</IdentificadorSolicitante>
+          <NombreSolicitante>BCN</NombreSolicitante>
+          <Finalidad>PROVES</Finalidad>
+          <Consentimiento>Si</Consentimiento>
+        </Solicitante>
+        <Transmision>
+          <CodigoCertificado>OVER_CONSULTA_EXPEDIENT</CodigoCertificado>
+          <IdSolicitud>1</IdSolicitud>
+        </Transmision>
+      </DatosGenericos>
+      <DatosEspecificos>
+        <peticioConsultaExpedient xmlns="http://www.aoc.cat/over">
+          <codiInstanciaServei>437014</codiInstanciaServei>
+        </peticioConsultaExpedient>
+      </DatosEspecificos>
+    </SolicitudTransmision>
+  </Solicitudes>
+</Peticion>
+```
+
+### 4.5.6. OVER_CONSULTA_EXPEDIENT resposta
+
+```xml
+<over:respostaConsultaExpedient xmlns:over="http://www.aoc.cat/over">
+  <over:peticioConsultaExpedient>
+    <over:codiInstanciaServei>437014</over:codiInstanciaServei>
+  </over:peticioConsultaExpedient>
+  <over:resposta>
+    <over:ensPromotor ine10="9610930008">Departament de Territori i Sostenibilitat</over:ensPromotor>
+    <over:serveiFuncional codi="TGEN0001">Tramesa genèrica</over:serveiFuncional>
+    <over:tramits>
+      <over:instanciaTramit>
+        <over:codiInstanciaTramit>400547</over:codiInstanciaTramit>
+        <over:tramitFuncional codi="TGEN0001">Tramesa genèrica</over:tramitFuncional>
+        <over:observacions>Assumpte ABC ob</over:observacions>
+        <over:data>2021-03-31T13:01:07.000+02:00</over:data>
+        <over:ensOrigen ine10="800180001">Ajuntament d'Abrera</over:ensOrigen>
+        <over:ensDesti ine10="9610930008">Departament de Territori i Sostenibilitat</over:ensDesti>
+        <over:registreSortida>
+          <over:numero>S/000040-2021</over:numero>
+          <over:data>2021-03-31T13:01:24.000+02:00</over:data>
+        </over:registreSortida>
+        <over:registreEntrada>
+          <over:numero>9033/70/2021</over:numero>
+          <over:data>2021-03-31T13:01:04.000+02:00</over:data>
+        </over:registreEntrada>
+      </over:instanciaTramit>
+    </over:tramits>
+  </over:resposta>
+  <over:resultat>
+    <over:codiResultat>0</over:codiResultat>
+    <over:descripcio/>
+  </over:resultat>
+</over:respostaConsultaExpedient>
+```
+
+
