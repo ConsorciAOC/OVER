@@ -37,10 +37,10 @@ Les dades i operacions disponibles a través del servei són les que es presente
 # 3. Missatgeria del servei
 A continuació es detalla la missatgeria corresponent a les modalitats de consum del producte OVER.
 
-# 31. Descàrrega de la documentació tràmit OVER_DOCUMENTACIO
+## 31. Descàrrega de la documentació tràmit OVER_DOCUMENTACIO
 Operació que permet recuperar la documentació generada en el procés de tramitació.
 
-# 311. Petició dades específiques
+### 311. Petició dades específiques
 
 
 
