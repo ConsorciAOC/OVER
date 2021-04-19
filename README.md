@@ -53,7 +53,7 @@ Documentació d'integració d'OVER
        - [4.4.2. OVER_CONSULTA_EXPEDIENT](#442-OVER_CONSULTA_EXPEDIENT)
        - [4.4.3. OVER_DOCUMENTACIO](#443-OVER_DOCUMENTACIO)
    * [4.5. Exemples XML](#45-Exemples-XML)
-       - [4.5.1. OVER_INTEGRACIO - Petició](#451-aa)
+       - [4.5.1. OVER_INTEGRACIO - Petició](#451-OVER_INTEGRACIO)
 
 
 # 1. Introducció
@@ -462,7 +462,7 @@ Si la documentació encara no està disponible, retornarà la següent resposta:
 ## 4.5. Exemples XML
 
 
-### 4.5.1. aa
+### 4.5.1. OVER_INTEGRACIO
 
 ```xml
 <Peticion>
