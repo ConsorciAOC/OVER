@@ -10,6 +10,11 @@ Documentació d'integració d'OVER
       - [3.1.1. Petició dades específiques](#311-Petició-dades-específiques)
       - [3.1.2. Resposta dades específiques](#312-Resposta-dades-específiques)
           - [3.1.2.1. Resultat de l’operació](#3121-Resultat-de-operació)   
+   * [3.2. Obtenció de formulari de tramitació (OVER_FORMULARI)](#32-Obtenció-de-formulari-de-tramitació-OVER_FORMULARI)
+      - [3.2.1. Petició dades específiques](#321-Petició-dades-específiques)
+      - [3.2.2. Resposta dades específiques](#322-Resposta-dades-específiques)
+          - [3.2.2.1. Resultat de l’operació](#3221-Resultat-de-operació)   
+
 
 # 1. Introducció
 Aquest document detalla la missatgeria associada al servei de l'Oficina Virtual d’Emissió i Recepció, en endavant OVER. Per poder realitzar la integració cal conèixer prèviament la següent documentació:
@@ -59,3 +64,17 @@ Operació que permet recuperar la documentació generada en el procés de tramit
 <p align="center">
 <img align="center" src="img/resultat_operacio_OVER_DOCUMENTACIO.png" />
 </p>  
+
+## 3.2. Obtenció de formulari de tramitació OVER_FORMULARI
+Permet obtenir d’OVER la informació del formulari de tramitació d’un determinat tràmit (preompliment).
+
+### 3.2.1. Petició dades específiques
+<p align="center">
+<img align="center" src="img/peticio-dades-especifiques_OVER_FORMULARI.png" />
+</p>  
+
+### 3.2.2. Resposta dades específiques
+<p align="center">
+<img align="center" src="img/resposta-dades-especifiques_1_OVER_FORMULARI.png" />
+</p>  
+
