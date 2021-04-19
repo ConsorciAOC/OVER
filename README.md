@@ -287,7 +287,7 @@ En el següent quadre es pot veure que només es pot respondre a la TGEN0001 amb
 <img align="center" src="img/tramit_resposta.PNG" />
 </p> 
 
-<b>Exemple de petició d’un tràmit inicial:<b>
+<b>Exemple de petició d’un tràmit inicial:</b>
 
 ```xml
 <DatosEspecificos>
@@ -300,9 +300,9 @@ En el següent quadre es pot veure que només es pot respondre a la TGEN0001 amb
 </DatosEspecificos>
 ```
 
-<b>Exemple de petició d’un tràmit de resposta (tràmit NO inicial):<b>
+<b>Exemple de petició d’un tràmit de resposta (tràmit NO inicial):</b>
   
-En aquest cas cal indicar el tràmit predecessor <codiInstanciaTramitPredecessor>
+En aquest cas cal indicar el tràmit predecessor ```xml<codiInstanciaTramitPredecessor>``` 
   
 ```xml
 <DatosEspecificos>
