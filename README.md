@@ -302,10 +302,7 @@ En el següent quadre es pot veure que només es pot respondre a la TGEN0001 amb
 
 <b>Exemple de petició d’un tràmit de resposta (tràmit NO inicial):</b>
   
-En aquest cas cal indicar el tràmit predecessor 
-```xml
-<codiInstanciaTramitPredecessor>
-``` 
+En aquest cas cal indicar el tràmit predecessor ```<codiInstanciaTramitPredecessor>``` 
   
 ```xml
 <DatosEspecificos>
