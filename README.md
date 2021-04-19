@@ -242,7 +242,12 @@ Mètode de tramitació mitjançant integració sense necessitat d'omplir i manip
 <p align="center">
 <img align="center" src="img/peticio-dades-especifiques_1_OVER_INTEGRACIO.png" />
 </p>  
- 
+<p align="center">
+<img align="center" src="img/peticio-dades-especifiques_2_new_OVER_INTEGRACIO.png" />
+</p> 
+<p align="center">
+<img align="center" src="img/peticio-dades-especifiques_3_OVER_INTEGRACIO.png" />
+</p> 
 
 ### 3.11.2. Resposta dades específiques
 <p align="center">
