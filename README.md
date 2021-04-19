@@ -56,3 +56,6 @@ Operació que permet recuperar la documentació generada en el procés de tramit
 </p>  
 
 #### 3.1.2.1 Resultat de operació
+<p align="center">
+<img align="center" src="img/resultat_operacio_OVER_DOCUMENTACIO.png" />
+</p>  
