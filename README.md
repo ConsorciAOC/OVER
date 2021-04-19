@@ -34,7 +34,7 @@ Documentació d'integració d'OVER
    * [3.9. Llista serveis funcionals (OVER_LLISTA_SERVEIS)](#39-Llista-serveis-funcionals-OVER_LLISTA_SERVEIS)
       - [3.9.1. Petició dades específiques](#391-Petició-dades-específiques)
       - [3.9.2. Resposta dades específiques](#392-Resposta-dades-específiques)    
-   * [3.10. Llista tràmits funcionals (OVER_LLISTA_TRAMITS)](#310-lista-tràmits-funcionals-OVER_LLISTA_TRAMITS)
+   * [3.10. Llista tràmits funcionals (OVER_LLISTA_TRAMITS)](#310-Llista-tràmits-funcionals-OVER_LLISTA_TRAMITS)
       - [3.10.1. Petició dades específiques](#3101-Petició-dades-específiques)
       - [3.10.2. Resposta dades específiques](#3102-Resposta-dades-específiques)    
    * [3.11. Integració sense PDF (OVER_INTEGRACIO)](#31111-Integració-sense-PDF-OVER_INTEGRACIO)
