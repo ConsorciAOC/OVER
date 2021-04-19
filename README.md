@@ -271,7 +271,7 @@ El procés de tramitació via integració està format per la part síncrona (OV
 Permet realitzar la tramitació sense necessitat de descarregar, omplir i manipular formularis PDF. Utilitzant aquesta modalitat obtindreu el context (codi instància tràmit i servei) que permetrà recuperar la documentació generada i relacionada amb el tràmit.
 
 ### 4.2.1. OVER_FORMULARI
-Omplir la missatgeria definida del bloc [peticioFormulariTramit] (#3111-Petició-dades-específiques)
+Omplir la missatgeria definida del bloc [peticioFormulariTramit](#3111-Petició-dades-específiques)
 
 Un tràmit inicial es considera aquell que desencadena la resta del procés interadministratiu. Per exemple, en una subvenció qualsevol, el tràmit inicial és el de la sol·licitud.
 
