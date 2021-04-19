@@ -8,7 +8,8 @@ Documentació d'integració d'OVER
 - [3. Missatgeria del servei](#3-Missatgeria-del-servei)
    * [3.1. Descàrrega de la documentació d'un tràmit (OVER_DOCUMENTACIO)](#31-Descàrrega-de-la-documentació-tràmit-OVER_DOCUMENTACIO)
       - [3.1.1. Petició dades específiques](#311-Petició-dades-específiques)
-      - [3.1.2. Resposta dades específiques](#311-Resposta-dades-específiques)
+      - [3.1.2. Resposta dades específiques](#312-Resposta-dades-específiques)
+          - [3.1.2.1. Resultat de l’operació](#3121-Resultat-de-operació)   
 
 # 1. Introducció
 Aquest document detalla la missatgeria associada al servei de l'Oficina Virtual d’Emissió i Recepció, en endavant OVER. Per poder realitzar la integració cal conèixer prèviament la següent documentació:
@@ -54,4 +55,4 @@ Operació que permet recuperar la documentació generada en el procés de tramit
 <img align="center" src="img/resposta-dades-especifiques_2.png" />
 </p>  
 
-
+#### 3.1.2.1 Resultat de operació
