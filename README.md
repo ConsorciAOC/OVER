@@ -50,6 +50,9 @@ Documentació d'integració d'OVER
    * [4.3. Signatura](#43-Signatura)
    * [4.4. Descàrrega de documentació](#44-Descàrrega-de-documentació)
        - [4.4.1. MUX_DESCARREGA](#441-MUX_DESCARREGA)
+       - [4.4.2. OVER_CONSULTA_EXPEDIENT](#442-OVER_CONSULTA_EXPEDIENT)
+       - [4.4.3. OVER_DOCUMENTACIO](#443-OVER_DOCUMENTACIO)
+
 
 # 1. Introducció
 Aquest document detalla la missatgeria associada al servei de l'Oficina Virtual d’Emissió i Recepció, en endavant OVER. Per poder realitzar la integració cal conèixer prèviament la següent documentació:
@@ -423,4 +426,34 @@ Si la documentació encara no està disponible, retornarà la següent resposta:
 </ns0:RespostaRegistre>
 ```
 
+### 4.4.2. OVER_CONSULTA_EXPEDIENT
+
+En cas de no disposar de número d’assentament, cal cercar-lo a partir del codi instància servei retornat per OVER_INTEGRACIO.
+
+Si la documentació encara no està disponible, retornarà la següent resposta:
+
+```xml
+<over:respostaConsultaExpedient xmlns:over="http://www.aoc.cat/over">
+  <over:resultat>
+    <over:codiResultat>0</over:codiResultat>
+    <over:descripcio/>
+  </over:resultat>
+</over:respostaConsultaExpedient>
+```
+
+
+### 4.4.3. VER_DOCUMENTACIO
+
+Requereix com a paràmetre d’entrada el codi instància tràmit retornat per OVER_INTEGRACIO.
+
+Si la documentació encara no està disponible, retornarà la següent resposta:
+
+```xml
+<over:respostaDocumentacioTramit xmlns:over="http://www.aoc.cat/over">
+  <over:resultat>
+    <over:codiResultat>1</over:codiResultat>
+    <over:descripcio>Tràmit 400547 pendent de tramitar-se. Torni a intentar-ho més tard.</over:descripcio>
+  </over:resultat>
+</over:respostaDocumentacioTramit>
+```
 
