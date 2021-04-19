@@ -117,6 +117,7 @@ Així, amb aquesta modalitat, es poden executar tant tràmits inicials com tràm
 </p> 
 
 ## 3.5. Actualització informació tràmit OVER_ACTUALITZACIO
+Permet associar informació a una determinada instància de servei (estat, número d’expedient o qualsevol altra informació que es mostrarà als usuaris).
 
 ### 3.5.1. Petició dades específiques
 <p align="center">
