@@ -28,6 +28,9 @@ Documentació d'integració d'OVER
    * [3.7. Llista expedients de serveis (OVER_LLISTA_EXPEDIENTS)](#37-Llista-expedients-de-serveis-OVER_LLISTA_EXPEDIENTS)
       - [3.7.1. Petició dades específiques](#371-Petició-dades-específiques)
       - [3.7.2. Resposta dades específiques](#372-Resposta-dades-específiques)           
+   * [3.8. Consulta d'expedient (OVER_CONSULTA_EXPEDIENT)](#38-Consulta-expedient-OVER_CONSULTA_EXPEDIENT)
+      - [3.8.1. Petició dades específiques](#381-Petició-dades-específiques)
+      - [3.8.2. Resposta dades específiques](#382-Resposta-dades-específiques)    
 # 1. Introducció
 Aquest document detalla la missatgeria associada al servei de l'Oficina Virtual d’Emissió i Recepció, en endavant OVER. Per poder realitzar la integració cal conèixer prèviament la següent documentació:
 •	Document de Missatgeria Genèrica de la PCI del Consorci AOC.
@@ -162,4 +165,18 @@ Permet llistar expedients de tramitacions realitzades a partir de paràmetres cl
 ### 3.7.2. Resposta dades específiques
 <p align="center">
 <img align="center" src="img/resposta-dades-especifiques_OVER_LLISTA_EXPEDIENTS.png" />
+</p> 
+
+
+## 3.8. Consulta expedient OVER_CONSULTA_EXPEDIENT
+Permet consultar les tramitacions i informació relacionada sobre un expedient. Només mostrarà les dades de l’ens autoritzat a la petició.
+
+### 3.8.1. Petició dades específiques
+<p align="center">
+<img align="center" src="img/peticio-dades-especifiques_OVER_CONSULTA_EXPEDIENT.png" />
+</p>  
+
+### 3.8.2. Resposta dades específiques
+<p align="center">
+<img align="center" src="img/resposta-dades-especifiques_OVER_CONSULTA_EXPEDIENT.png" />
 </p> 
