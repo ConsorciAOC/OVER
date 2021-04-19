@@ -19,7 +19,9 @@ Documentació d'integració d'OVER
    * [3.4. Tramitació (OVER_TRAMITACIO)](#34-Tramitació-OVER_TRAMITACIO)
       - [3.4.1. Petició dades específiques](#341-Petició-dades-específiques)
       - [3.4.2. Resposta dades específiques](#342-Resposta-dades-específiques)
-
+   * [3.5. Actualització d'informació d'un tràmit (OVER_ACTUALITZACIO))](#35-Actualització-informació-tràmit-OVER_ACTUALITZACIO)
+      - [3.5.1. Petició dades específiques](#351-Petició-dades-específiques)
+      - [3.5.2. Resposta dades específiques](#352-Resposta-dades-específiques)
 # 1. Introducció
 Aquest document detalla la missatgeria associada al servei de l'Oficina Virtual d’Emissió i Recepció, en endavant OVER. Per poder realitzar la integració cal conèixer prèviament la següent documentació:
 •	Document de Missatgeria Genèrica de la PCI del Consorci AOC.
@@ -112,4 +114,16 @@ Així, amb aquesta modalitat, es poden executar tant tràmits inicials com tràm
 ### 3.4.2. Resposta dades específiques
 <p align="center">
 <img align="center" src="img/resposta-dades-especifiques_OVER_TRAMITACIO.png" />
+</p> 
+
+## 3.5. Actualització informació tràmit OVER_ACTUALITZACIO
+
+### 3.5.1. Petició dades específiques
+<p align="center">
+<img align="center" src="img/peticio-dades-especifiques_OVER_ACTUALITZACIO.png" />
+</p>  
+
+### 3.5.2. Resposta dades específiques
+<p align="center">
+<img align="center" src="img/resposta-dades-especifiques_OVER_ACTUALITZACIO.png" />
 </p> 
