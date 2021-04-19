@@ -106,8 +106,8 @@ Permet obtenir d’OVER la informació del formulari de tramitació d’un deter
 </p>  
 
 ## 3.3. Obtenció de context de tramitació OVER_CONTEXT
+[Ja no es servir, utilitzar la modalitat OVER_INTEGRACIO](#311-Integració-sense-PDF-OVER_INTEGRACIO)
 Permet obtenir d’OVER el context de tramitació d’un tràmit pel qual no es vulgui obtenir el PDF de tramitació via la modalitat OVER_FORMULARI.
-[aaaa](#311-Integració-sense-PDF-OVER_INTEGRACIO)
 
 ### 3.3.1. Petició dades específiques
 <p align="center">
@@ -120,6 +120,8 @@ Permet obtenir d’OVER el context de tramitació d’un tràmit pel qual no es 
 </p> 
 
 ## 3.4. Tramitació OVER_TRAMITACIO
+[Ja no es servir, utilitzar la modalitat OVER_INTEGRACIO](#311-Integració-sense-PDF-OVER_INTEGRACIO)
+
 Aquesta modalitat permet iniciar un procés de tramitació a OVER.
 OVER permet classificar els tràmits que gestiona en dos grans grups:
 
