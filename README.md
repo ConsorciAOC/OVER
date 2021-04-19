@@ -6,7 +6,7 @@ Documentació d'integració d'OVER
 - [1. Introducció](#1-introducció)
 - [2. Transmissions de dades disponibles](#2-Transmissions-de-dades-disponibles)
 - [3. Missatgeria del servei](#3-Missatgeria-del-servei)
-  * [3.1. Descàrrega de la documentació d'un tràmit (OVER_DOCUMENTACIO)](#31-Descàrrega-de-la-documentació-tràmit-(OVER_DOCUMENTACIO))
+  * [3.1. Descàrrega de la documentació d'un tràmit (OVER_DOCUMENTACIO)](#31-Descàrrega-de-la-documentació-tràmit)
 
 # 1. Introducció
 Aquest document detalla la missatgeria associada al servei de l'Oficina Virtual d’Emissió i Recepció, en endavant OVER. Per poder realitzar la integració cal conèixer prèviament la següent documentació:
@@ -36,7 +36,7 @@ Les dades i operacions disponibles a través del servei són les que es presente
 # 3. Missatgeria del servei
 A continuació es detalla la missatgeria corresponent a les modalitats de consum del producte OVER.
 
-# 31. Descàrrega de la documentació tràmit (OVER_DOCUMENTACIO)
+# 31. Descàrrega de la documentació tràmit
 Operació que permet recuperar la documentació generada en el procés de tramitació.
 
 
