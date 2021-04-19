@@ -54,7 +54,9 @@ Documentació d'integració d'OVER
        - [4.4.3. OVER_DOCUMENTACIO](#443-OVER_DOCUMENTACIO)
    * [4.5. Exemples XML](#45-Exemples-XML)
        - [4.5.1. OVER_INTEGRACIO - Petició](#451-OVER_INTEGRACIO-petició)
-
+       - [4.5.2. OVER_INTEGRACIO - Resposta](#452-OVER_INTEGRACIO-resposta)
+       - [4.5.3. MUX_DESCARREGA - Petició](#453-MUX_DESCARREGA-petició)
+       - [4.5.4. MUX_DESCARREGA - Resposta](#454-MUX_DESCARREGA-resposta)
 
 # 1. Introducció
 Aquest document detalla la missatgeria associada al servei de l'Oficina Virtual d’Emissió i Recepció, en endavant OVER. Per poder realitzar la integració cal conèixer prèviament la següent documentació:
@@ -598,4 +600,120 @@ Si la documentació encara no està disponible, retornarà la següent resposta:
     </SolicitudTransmision>
   </Solicitudes>
 </Peticion>
+```
+
+
+### 4.5.2. OVER_INTEGRACIO resposta
+
+```xml
+<over:respostaIntegracio xmlns:over="http://www.aoc.cat/over">
+  <over:peticioIntegracio>
+    <over:peticioFormulariTramit>
+      <over:codiCataleg>9610930008</over:codiCataleg>
+      <over:codiFuncionalServei>TGEN0001</over:codiFuncionalServei>
+      <over:codiFuncionalTramit>TGEN0001</over:codiFuncionalTramit>
+      <over:codiEns>800180001</over:codiEns>
+    </over:peticioFormulariTramit>
+    <over:dadesContingut>
+      <over:formulari>
+        <![CDATA[<...>]]>
+      </over:formulari>
+    </over:dadesContingut>
+  </over:peticioIntegracio>
+  <over:resposta>
+    <over:codiInstanciaServei>437014</over:codiInstanciaServei>
+    <over:codiInstanciaTramit>400547</over:codiInstanciaTramit>
+  </over:resposta>
+</over:respostaIntegracio>
+```
+
+### 4.5.3. MUX_DESCARREGA petició
+
+```xml
+<Peticion xmlns="http://gencat.net/scsp/esquemes/peticion">
+  <Atributos>
+    <IdPeticion>CU1-MUX_DESCARREGA</IdPeticion>
+    <NumElementos>1</NumElementos>
+    <TimeStamp>2021-03-31 16:17:00</TimeStamp>
+    <CodigoCertificado>MUX_DESCARREGA</CodigoCertificado>
+    <CodigoProducto>MUX</CodigoProducto>
+    <DatosAutorizacion>
+      <IdentificadorSolicitante>800180001</IdentificadorSolicitante>
+      <NombreSolicitante>BCN</NombreSolicitante>
+      <Finalidad>PROVES</Finalidad>
+    </DatosAutorizacion>
+    <Emisor>
+      <NifEmisor>Q0801175A</NifEmisor>
+      <NombreEmisor>CAOC</NombreEmisor>
+    </Emisor>
+  </Atributos>
+  <Solicitudes>
+    <SolicitudTransmision xmlns:pet="http://gencat.net/scsp/esquemes/peticion">
+      <DatosGenericos>
+        <Emisor>
+          <NifEmisor>Q0801175A</NifEmisor>
+          <NombreEmisor>CAOC</NombreEmisor>
+        </Emisor>
+        <Solicitante>
+          <IdentificadorSolicitante>800180001</IdentificadorSolicitante>
+          <NombreSolicitante>BCN</NombreSolicitante>
+          <Finalidad>PROVES</Finalidad>
+          <Consentimiento>Si</Consentimiento>
+        </Solicitante>
+        <Transmision>
+          <CodigoCertificado>MUX_DESCARREGA</CodigoCertificado>
+          <IdSolicitud>1</IdSolicitud>
+        </Transmision>
+      </DatosGenericos>
+      <DatosEspecificos>
+        <PeticioRegistre xmlns="http://net.aocat/MUX2/PeticioRegistre" IdAplicacio="OVER">
+          <DescarregaDocumentacio>
+            <NumeroAssentamentSortida>S/000040-2021</NumeroAssentamentSortida>
+          </DescarregaDocumentacio>
+        </PeticioRegistre>
+      </DatosEspecificos>
+    </SolicitudTransmision>
+  </Solicitudes>
+</Peticion>
+```
+
+### 4.5.4. MUX_DESCARREGA resposta
+
+```xml
+<ns0:RespostaRegistre idTransaccio="CU1-MUX_DESCARREGA" xmlns:ns0="http://net.aocat/MUX2/RespostaRegistre">
+  <ns0:Resultat codi="OK"/>
+  <ns0:DocumentacioAssentament>
+    <ns0:NumeroAssentamentSortida>S/000040-2021</ns0:NumeroAssentamentSortida>
+    <ns0:Document>
+      <ns0:Nom>S/000040-2021 formulari.pdf</ns0:Nom>
+      <ns0:Descripcio>PDF_ORIGINAL</ns0:Descripcio>
+      <ns0:GUID>6a3c0820-b066-4962-b594-f51596772a14</ns0:GUID>
+      <ns0:UUID>eacat-6a3c0820-b066-4962-b594-f51596772a14</ns0:UUID>
+    </ns0:Document>
+    <ns0:Document>
+      <ns0:Nom>S/000040-2021 holamon.pdf</ns0:Nom>
+      <ns0:Descripcio>ADJUNT</ns0:Descripcio>
+      <ns0:GUID>6202a943-9f48-413b-93ca-c00ede00dfad</ns0:GUID>
+      <ns0:UUID>eacat-6202a943-9f48-413b-93ca-c00ede00dfad</ns0:UUID>
+    </ns0:Document>
+    <ns0:Document>
+      <ns0:Nom>S/000040-2021 justificant.pdf</ns0:Nom>
+      <ns0:Descripcio>TIQUET</ns0:Descripcio>
+      <ns0:GUID>b6b9cc7f-9a1e-4e6c-91b3-e4dc7f24a110</ns0:GUID>
+      <ns0:UUID>eacat-b6b9cc7f-9a1e-4e6c-91b3-e4dc7f24a110</ns0:UUID>
+    </ns0:Document>
+    <ns0:Document>
+      <ns0:Nom>S/000040-2021 tramit.xml</ns0:Nom>
+      <ns0:Descripcio>XML_TRAMIT</ns0:Descripcio>
+      <ns0:GUID>17d0d1d4-665a-432b-8b72-a74aceb507ee</ns0:GUID>
+      <ns0:UUID>eacat-17d0d1d4-665a-432b-8b72-a74aceb507ee</ns0:UUID>
+    </ns0:Document>
+    <ns0:Document>
+      <ns0:Nom>S/000040-2021 tramit_signat.xml</ns0:Nom>
+      <ns0:Descripcio>XML_TRAMIT_SIGNAT</ns0:Descripcio>
+      <ns0:GUID>24a4527f-02ae-4607-9174-0c1932dff0b5</ns0:GUID>
+      <ns0:UUID>eacat-24a4527f-02ae-4607-9174-0c1932dff0b5</ns0:UUID>
+    </ns0:Document>
+  </ns0:DocumentacioAssentament>
+</ns0:RespostaRegistre>
 ```
