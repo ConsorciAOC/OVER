@@ -42,7 +42,9 @@ Documentació d'integració d'OVER
       - [3.11.2. Resposta dades específiques](#3112-Resposta-dades-específiques)    
 - [4. Exemple integració](#4-Exemple-integració)
    * [4.1. Flux de tramitació](#41-Flux-de-tramitació)
-
+   * [4.2. OVER_INTEGRACIO](#42-OVER_INTEGRACIO)
+       - [4.2.1. OVER_FORMULARI](#421-OVER_FORMULARI)
+         
 # 1. Introducció
 Aquest document detalla la missatgeria associada al servei de l'Oficina Virtual d’Emissió i Recepció, en endavant OVER. Per poder realitzar la integració cal conèixer prèviament la següent documentació:
 •	Document de Missatgeria Genèrica de la PCI del Consorci AOC.
@@ -264,4 +266,16 @@ El procés de tramitació via integració està format per la part síncrona (OV
 <p align="center">
 <img align="center" src="img/flux-de-tramitacio.png" />
 </p> 
+
+## 4.2. OVER_INTEGRACIO
+Permet realitzar la tramitació sense necessitat de descarregar, omplir i manipular formularis PDF. Utilitzant aquesta modalitat obtindreu el context (codi instància tràmit i servei) que permetrà recuperar la documentació generada i relacionada amb el tràmit.
+
+### 4.2.1. OVER_FORMULARI
+Omplir la missatgeria definida del bloc [peticioFormulariTramit] (#3111-Petició-dades-específiques)
+
+Un tràmit inicial es considera aquell que desencadena la resta del procés interadministratiu. Per exemple, en una subvenció qualsevol, el tràmit inicial és el de la sol·licitud.
+
+Un tràmit NO inicial sempre és la resposta d'un tràmit ja processat. No es pot iniciar mai un tràmit d'aquest, sense fer referència a un predecessor. Per obtenir la informació del predecessor, cal fer una consulta a OVER_CONSULTA.
+
+
 
