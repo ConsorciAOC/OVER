@@ -178,5 +178,14 @@ Permet consultar les tramitacions i informació relacionada sobre un expedient. 
 
 ### 3.8.2. Resposta dades específiques
 <p align="center">
-<img align="center" src="img/resposta-dades-especifiques_OVER_CONSULTA_EXPEDIENT.png" />
+<img align="center" src="img/resposta-dades-especifiques_1_OVER_CONSULTA_EXPEDIENT.png" />
+</p> 
+<p align="center">
+<img align="center" src="img/resposta-dades-especifiques_2_OVER_CONSULTA_EXPEDIENT.png" />
+</p> 
+<p align="center">
+<img align="center" src="img/resposta-dades-especifiques_3_OVER_CONSULTA_EXPEDIENT.png" />
+</p> 
+<p align="center">
+<img align="center" src="img/resposta-dades-especifiques_4_OVER_CONSULTA_EXPEDIENT.png" />
 </p> 
