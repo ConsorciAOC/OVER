@@ -277,5 +277,12 @@ Un tràmit inicial es considera aquell que desencadena la resta del procés inte
 
 Un tràmit NO inicial sempre és la resposta d'un tràmit ja processat. No es pot iniciar mai un tràmit d'aquest, sense fer referència a un predecessor. Per obtenir la informació del predecessor, cal fer una consulta a OVER_CONSULTA.
 
+<p align="center">
+<img align="center" src="img/tramit_inicial.png" />
+</p> 
 
+En el següent quadre es pot veure que només es pot respondre a la TGEN0001 amb una TGEN0002.
 
+<p align="center">
+<img align="center" src="img/tramit_resposta.png" />
+</p> 
