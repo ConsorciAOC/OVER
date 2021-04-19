@@ -13,7 +13,9 @@ Documentació d'integració d'OVER
    * [3.2. Obtenció de formulari de tramitació (OVER_FORMULARI)](#32-Obtenció-de-formulari-de-tramitació-OVER_FORMULARI)
       - [3.2.1. Petició dades específiques](#321-Petició-dades-específiques)
       - [3.2.2. Resposta dades específiques](#322-Resposta-dades-específiques)
-          - [3.2.2.1. Resultat de l’operació](#3221-Resultat-de-operació)   
+   * [3.3. Obtenció de context de tramitació (OVER_CONTEXT)](#33-Obtenció-de-context-de-tramitació-OVER_CONTEXT)
+      - [3.3.1. Petició dades específiques](#331-Petició-dades-específiques)
+      - [3.3.2. Resposta dades específiques](#332-Resposta-dades-específiques)
 
 
 # 1. Introducció
@@ -78,3 +80,15 @@ Permet obtenir d’OVER la informació del formulari de tramitació d’un deter
 <img align="center" src="img/resposta-dades-especifiques_1_OVER_FORMULARI.png" />
 </p>  
 
+## 3.2. Obtenció de context de tramitació OVER_CONTEXT
+Permet obtenir d’OVER el context de tramitació d’un tràmit pel qual no es vulgui obtenir el PDF de tramitació via la modalitat OVER_FORMULARI.
+
+### 3.2.1. Petició dades específiques
+<p align="center">
+<img align="center" src="img/peticio-dades-especifiques_OVER_CONTEXT.png" />
+</p>  
+
+### 3.2.2. Resposta dades específiques
+<p align="center">
+<img align="center" src="img/resposta-dades-especifiques_OVER_CONTEXT.png" />
+</p> 
