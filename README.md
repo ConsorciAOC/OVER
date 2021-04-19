@@ -352,7 +352,7 @@ El procés de tramitació sempre farà un registre d’entrada i un de sortida. 
 </registreDesti>
 ```
 
-### 4.2.3. Documentació annexa
+### 4.2.4. Documentació annexa
 
 La documentació que es vulgui annexar a la tramitació, caldrà fer-la via MTOM a la petició del SIRI. Els fitxers enviats es desaran com a documentació annexa.
 
