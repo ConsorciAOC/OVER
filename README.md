@@ -41,7 +41,7 @@ Documentació d'integració d'OVER
       - [3.11.1. Petició dades específiques](#3111-Petició-dades-específiques)
       - [3.11.2. Resposta dades específiques](#3112-Resposta-dades-específiques)    
 - [4. Exemple integració](#4-Exemple-integració)
-
+   * [4.1. Flux de tramitació](#41-Flux-de-tramitació)
 
 # 1. Introducció
 Aquest document detalla la missatgeria associada al servei de l'Oficina Virtual d’Emissió i Recepció, en endavant OVER. Per poder realitzar la integració cal conèixer prèviament la següent documentació:
@@ -248,3 +248,11 @@ Mètode de tramitació mitjançant integració sense necessitat d'omplir i manip
 </p> 
 
 # 4. Exemple integració
+Exemple de com integrar-se amb el servei de tramitació de l’OVER. S’explicarà com utilitzar l’OVER_INTEGRACIO sense necessitat de manipular formularis PDF. Els exemples van orientats a la integració amb la tramesa genèrica (TGEN).
+El procés de tramitació via integració està format per la part síncrona (OVER_INTEGRACIÓ) que retornarà de immediat la instància de tràmit i servei; i una part asíncrona que tramitarà el formulari i generarà tota la documentació pertinent, que podreu descarregar a posteriori.
+
+## 4.1. Flux de tramitació
+<p align="center">
+<img align="center" src="img/flux-de-tramitacio.png" />
+</p> 
+
