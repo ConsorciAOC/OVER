@@ -11,7 +11,7 @@ Documentació d'integració d'OVER
 Aquest document detalla la missatgeria associada al servei de l'Oficina Virtual d’Emissió i Recepció, en endavant OVER. Per poder realitzar la integració cal conèixer prèviament la següent documentació:
 •	Document de Missatgeria Genèrica de la PCI del Consorci AOC.
 
-# 2. Transmissions
+# 2. missatgeria
 Les dades i operacions disponibles a través del servei són les que es presenten a continuació:
 
 |EMISSOR|
