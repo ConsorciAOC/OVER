@@ -13,6 +13,8 @@ Aquest document detalla la missatgeria associada al servei de l'Oficina Virtual 
 # 2. Transmissions de dades disponibles
 Les dades i operacions disponibles a través del servei són les que es presenten a continuació:
 
-|EMISSOR | Descripció|
+|EMISSOR|
 |---- | ----------|
+|Consorci Administració Oberta de Catalunya|
 |PRODUCTE | MODALITAT| DESCRIPCIO|
+|---- | ----------|
