@@ -9,7 +9,7 @@ Documentació d'integració d'OVER
    * [3.1. Descàrrega de la documentació d'un tràmit (OVER_DOCUMENTACIO)](#31-Descàrrega-de-la-documentació-tràmit-OVER_DOCUMENTACIO)
       - [3.1.1. Petició dades específiques](#311-Petició-dades-específiques)
       - [3.1.2. Resposta dades específiques](#312-Resposta-dades-específiques)
-          - [3.1.2.1. Resultat de l’operació](#3121-Resultat-de-operació)   
+          - [3.1.2.1. Resultat de l’operació](#3121-Resultat-de-la-operació)   
    * [3.2. Obtenció de formulari de tramitació (OVER_FORMULARI)](#32-Obtenció-de-formulari-de-tramitació-OVER_FORMULARI)
       - [3.2.1. Petició dades específiques](#321-Petició-dades-específiques)
       - [3.2.2. Resposta dades específiques](#322-Resposta-dades-específiques)
@@ -87,7 +87,7 @@ Operació que permet recuperar la documentació generada en el procés de tramit
 <img align="center" src="img/resposta-dades-especifiques_2_OVER_DOCUMENTACIO.png" />
 </p>  
 
-#### 3.1.2.1 Resultat de operació
+#### 3.1.2.1 Resultat de la operació
 <p align="center">
 <img align="center" src="img/resultat_operacio_OVER_DOCUMENTACIO.png" />
 </p>  
