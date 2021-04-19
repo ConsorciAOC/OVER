@@ -46,7 +46,7 @@ Documentació d'integració d'OVER
        - [4.2.1. OVER_FORMULARI](#421-OVER_FORMULARI)
        - [4.2.2. Contingut del formulari](#422-Contingut-del-formualari)
        - [4.2.3. Registre d’entrada / sortida](#423-Registre-entrada-sortida)
-
+       - [4.2.4. Documentació annexa](#424-Documentació-annexa)
 
 # 1. Introducció
 Aquest document detalla la missatgeria associada al servei de l'Oficina Virtual d’Emissió i Recepció, en endavant OVER. Per poder realitzar la integració cal conèixer prèviament la següent documentació:
@@ -334,6 +334,37 @@ Dades en format XML que representen el contingut del formulari. Aquestes han de 
 ```
 
 ### 4.2.3. Registre entrada sortida
+
+El procés de tramitació sempre farà un registre d’entrada i un de sortida. En cas de disposar de registre, pots informar-lo i quan aquest es tramiti no es farà un nou registre.
+
+<b>Exemple de registre de sortida i entrada:</b>
+
+```xml
+<registreOrigen tipusRegistre="SARCAT">
+  <dataRegistre>2017-07-24T00:00:00</dataRegistre>
+  <assentamentRegistre>REG_SORT_1234</assentamentRegistre>
+  <evidenciaRegistre>PGVudjpFbnZlbG9...</evidenciaRegistre>
+</registreOrigen>
+<registreDesti tipusRegistre="EACAT">
+  <dataRegistre>2017-07-24T23:59:59</dataRegistre>
+  <assentamentRegistre>REG_ENT_1234</assentamentRegistre>
+  <evidenciaRegistre>PGVudjpFbnZlbG9...</evidenciaRegistre>
+</registreDesti>
+```
+
+### 4.2.3. Documentació annexa
+
+La documentació que es vulgui annexar a la tramitació, caldrà fer-la via MTOM a la petició del SIRI. Els fitxers enviats es desaran com a documentació annexa.
+
+<p align="center">
+<img align="center" src="img/documentacio_annexa.png" />
+</p> 
+
+
+
+
+
+
 
 
 
