@@ -806,7 +806,7 @@ Si la documentació encara no està disponible, retornarà la següent resposta:
 </over:respostaConsultaExpedient>
 ```
 
-### 4.5.6. OVER_DOCUMENTACIO petició
+### 4.5.7. OVER_DOCUMENTACIO petició
 
 ```xml
 <Peticion xmlns="http://gencat.net/scsp/esquemes/peticion">
@@ -855,7 +855,7 @@ Si la documentació encara no està disponible, retornarà la següent resposta:
 </Peticion>
 ```
 
-### 4.5.6. OVER_DOCUMENTACIO resposta
+### 4.5.8. OVER_DOCUMENTACIO resposta
 
 ```xml
 <over:respostaDocumentacioTramit xmlns:over="http://www.aoc.cat/over">
