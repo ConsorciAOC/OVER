@@ -298,4 +298,21 @@ En el següent quadre es pot veure que només es pot respondre a la TGEN0001 amb
     <codiEns>Codi INE10 de l'ENS origen</codiEns>
   </peticioFormulariTramit>
 </DatosEspecificos>
+```
+
+<b>Exemple de petició d’un tràmit de resposta (tràmit NO inicial):<b>
+En aquest cas cal indicar el tràmit predecessor “<codiInstanciaTramitPredecessor>”
+  
 ```xml
+<DatosEspecificos>
+  <peticioFormulariTramit xmlns="http://www.aoc.cat/over">
+    <codiCataleg>Codi INE10 de l'ENS destí</codiCataleg>
+    <codiFuncionalServei>IdServei (per exemple pel servei de la tramesa genèrica seria: TGEN0001)</codiFuncionalServei>
+    <codiFuncionalTramit>IdTràmit (per exemple pel tràmit de resposta de la tramesa genèrica seria: TGEN0002)</codiFuncionalTramit>
+    <codiInstanciaServei>Codi d'instància del servei / fil d'execució (en cas de tràmits NO inicials)</codiInstanciaServei>
+    <codiInstanciaTramitPredecessor>Codi d'instància de tràmit predecessor en cas del resposta a una instància de tràmit prèvia (tràmit NO inicial)</codiInstanciaTramitPredecessor>
+    <codiEns>Codi INE10 de l'ENS promotor/origen</codiEns>
+  </peticioFormulariTramit>
+</DatosEspecificos>
+``` 
+
