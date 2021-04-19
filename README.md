@@ -286,3 +286,16 @@ En el següent quadre es pot veure que només es pot respondre a la TGEN0001 amb
 <p align="center">
 <img align="center" src="img/tramit_resposta.PNG" />
 </p> 
+
+<b>Exemple de petició d’un tràmit inicial:<b>
+
+```xml
+<DatosEspecificos>
+  <peticioFormulariTramit xmlns="http://www.aoc.cat/over">
+    <codiCataleg>Codi INE10 de l'ENS promotor (destí)</codiCataleg>
+    <codiFuncionalServei>IdServei (per exemple pel servei de la tramesa genèrica seria: TGEN0001)</codiFuncionalServei>
+    <codiFuncionalTramit>IdTràmit (per exemple pel tràmit incial de la tramesa genèrica seria: TGEN0001)</codiFuncionalTramit>
+    <codiEns>Codi INE10 de l'ENS origen</codiEns>
+  </peticioFormulariTramit>
+</DatosEspecificos>
+```xml
