@@ -442,7 +442,7 @@ Si la documentació encara no està disponible, retornarà la següent resposta:
 ```
 
 
-### 4.4.3. VER_DOCUMENTACIO
+### 4.4.3. OVER_DOCUMENTACIO
 
 Requereix com a paràmetre d’entrada el codi instància tràmit retornat per OVER_INTEGRACIO.
 
