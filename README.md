@@ -462,7 +462,7 @@ Si la documentació encara no està disponible, retornarà la següent resposta:
 ## 4.3. Exemples XML
 
 
-### 4.3.1. OVER_INTEGRACIO–Petició
+### 4.3.1. OVER_INTEGRACIO Petició
 
 ```xml
 <Peticion>
