@@ -20,6 +20,6 @@ Les dades i operacions disponibles a través del servei són les que es presente
 |PRODUCTE | MODALITAT| DESCRIPCIO|
 |---- | ----------| ----------|
 |OVER | OVER_DOCUMENTACIO| Operació de descàrrega de documentació associada a un tràmit.|
-|PROVA|
+|     | OVER_FORMULARI   | Operació d’obtenció del formulari de tramitació d’un tràmit.|
 
 
