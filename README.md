@@ -16,7 +16,9 @@ Documentació d'integració d'OVER
    * [3.3. Obtenció de context de tramitació (OVER_CONTEXT)](#33-Obtenció-de-context-de-tramitació-OVER_CONTEXT)
       - [3.3.1. Petició dades específiques](#331-Petició-dades-específiques)
       - [3.3.2. Resposta dades específiques](#332-Resposta-dades-específiques)
-
+   * [3.4. Tramitació (OVER_TRAMITACIO)](#34-Tramitació-OVER_TRAMITACIO)
+      - [3.4.1. Petició dades específiques](#341-Petició-dades-específiques)
+      - [3.4.2. Resposta dades específiques](#342-Resposta-dades-específiques)
 
 # 1. Introducció
 Aquest document detalla la missatgeria associada al servei de l'Oficina Virtual d’Emissió i Recepció, en endavant OVER. Per poder realitzar la integració cal conèixer prèviament la següent documentació:
@@ -91,4 +93,23 @@ Permet obtenir d’OVER el context de tramitació d’un tràmit pel qual no es 
 ### 3.3.2. Resposta dades específiques
 <p align="center">
 <img align="center" src="img/resposta-dades-especifiques_OVER_CONTEXT.png" />
+</p> 
+
+## 3.4. Tramitació OVER_TRAMITACIO
+Aquesta modalitat permet iniciar un procés de tramitació a OVER.
+OVER permet classificar els tràmits que gestiona en dos grans grups:
+
+•	Tràmits inicials: són tràmits que no depenen de cap altre per a executar-se i, per tant, poden ser iniciats en qualsevol moment. Quan s’executen, aquest tràmits creen una instància de servei (fil d’execució / codiInstanciaServei).
+
+•	Tràmits no-inicials: són tràmits que només poden ser executats dins del context d’una instància de servei (fil d’execució / codiInstanciaServei) ja existent. Els tràmits no inicials depenen d’un tràmit previ.
+Així, amb aquesta modalitat, es poden executar tant tràmits inicials com tràmits no-inicials. Per aquesta segona opció, cal afegir a la petició d’execució el codi de la instància de servei (codiInstanciaServei).
+
+### 3.4.1. Petició dades específiques
+<p align="center">
+<img align="center" src="img/peticio-dades-especifiques_OVER_TRAMITACIO.png" />
+</p>  
+
+### 3.4.2. Resposta dades específiques
+<p align="center">
+<img align="center" src="img/resposta-dades-especifiques_OVER_TRAMITACIOT.png" />
 </p> 
