@@ -3,7 +3,7 @@ Documentació d'integració d'OVER
 
 # Taula de continguts
 
-- [1. Introducció](#1-introduccio)
+- [1. Introducció](#1-introducció)
 - [2. Transmissions de dades disponibles](#2-Transmissions-de-dades-disponibles)
 - [3. Missatgeria del servei](#3-Missatgeria-del-servei)
   * [3.1. Descàrrega de la documentació d'un tràmit (OVER_DOCUMENTACIO)](#31-Descàrrega-de-la-documentació)
