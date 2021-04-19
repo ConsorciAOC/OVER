@@ -93,6 +93,8 @@ Operació que permet recuperar la documentació generada en el procés de tramit
 </p>  
 
 ## 3.2. Obtenció de formulari de tramitació OVER_FORMULARI
+Ja no es fa servir, utilitzar la modalitat [OVER_INTEGRACIO](#311-Integració-sense-PDF-OVER_INTEGRACIO)
+
 Permet obtenir d’OVER la informació del formulari de tramitació d’un determinat tràmit (preompliment).
 
 ### 3.2.1. Petició dades específiques
