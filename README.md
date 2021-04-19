@@ -57,8 +57,10 @@ Documentació d'integració d'OVER
        - [4.5.2. OVER_INTEGRACIO - Resposta](#452-OVER_INTEGRACIO-resposta)
        - [4.5.3. MUX_DESCARREGA - Petició](#453-MUX_DESCARREGA-petició)
        - [4.5.4. MUX_DESCARREGA - Resposta](#454-MUX_DESCARREGA-resposta)
-       - [4.5.5. OVER_CONSULTA_EXPEDIENT - Petició](#455-OVER_CONSULTA_EXPEDIENT-resposta)
-       - [4.5.6. OVER_CONSULTA_EXPEDIENT - Resposta](#456-OVER_CONSULTA_EXPEDIENT-resposta)       
+       - [4.5.5. OVER_CONSULTA_EXPEDIENT - Petició](#455-OVER_CONSULTA_EXPEDIENT-petició)
+       - [4.5.6. OVER_CONSULTA_EXPEDIENT - Resposta](#456-OVER_CONSULTA_EXPEDIENT-resposta)     
+       - [4.5.7. OVER_DOCUMENTACIO - Petició](#457-OVER_DOCUMENTACIO-petició)     
+       - [4.5.8. OVER_DOCUMENTACIO - Resposta](#458-OVER_DOCUMENTACIO-resposta)                       
 
 # 1. Introducció
 Aquest document detalla la missatgeria associada al servei de l'Oficina Virtual d’Emissió i Recepció, en endavant OVER. Per poder realitzar la integració cal conèixer prèviament la següent documentació:
@@ -804,4 +806,85 @@ Si la documentació encara no està disponible, retornarà la següent resposta:
 </over:respostaConsultaExpedient>
 ```
 
+### 4.5.6. OVER_DOCUMENTACIO petició
 
+```xml
+<Peticion xmlns="http://gencat.net/scsp/esquemes/peticion">
+  <Atributos>
+    <IdPeticion>CU1-OVER_DOCUMENTACIO</IdPeticion>
+    <NumElementos>1</NumElementos>
+    <TimeStamp/>
+    <CodigoCertificado>OVER_DOCUMENTACIO</CodigoCertificado>
+    <CodigoProducto>OVER</CodigoProducto>
+    <DatosAutorizacion>
+      <IdentificadorSolicitante>800180001</IdentificadorSolicitante>
+      <NombreSolicitante>BCN</NombreSolicitante>
+      <Finalidad>PROVES</Finalidad>
+    </DatosAutorizacion>
+    <Funcionario>
+      <NombreCompletoFuncionario>FUNCIONARIO</NombreCompletoFuncionario>
+      <NifFuncionario/>
+      <EMailFuncionario/>
+    </Funcionario>
+  </Atributos>
+  <Solicitudes>
+    <SolicitudTransmision>
+      <DatosGenericos>
+        <Emisor>
+          <NifEmisor>Q0801175A</NifEmisor>
+          <NombreEmisor>CAOC</NombreEmisor>
+        </Emisor>
+        <Solicitante>
+          <IdentificadorSolicitante>800180001</IdentificadorSolicitante>
+          <NombreSolicitante>BCN</NombreSolicitante>
+          <Finalidad>PROVES</Finalidad>
+          <Consentimiento>Si</Consentimiento>
+        </Solicitante>
+        <Transmision>
+          <CodigoCertificado>OVER_DOCUMENTACIO</CodigoCertificado>
+          <IdSolicitud>1</IdSolicitud>
+        </Transmision>
+      </DatosGenericos>
+      <DatosEspecificos>
+        <peticioDocumentacioTramit xmlns="http://www.aoc.cat/over">
+          <codiInstanciaTramit>400547</codiInstanciaTramit>
+        </peticioDocumentacioTramit>
+      </DatosEspecificos>
+    </SolicitudTransmision>
+  </Solicitudes>
+</Peticion>
+```
+
+### 4.5.6. OVER_DOCUMENTACIO resposta
+
+```xml
+<over:respostaDocumentacioTramit xmlns:over="http://www.aoc.cat/over">
+  <over:resposta>
+    <over:document>
+      <over:tipus>PDF_ORIGINAL</over:tipus>
+      <over:contingut>JVBERi0xLjcNJeLjz9MNC...</over:contingut>
+    </over:document>
+    <over:document>
+      <over:tipus>ADJUNT</over:tipus>
+      <over:nom>holamon.pdf</over:nom>
+      <over:guid>6202a943-9f48-413b-93ca-c00ede00dfad</over:guid>
+    </over:document>
+    <over:document>
+      <over:tipus>TIQUET</over:tipus>
+      <over:guid>b6b9cc7f-9a1e-4e6c-91b3-e4dc7f24a110</over:guid>
+    </over:document>
+    <over:document>
+      <over:tipus>XML_TRAMIT</over:tipus>
+      <over:contingut>PD94bWwgdmVyc2lvbj0i...</over:contingut>
+    </over:document>
+    <over:document>
+      <over:tipus>XML_TRAMIT_SIGNAT</over:tipus>
+      <over:contingut>PGZvcm0xIElkPSJJZDEx...</over:contingut>
+    </over:document>
+  </over:resposta>
+  <over:resultat>
+    <over:codiResultat>0</over:codiResultat>
+    <over:descripcio/>
+  </over:resultat>
+</over:respostaDocumentacioTramit>
+```
