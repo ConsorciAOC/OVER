@@ -41,6 +41,8 @@ A continuació es detalla la missatgeria corresponent a les modalitats de consum
 Operació que permet recuperar la documentació generada en el procés de tramitació.
 
 ### 3.1.1. Petició dades específiques
-
+<p align="center">
+<img align="center" src="img/peticio-dades-especifiques.png" />
+</p>  
 
 
