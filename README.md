@@ -47,6 +47,9 @@ Documentació d'integració d'OVER
        - [4.2.2. Contingut del formulari](#422-Contingut-del-formualari)
        - [4.2.3. Registre d’entrada / sortida](#423-Registre-entrada-sortida)
        - [4.2.4. Documentació annexa](#424-Documentació-annexa)
+   * [4.3. Signatura](#43-Signatura)
+   * [4.4. Descàrrega de documentació](#44-Descàrrega-de-documentació)
+       - [4.4.1. MUX_DESCARREGA](#441-MUX_DESCARREGA)
 
 # 1. Introducció
 Aquest document detalla la missatgeria associada al servei de l'Oficina Virtual d’Emissió i Recepció, en endavant OVER. Per poder realitzar la integració cal conèixer prèviament la següent documentació:
@@ -361,10 +364,59 @@ La documentació que es vulgui annexar a la tramitació, caldrà fer-la via MTOM
 </p> 
 
 
+## 4.3. Signatura
+
+Les dades generades a partir de les dades rebudes es signaran amb el certificat del vostre organisme cedit al Consorci AOC. En cas de no disposar d’aquest certificat o que ja no sigui vàlid, es signarà amb el certificar propi del Consorci AOC.
+
+La signatura que es generarà serà XADES Enveloped amb segell de temps.
+
+## 4.4. Descàrrega de documentació
+
+Una vegada la tramitació s’hagi efectuat, podreu recuperar la documentació generada relacionada amb la tramitació. Els documents que s’obtindran seran:
+
+•	XML_TRAMIT: Les dades que composen el tràmit, generades a partir de les dades rebudes.
+•	XML_TRAMIT_SIGNAT: XML_TRAMIT signat amb el certificat cedit.
+•	PDF_ORIGINAL: PDF planxat amb les dades rebudes.
+•	ADJUNT: Documentació enviada per MTOM.
+•	TIQUET: PDF_ORIGINAL + dades rellevants de la tramitació (identificadors, data, registre,...)
+
+Aquesta documentació es pot recuperar per dues vies: MUX_DESCARREGA (requereix OVER_CONSULTA_EXPEDIENT previ) o OVER_DOCUMENTACIO.
 
 
+### 4.4.1. MUX_DESCARREGA
 
+Requereix com a paràmetre d’entrada el número d’assentament del tràmit generat pel MUX. Aquest es pot cercar via OVER_CONSULTA_EXPEDIENT amb el codi instància servei retornat per OVER_INTEGRACIO.
 
+En cas d’haver informat el registre propi i no haver fet servir MUX, aquesta via no funcionarà i cal fer servir OVER_DOCUMENTACIO.
 
+Si no es troba l’assentament demanat, retornarà la següent resposta:
+
+```xml
+<ns0:RespostaRegistre xmlns:ns0="http://net.aocat/MUX2/RespostaRegistre" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+  <ns0:Resultat codi="KO">
+    <ns0:Errors>
+      <ns0:Error>
+        <ns0:Codi>502</ns0:Codi>
+        <ns0:Descripcio>No s'ha trobat cap assentament amb número S2021002609</ns0:Descripcio>
+      </ns0:Error>
+    </ns0:Errors>
+  </ns0:Resultat>
+</ns0:RespostaRegistre>
+```
+
+Si la documentació encara no està disponible, retornarà la següent resposta:
+
+```xml
+<ns0:RespostaRegistre xmlns:ns0="http://net.aocat/MUX2/RespostaRegistre" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+  <ns0:Resultat codi="KO">
+    <ns0:Errors>
+      <ns0:Error>
+        <ns0:Codi>502</ns0:Codi>
+        <ns0:Descripcio>02311839943 No s'ha trobat cap document amb registre d'entrada ENTRA-2021-2462</ns0:Descripcio>
+      </ns0:Error>
+    </ns0:Errors>
+  </ns0:Resultat>
+</ns0:RespostaRegistre>
+```
 
 
