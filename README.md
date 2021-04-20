@@ -14,10 +14,17 @@ Documentació d'integració d'OVER
 
 <b>Històric de revisions</b>
 
-|Versió   |Data       |Autor          |Comentaris           |
-|----     |----       |----           |----                 |
-|V1.0	    |12/01/2012	|Projectes CAOC	|Creació del document |  
-|V1.1	    |05/11/2012	|Projectes CAOC	|Notificació directa vàlida per trameses amb signatura automàtica i incorporació d’usuari. Suport MTOM en tramitació OVER, descàrrega de documentació d’un tràmit a partir de número d’assentament i consulta de tràmits per rang de dates.|
+|Versió|Data       |Autor          |Comentaris           |
+|----  |----       |----           |----                 |
+|V1.0	 |12/01/2012	|Projectes CAOC	|Creació del document |  
+|V1.1	 |05/11/2012	|Projectes CAOC	|Notificació directa vàlida per trameses amb signatura automàtica i incorporació d’usuari. Suport MTOM en tramitació OVER, descàrrega de documentació d’un tràmit a partir de número d’assentament i consulta de tràmits per rang de dates.|
+|V1.2	|23/01/2013	|Projectes CAOC	|NOTIFICACIO_DIRECTA permet informar oficines de registre origen i destí.|
+|V1.3	|05/11/2013	|Operacions CAOC	|NOTIFICACIO_DIRECTA permet informar les adreces de correu electrònic a qui es notifica la tramesa.|
+|V1.4	|27/02/2014	|Operacions CAOC	|OVER_FORMULARI permet informar XML amb dades de preompliment.|
+|V1.5	|08/03/2018	|Suport Tècnic AOC	|Afegim detalls del flux per integracions|
+|V2.0	|05/10/2020	|Suport Tècnic AOC	|Revisió canvis URL a nous frontals PCI 3.0|
+|V2.1	|08/02/2021	|Suport Tècnic AOC	|Nova missatgeria consulta expedients|
+|V2.2	|01/04/2021	|Suport Tècnic AOC	|Nova modalitat OVER_INTEGRACIO|
 
 
 
