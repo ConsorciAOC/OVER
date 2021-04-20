@@ -1,0 +1,271 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns="http://www.aoc.cat/over" targetNamespace="http://www.aoc.cat/over" elementFormDefault="qualified" attributeFormDefault="unqualified">
+	<xs:element name="PAG_DADES_INTEGRACIO">
+		<xs:complexType>
+			<xs:sequence>
+				<xs:element name="TXT_EXPEDIENT" type="xs:string" minOccurs="0" />
+				<xs:element name="TXT_ASSUMPTE" type="TipusAssumpte" />
+				<xs:element name="EXPOSO" type="TipusExposo" />
+				<xs:element name="SOLLICITO" type="xs:string" minOccurs="0" />
+				<xs:element name="TIPUS_TRAMESA">
+					<xs:complexType>
+						<xs:sequence>
+							<xs:element name="TIPUS">
+								<xs:simpleType>
+									<xs:restriction base="xs:string">
+										<xs:enumeration value="INTERADMINISTRATIU"/>
+										<xs:enumeration value="DOCUMENTACIO_REGISTRADA_DESTINADA_A_ALTRES_AAPP"/>
+									</xs:restriction>
+								</xs:simpleType>
+							</xs:element>
+							<xs:element name="DOCUMENTACIO_REGISTRADA_DESTINADA_A_ALTRES_AAPP" minOccurs="0">
+								<xs:complexType>
+									<xs:sequence>
+										<xs:element name="ASSENTAMENT">
+											<xs:complexType>
+												<xs:sequence>
+													<xs:element name="DATA_HORA_ASSENTAMENT" type="xs:dateTime" />
+													<xs:element name="NUM_ASSENTAMENT" type="TipusNumAssentament" minOccurs="0" />
+												</xs:sequence>
+											</xs:complexType>
+										</xs:element>
+										<xs:element name="DADES_INTERESSAT" minOccurs="0">
+											<xs:complexType>
+												<xs:sequence>
+													<xs:choice>
+														<xs:element name="PERSONA_FISICA" type="TipusPersonaFisica" />
+														<xs:element name="PERSONA_JURIDICA_ORGANISME" type="TipusPersonaJuridicaOrganisme" />
+													</xs:choice>
+												</xs:sequence>
+											</xs:complexType>
+										</xs:element>
+										<xs:element name="DADES_REPRESENTAT" minOccurs="0">
+											<xs:complexType>
+												<xs:sequence>
+													<xs:choice>
+														<xs:element name="PERSONA_FISICA" type="TipusPersonaFisica" />
+														<xs:element name="PERSONA_JURIDICA_ORGANISME" type="TipusPersonaJuridicaOrganisme" />
+													</xs:choice>
+												</xs:sequence>
+											</xs:complexType>
+										</xs:element>
+									</xs:sequence>
+								</xs:complexType>
+							</xs:element>
+						</xs:sequence>
+					</xs:complexType>
+				</xs:element>
+				<xs:element name="INFORMACIO_COMPLEMENTARIA" minOccurs="0">
+					<xs:complexType>
+						<xs:sequence>
+							<xs:element name="REFERENCIA_EXTERNA" type="xs:string" minOccurs="0"/>
+							<xs:element name="OBSERVACIONS" type="TipusObservacions" minOccurs="0"/>
+							<xs:element name="DOCUMENTACIO_ADJUNTA" minOccurs="0">
+								<xs:simpleType>
+									<xs:restriction base="xs:string">
+										<xs:enumeration value="SENSE_DOCUMENTACIO_ADJUNTA"/>
+										<xs:enumeration value="DOCUMENTACIO_FORMAT_ELECTRONIC"/>
+										<xs:enumeration value="DOCUMENTACIO_SUPORT_NO_DIGITALITZABLE"/>
+										<xs:enumeration value="DOCUMENTACIO_FORMAT_ELECTRONIC_SUPORT_NO_DIGITALITZABLE"/>
+									</xs:restriction>
+								</xs:simpleType>
+							</xs:element>
+						</xs:sequence>
+					</xs:complexType>
+				</xs:element>
+				<xs:element name="DOCUMENTACIO_FORMAT_ELECTRONIC_URL_DESCARREGA" minOccurs="0">
+					<xs:complexType>
+						<xs:sequence>
+							<xs:element name="DOCUMENTACIO" minOccurs="1" maxOccurs="unbounded">
+								<xs:complexType>
+									<xs:sequence>
+										<xs:element name="URL" type="xs:string"/>
+										<xs:element name="OBSERVACIONS" type="xs:string" minOccurs="0"/>
+									</xs:sequence>
+								</xs:complexType>
+							</xs:element>
+						</xs:sequence>
+					</xs:complexType>
+				</xs:element>
+				<xs:element name="DOCUMENTACIO_POSTERIORI_NO_DIGITALITZABLE" minOccurs="0">
+					<xs:complexType>
+						<xs:sequence>
+							<xs:element name="DESCRIPCIO_DOCUMENTACIO" type="xs:string" minOccurs="0" />
+						</xs:sequence>
+					</xs:complexType>
+				</xs:element>
+			</xs:sequence>
+		</xs:complexType>
+	</xs:element>
+	<xs:complexType name="TipusPersonaFisica">
+		<xs:sequence>
+			<xs:element name="NOM" type="TipusNom" />
+			<xs:element name="NOM_SENTIT" type="TipusNom" minOccurs="0" />
+			<xs:element name="PRIMER_COGNOM" type="TipusCognom1" />
+			<xs:element name="SEGON_COGNOM" type="TipusCognom2" minOccurs="0" />
+			<xs:choice minOccurs="0">
+				<xs:element name="DOCUMENT_NIF">
+					<xs:complexType>
+						<xs:sequence>
+							<xs:element name="DOCUMENT" type="TipusNIF" />
+						</xs:sequence>
+					</xs:complexType>
+				</xs:element>
+				<xs:element name="DOCUMENT_PASSAPORT">
+					<xs:complexType>
+						<xs:sequence>
+							<xs:element name="DOCUMENT" type="TipusPassaport" />
+						</xs:sequence>
+					</xs:complexType>
+				</xs:element>
+				<xs:element name="DOCUMENT_NIE">
+					<xs:complexType>
+						<xs:sequence>
+							<xs:element name="DOCUMENT" type="TipusNIE" />
+						</xs:sequence>
+					</xs:complexType>
+				</xs:element>
+				<xs:element name="DOCUMENT_ALTRES_PRESONA_FISICA">
+					<xs:complexType>
+						<xs:sequence>
+							<xs:element name="DOCUMENT" type="TipusAltresPersonaFisica" />
+						</xs:sequence>
+					</xs:complexType>
+				</xs:element>
+			</xs:choice>
+			<xs:element name="PERSONA_DADES_COMPLEMENTARIES" type="TipusPersonaDadesComplementaries" minOccurs="0"/>
+		</xs:sequence>
+	</xs:complexType>
+	<xs:complexType name="TipusPersonaJuridicaOrganisme">
+		<xs:sequence>
+			<xs:element name="RAO_SOCIAL" type="TipusRaoSocial" />
+			<xs:element name="DOCUMENT_NIF" minOccurs="0">
+				<xs:complexType>
+					<xs:sequence>
+						<xs:element name="DOCUMENT" type="TipusCIF" />
+					</xs:sequence>
+				</xs:complexType>
+			</xs:element>
+			<xs:element name="PERSONA_DADES_COMPLEMENTARIES" type="TipusPersonaDadesComplementaries" minOccurs="0"/>
+		</xs:sequence>
+	</xs:complexType>
+	<xs:complexType name="TipusPersonaDadesComplementaries">
+		<xs:sequence>
+			<xs:element name="CANAL_PREFERENT_NOTIFICACIO" minOccurs="0">
+				<xs:complexType>
+					<xs:sequence>
+						<xs:choice>
+							<xs:element name="ADRECA_POSTAL">
+								<xs:complexType>
+									<xs:sequence>
+										<xs:element name="CODI_POSTAL" type="TipusCP" />
+										<xs:element name="ADRECA" type="xs:string" />
+									</xs:sequence>
+								</xs:complexType>
+							</xs:element>
+							<xs:element name="ADRECA_ELECTRONICA_HABILITADA" type="TipusEmail" />
+						</xs:choice>
+					</xs:sequence>
+				</xs:complexType>
+			</xs:element>
+			<xs:element name="FORA_CATALUNYA" minOccurs="0">
+				<xs:simpleType>
+					<xs:restriction base="xs:string">
+						<xs:enumeration value="SI"/>
+						<xs:enumeration value="NO"/>
+					</xs:restriction>
+				</xs:simpleType>
+			</xs:element>
+			<xs:element name="TELEFON_CONTACTE" type="TipusTelefon" minOccurs="0" />
+			<xs:element name="CORREU_ELECTRONIC_CONTACTE" type="TipusEmail" minOccurs="0" />
+			<xs:element name="OBSERVACIONS" type="xs:string" minOccurs="0" />
+		</xs:sequence>
+	</xs:complexType>
+	<xs:simpleType name="TipusAssumpte">
+		<xs:restriction base="xs:string">
+			<xs:minLength value="1"/>
+			<xs:maxLength value="400"/>
+		</xs:restriction>
+	</xs:simpleType>
+	<xs:simpleType name="TipusExposo">
+		<xs:restriction base="xs:string">
+			<xs:minLength value="1"/>
+		</xs:restriction>
+	</xs:simpleType>
+	<xs:simpleType name="TipusNom">
+		<xs:restriction base="xs:string">
+			<xs:maxLength value="30"/>
+		</xs:restriction>
+	</xs:simpleType>
+	<xs:simpleType name="TipusCognom1">
+		<xs:restriction base="xs:string">
+			<xs:maxLength value="30"/>
+		</xs:restriction>
+	</xs:simpleType>
+	<xs:simpleType name="TipusCognom2">
+		<xs:restriction base="xs:string">
+			<xs:maxLength value="30"/>
+		</xs:restriction>
+	</xs:simpleType>
+	<xs:simpleType name="TipusRaoSocial">
+		<xs:restriction base="xs:string">
+			<xs:minLength value="1"/>
+			<xs:maxLength value="80"/>
+		</xs:restriction>
+	</xs:simpleType>
+	<xs:simpleType name="TipusNumAssentament">
+		<xs:restriction base="xs:string">
+			<xs:minLength value="1"/>
+			<xs:maxLength value="100"/>
+		</xs:restriction>
+	</xs:simpleType>
+	<xs:simpleType name="TipusNIF">
+		<xs:restriction base="xs:string">
+			<xs:pattern value="[0-9]{8}[A-Z]"/>
+		</xs:restriction>
+	</xs:simpleType>
+	<xs:simpleType name="TipusPassaport">
+		<xs:restriction base="xs:string">
+			<xs:minLength value="1"/>
+			<xs:maxLength value="100"/>
+		</xs:restriction>
+	</xs:simpleType>
+	<xs:simpleType name="TipusNIE">
+		<xs:restriction base="xs:string">
+			<xs:pattern value="[XYZ]{1}[0-9]{7}[A-Z]"/>
+		</xs:restriction>
+	</xs:simpleType>
+	<xs:simpleType name="TipusAltresPersonaFisica">
+		<xs:restriction base="xs:string">
+			<xs:minLength value="1"/>
+			<xs:maxLength value="160"/>
+		</xs:restriction>
+	</xs:simpleType>
+	<xs:simpleType name="TipusCIF">
+		<xs:restriction base="xs:string">
+			<xs:pattern value="[ABCDEFGHJKLMNPQRSUVW][0-9]{7}[0-9A-J]"/>
+		</xs:restriction>
+	</xs:simpleType>
+	<xs:simpleType name="TipusCP">
+		<xs:restriction base="xs:string">
+			<xs:minLength value="5"/>
+			<xs:maxLength value="5"/>
+		</xs:restriction>
+	</xs:simpleType>
+	<xs:simpleType name="TipusTelefon">
+		<xs:restriction base="xs:string">
+			<xs:maxLength value="20"/>
+		</xs:restriction>
+	</xs:simpleType>
+	<xs:simpleType name="TipusEmail">
+		<xs:restriction base="xs:string">
+			<xs:pattern value="[^@]+@[^\.]+\..+"/>
+			<xs:maxLength value="160"/>
+		</xs:restriction>
+	</xs:simpleType>
+	<xs:simpleType name="TipusObservacions">
+		<xs:restriction base="xs:string">
+			<xs:maxLength value="160"/>
+		</xs:restriction>
+	</xs:simpleType>
+</xs:schema>
