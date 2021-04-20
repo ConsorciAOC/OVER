@@ -120,6 +120,8 @@ Les dades i operacions disponibles a través del servei són les que es presente
 # 3. Missatgeria del servei
 A continuació es detalla la missatgeria corresponent a les modalitats de consum del producte OVER.
 
+Schema de les modalitats OVER [dadesEspecifiques.xsd](dadesEspecifiques.xsd)
+
 ## 3.1. Descàrrega de la documentació tràmit OVER_DOCUMENTACIO
 Operació que permet recuperar la documentació generada en el procés de tramitació.
 
@@ -937,10 +939,12 @@ Si la documentació encara no està disponible, retornarà la següent resposta:
     </over:document>
     <over:document>
       <over:tipus>XML_TRAMIT</over:tipus>
+      <over:nom>XML_TRAMIT.xml</over:nom>
       <over:contingut>PD94bWwgdmVyc2lvbj0i...</over:contingut>
     </over:document>
     <over:document>
       <over:tipus>XML_TRAMIT_SIGNAT</over:tipus>
+      <over:nom>XML_TRAMIT_SIGNAT.xml</over:nom>
       <over:contingut>PGZvcm0xIElkPSJJZDEx...</over:contingut>
     </over:document>
   </over:resposta>
