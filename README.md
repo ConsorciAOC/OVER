@@ -147,7 +147,7 @@ Operació que permet recuperar la documentació generada en el procés de tramit
 | --- | --- |
 | respostaDocumentacioTramit/peticioDocumentacioTramit | Bloc de dades corresponent a la petició que genera la resposta |
 | respostaDocumentacioTramit/resposta/document | Bloc de dades corresponent a un document de tramitació |
-| //resposta/document/tipus | Tipus del document: <ul><li>ADJUNT: document adjunt (adjunt al formulari de tramitació)</li><li>ALTRES: altres evidències</li><li>MIS_ORIGINAL: dades MIS associades al formulari del PDF tramitat</li><li>MIS_ACTUALITZAT:  dades MIS actualitzades amb informació obtinguda durant el procés de tramitació</li><li>MUX_EVIDENCIA_ENTRADA: evidència de registre d'entrada</li><li>MUX_EVIDENCIA_SORTIDA: evidència de registre de sortida</li><li>PDF_DESCARREGA: PDF del tràmit descarregat</li><li>PDF_ORIGINAL: PDF del tràmit omplert per l'usuari</li><li>TIQUET: PDF amb el rebut dels registres electrònics</li><li>INT_PETICIO: Petició original si s'ha tramitat via OVER_INTEGRACIO</li><li>XML_DADES: XML de dades del formulari a tramitar</li><li>XML_DADES_SIGNAT: XML de dades signadades (si s'ha tramitat via OVER_INTEGRACIO)</li></ul> |
+| //resposta/document/tipus | Tipus del document: <ul><li>ADJUNT: document adjunt (adjunt al formulari de tramitació)</li><li>ALTRES: altres evidències</li><li>MIS_ORIGINAL: dades MIS associades al formulari del PDF tramitat</li><li>MIS_ACTUALITZAT:  dades MIS actualitzades amb informació obtinguda durant el procés de tramitació</li><li>MUX_EVIDENCIA_ENTRADA: evidència de registre d'entrada</li><li>MUX_EVIDENCIA_SORTIDA: evidència de registre de sortida</li><li>PDF_DESCARREGA: PDF del tràmit descarregat</li><li>PDF_ORIGINAL: PDF del tràmit omplert per l'usuari</li><li>TIQUET: PDF amb el rebut dels registres electrònics</li><li>INT_PETICIO: Petició original si s'ha tramitat via [OVER_INTEGRACIO](#311-Integració-sense-PDF-OVER_INTEGRACIO)</li><li>XML_DADES: XML de dades del formulari a tramitar</li><li>XML_DADES_SIGNAT: XML de dades signadades (si s'ha tramitat via [OVER_INTEGRACIO](#311-Integració-sense-PDF-OVER_INTEGRACIO))</li></ul> |
 | //resposta/document/nom | Nom del document en cas d’adjunt |
 | //resposta/document/contingut | Document codificat en base64 |
 | respostaDocumentacioTramit/resposta/dadesTramit | Bloc de dades corresponent a dades detallades del tràmit |
@@ -335,9 +335,9 @@ Mètode de tramitació mitjançant integració sense necessitat d'omplir i manip
 </p> 
 
 # 4. Exemple integració
-Exemple de com integrar-se amb el servei de tramitació de l’OVER. S’explicarà com utilitzar l’OVER_INTEGRACIO sense necessitat de manipular formularis PDF. Els exemples van orientats a la integració amb la tramesa genèrica (TGEN).
+Exemple de com integrar-se amb el servei de tramitació de l’OVER. S’explicarà com utilitzar l'[OVER_INTEGRACIO](#311-Integració-sense-PDF-OVER_INTEGRACIO) sense necessitat de manipular formularis PDF. Els exemples van orientats a la integració amb la tramesa genèrica (TGEN).
 
-El procés de tramitació via integració està format per la part síncrona (OVER_INTEGRACIÓ) que retornarà de immediat la instància de tràmit i servei; i una part asíncrona que tramitarà el formulari i generarà tota la documentació pertinent, que podreu descarregar a posteriori.
+El procés de tramitació via integració està format per la part síncrona ([OVER_INTEGRACIO](#311-Integració-sense-PDF-OVER_INTEGRACIO)) que retornarà de immediat la instància de tràmit i servei; i una part asíncrona que tramitarà el formulari i generarà tota la documentació pertinent, que podreu descarregar a posteriori.
 
 
 Exemple XML de la [TGEN0001.xml](TGEN0001.xml)
@@ -358,7 +358,7 @@ Omplir la missatgeria definida del bloc [peticioFormulariTramit](#3111-Petició-
 
 Un tràmit inicial es considera aquell que desencadena la resta del procés interadministratiu. Per exemple, en una subvenció qualsevol, el tràmit inicial és el de la sol·licitud.
 
-Un tràmit NO inicial sempre és la resposta d'un tràmit ja processat. No es pot iniciar mai un tràmit d'aquest, sense fer referència a un predecessor. Per obtenir la informació del predecessor, cal fer una consulta a OVER_CONSULTA.
+Un tràmit NO inicial sempre és la resposta d'un tràmit ja processat. No es pot iniciar mai un tràmit d'aquest, sense fer referència a un predecessor. Per obtenir la informació del predecessor, cal fer una consulta a [OVER_CONSULTA](#36-Consulta-de-tràmits-OVER_CONSULTA).
 
 <p align="center">
 <img align="center" src="img/tramit_inicial.PNG" />
@@ -461,14 +461,14 @@ Una vegada la tramitació s’hagi efectuat, podreu recuperar la documentació g
 
 •	TIQUET: PDF_ORIGINAL + dades rellevants de la tramitació (identificadors, data, registre,...)
 
-Aquesta documentació es pot recuperar per dues vies: MUX_DESCARREGA (requereix OVER_CONSULTA_EXPEDIENT previ) o OVER_DOCUMENTACIO.
+Aquesta documentació es pot recuperar per dues vies: MUX_DESCARREGA (requereix [OVER_CONSULTA_EXPEDIENT](#38-Consulta-expedient-OVER_CONSULTA_EXPEDIENT) previ) o [OVER_DOCUMENTACIO](#31-Descàrrega-de-la-documentació-tràmit-OVER_DOCUMENTACIO)  .
 
 
 ### 4.4.1. MUX_DESCARREGA
 
-Requereix com a paràmetre d’entrada el número d’assentament del tràmit generat pel MUX. Aquest es pot cercar via OVER_CONSULTA_EXPEDIENT amb el codi instància servei retornat per OVER_INTEGRACIO.
+Requereix com a paràmetre d’entrada el número d’assentament del tràmit generat pel MUX. Aquest es pot cercar via [OVER_CONSULTA_EXPEDIENT](#38-Consulta-expedient-OVER_CONSULTA_EXPEDIENT) amb el codi instància servei retornat per [OVER_INTEGRACIO](#311-Integració-sense-PDF-OVER_INTEGRACIO).
 
-En cas d’haver informat el registre propi i no haver fet servir MUX, aquesta via no funcionarà i cal fer servir OVER_DOCUMENTACIO.
+En cas d’haver informat el registre propi i no haver fet servir MUX, aquesta via no funcionarà i cal fer servir [OVER_DOCUMENTACIO](#31-Descàrrega-de-la-documentació-tràmit-OVER_DOCUMENTACIO)  .
 
 Si no es troba l’assentament demanat, retornarà la següent resposta:
 
@@ -502,7 +502,7 @@ Si la documentació encara no està disponible, retornarà la següent resposta:
 
 ### 4.4.2. OVER_CONSULTA_EXPEDIENT
 
-En cas de no disposar de número d’assentament, cal cercar-lo a partir del codi instància servei retornat per OVER_INTEGRACIO.
+En cas de no disposar de número d’assentament, cal cercar-lo a partir del codi instància servei retornat per [OVER_INTEGRACIO](#311-Integració-sense-PDF-OVER_INTEGRACIO).
 
 Si la documentació encara no està disponible, retornarà la següent resposta:
 
@@ -518,7 +518,7 @@ Si la documentació encara no està disponible, retornarà la següent resposta:
 
 ### 4.4.3. OVER_DOCUMENTACIO
 
-Requereix com a paràmetre d’entrada el codi instància tràmit retornat per OVER_INTEGRACIO.
+Requereix com a paràmetre d’entrada el codi instància tràmit retornat per [OVER_INTEGRACIO](#311-Integració-sense-PDF-OVER_INTEGRACIO).
 
 Si la documentació encara no està disponible, retornarà la següent resposta:
 
