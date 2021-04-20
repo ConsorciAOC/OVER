@@ -1132,7 +1132,7 @@ Si la documentació encara no està disponible, retornarà la següent resposta:
 
 ### 4.5.11. OVER_ACTUALITZACIO petició
 
-En aquest cas actualitzem el número de expedient relacionat amb el ```<codiInstanciaServei>``` 101167 d'Abrera.
+En aquest cas actualitzem el número d'expedient relacionat amb el ```<codiInstanciaServei>``` 101167 d'Abrera.
 
 ```xml
 <Peticion xmlns="http://gencat.net/scsp/esquemes/peticion">
@@ -1211,7 +1211,84 @@ Numero d'expedient actualitzat dintre de l'EACAT.
 <img align="center" src="img/OVER_ACTUALITZCIO_num_expedient.png" />
 </p> 
 
+En aquest cas actualitzem l'estat del número d'expedient relacionat amb el ```<codiInstanciaServei>``` 101167 d'Abrera.
 
+```xml
+<Peticion xmlns="http://gencat.net/scsp/esquemes/peticion">
+  <Atributos>
+    <IdPeticion>CU1-OVER_ACTUALITZACIO-${=(long)(System.currentTimeMillis())}</IdPeticion>
+    <NumElementos>1</NumElementos>
+    <TimeStamp/>
+    <CodigoCertificado>OVER_ACTUALITZACIO</CodigoCertificado>
+    <CodigoProducto>OVER</CodigoProducto>
+    <DatosAutorizacion>
+      <IdentificadorSolicitante>800180001</IdentificadorSolicitante>
+      <NombreSolicitante>BCN</NombreSolicitante>
+      <Finalidad>PROVES</Finalidad>
+    </DatosAutorizacion>
+    <Emisor>
+      <NifEmisor>Q0801175A</NifEmisor>
+      <NombreEmisor>CAOC</NombreEmisor>
+    </Emisor>
+    <Funcionario>
+      <NombreCompletoFuncionario>FUNCIONARIO</NombreCompletoFuncionario>
+      <NifFuncionario/>
+      <EMailFuncionario/>
+    </Funcionario>
+  </Atributos>
+  <Solicitudes>
+    <SolicitudTransmision>
+      <DatosGenericos>
+        <Emisor>
+          <NifEmisor>Q0801175A</NifEmisor>
+          <NombreEmisor>CAOC</NombreEmisor>
+        </Emisor>
+        <Solicitante>
+          <IdentificadorSolicitante>800180001</IdentificadorSolicitante>
+          <NombreSolicitante>BCN</NombreSolicitante>
+          <Finalidad>PROVES</Finalidad>
+          <Consentimiento>Si</Consentimiento>
+          <Funcionario>
+            <NombreCompletoFuncionario/>
+            <NifFuncionario/>
+            <EMailFuncionario/>
+          </Funcionario>
+        </Solicitante>
+        <Titular>
+          <TipoDocumentacion>NIF</TipoDocumentacion>
+          <Documentacion/>
+          <NombreCompleto/>
+          <Nombre/>
+          <Apellido1/>
+          <Apellido2/>
+        </Titular>
+        <Transmision>
+          <CodigoCertificado>OVER_ACTUALITZACIO</CodigoCertificado>
+          <IdSolicitud>1</IdSolicitud>
+          <IdTransmision>EXPEDIENT</IdTransmision>
+          <FechaGeneracion/>
+        </Transmision>
+      </DatosGenericos>
+      <DatosEspecificos>
+        <peticioActualitzacioTramit xmlns="http://www.aoc.cat/over">
+          <codiInstanciaServei>101167</codiInstanciaServei>
+          <dada>
+            <tipus>ESTAT</tipus>
+            <dada/>
+            <valor>Estat pendent</valor>
+          </dada>
+        </peticioActualitzacioTramit>
+      </DatosEspecificos>
+    </SolicitudTransmision>
+  </Solicitudes>
+</Peticion>
+```
+
+Estat actualitzat dintre de l'EACAT.
+
+<p align="center">
+<img align="center" src="img/OVER_ACTUALITZCIO_estat.png" />
+</p> 
 
 ### 4.5.12. OVER_ACTUALITZACIO resposta
 
