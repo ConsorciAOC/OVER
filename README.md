@@ -1371,6 +1371,86 @@ Tipologia ```ALTRES``` actualitzat dintre de l'EACAT. Aquesta actualització ser
 </p> 
 
 
+En aquest cas actualitzem l'expedient relacionat amb el ```<codiInstanciaServei>``` 101167 d'Abrera amb un comentari, afegint informació a l'element de la missatgeria ```dada```.
+
+```xml
+<Peticion xmlns="http://gencat.net/scsp/esquemes/peticion">
+  <Atributos>
+    <IdPeticion>CU1-OVER_ACTUALITZACIO-${=(long)(System.currentTimeMillis())}</IdPeticion>
+    <NumElementos>1</NumElementos>
+    <TimeStamp/>
+    <CodigoCertificado>OVER_ACTUALITZACIO</CodigoCertificado>
+    <CodigoProducto>OVER</CodigoProducto>
+    <DatosAutorizacion>
+      <IdentificadorSolicitante>800180001</IdentificadorSolicitante>
+      <NombreSolicitante>BCN</NombreSolicitante>
+      <Finalidad>PROVES</Finalidad>
+    </DatosAutorizacion>
+    <Emisor>
+      <NifEmisor>Q0801175A</NifEmisor>
+      <NombreEmisor>CAOC</NombreEmisor>
+    </Emisor>
+    <Funcionario>
+      <NombreCompletoFuncionario>FUNCIONARIO</NombreCompletoFuncionario>
+      <NifFuncionario/>
+      <EMailFuncionario/>
+    </Funcionario>
+  </Atributos>
+  <Solicitudes>
+    <SolicitudTransmision>
+      <DatosGenericos>
+        <Emisor>
+          <NifEmisor>Q0801175A</NifEmisor>
+          <NombreEmisor>CAOC</NombreEmisor>
+        </Emisor>
+        <Solicitante>
+          <IdentificadorSolicitante>800180001</IdentificadorSolicitante>
+          <NombreSolicitante>BCN</NombreSolicitante>
+          <Finalidad>PROVES</Finalidad>
+          <Consentimiento>Si</Consentimiento>
+          <Funcionario>
+            <NombreCompletoFuncionario/>
+            <NifFuncionario/>
+            <EMailFuncionario/>
+          </Funcionario>
+        </Solicitante>
+        <Titular>
+          <TipoDocumentacion>NIF</TipoDocumentacion>
+          <Documentacion/>
+          <NombreCompleto/>
+          <Nombre/>
+          <Apellido1/>
+          <Apellido2/>
+        </Titular>
+        <Transmision>
+          <CodigoCertificado>OVER_ACTUALITZACIO</CodigoCertificado>
+          <IdSolicitud>1</IdSolicitud>
+          <IdTransmision>EXPEDIENT</IdTransmision>
+          <FechaGeneracion/>
+        </Transmision>
+      </DatosGenericos>
+      <DatosEspecificos>
+        <peticioActualitzacioTramit xmlns="http://www.aoc.cat/over">
+          <codiInstanciaServei>101112</codiInstanciaServei>
+          <dada>
+            <tipus>ALTRES</tipus>
+            <dada>DADES PROVES</dada>
+            <valor>PROVES</valor>
+          </dada>
+        </peticioActualitzacioTramit>
+      </DatosEspecificos>
+    </SolicitudTransmision>
+  </Solicitudes>
+</Peticion>
+```
+
+Tipologia ```ALTRES``` amb valor a l'element de la missatgeria ```dada``` actualitzat dintre de l'EACAT. Aquesta actualització serà visible a l'origen i destí.
+
+<p align="center">
+<img align="center" src="img/OVER_ACTUALITZCIO_dades.png" />
+</p> 
+
+
 ### 4.5.12. OVER_ACTUALITZACIO resposta
 
 Resposta en el cas d'actualitzar el número d'epxpedient.
