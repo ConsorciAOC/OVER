@@ -17,6 +17,7 @@ Documentació d'integració d'OVER
 |Versió   |Data       |Autor          |Comentaris           |
 |----     |----       |----           |----                 |
 |V1.0	    |12/01/2012	|Projectes CAOC	|Creació del document |  
+|V1.1	    |05/11/2012	|Projectes CAOC	|Notificació directa vàlida per trameses amb signatura automàtica i incorporació d’usuari. Suport MTOM en tramitació OVER, descàrrega de documentació d’un tràmit a partir de número d’assentament i consulta de tràmits per rang de dates.|
 
 
 
