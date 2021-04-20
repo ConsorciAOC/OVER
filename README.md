@@ -146,6 +146,17 @@ Operació que permet recuperar la documentació generada en el procés de tramit
 | //resposta/document/tipus | Tipus del document: <ul><li>ADJUNT: document adjunt (adjunt al formulari de tramitació)</li><li>ALTRES: altres evidències</li><li>MIS_ORIGINAL: dades MIS associades al formulari del PDF tramitat</li><li>MIS_ACTUALITZAT:  dades MIS actualitzades amb informació obtinguda durant el procés de tramitació</li><li>MUX_EVIDENCIA_ENTRADA: evidència de registre d'entrada</li><li>MUX_EVIDENCIA_SORTIDA: evidència de registre de sortida</li><li>PDF_DESCARREGA: PDF del tràmit descarregat</li><li>PDF_ORIGINAL: PDF del tràmit omplert per l'usuari</li><li>TIQUET: PDF amb el rebut dels registres electrònics</li><li>INT_PETICIO: Petició original si s'ha tramitat via OVER_INTEGRACIO</li><li>XML_DADES: XML de dades del formulari a tramitar</li><li>XML_DADES_SIGNAT: XML de dades signadades (si s'ha tramitat via OVER_INTEGRACIO)</li></ul> |
 | //resposta/document/nom | Nom del document en cas d’adjunt |
 | //resposta/document/contingut | Document codificat en base64 |
+| respostaDocumentacioTramit/resposta/dadesTramit | Bloc de dades corresponent a dades detallades del tràmit |
+| //dadesTramit/codiInstanciaServei | Codi d'instància del servei / fil d'execució |
+| //dadesTramit/codiInstanciaTramit | Codi d'instància del tràmit |
+| //dadesTramit/codiInstanciaTramitPredecessor | Codi d'instància del tràmit predecessor |
+| //dadesTramit/dataTramit | Data de tramitació |
+| //dadesTramit/codiEnsOrigen | Codi INE10 de l'ens origen |
+| //dadesTramit/codiEnsDesti | Codi INE10 de l'ens destí |
+| //dadesTramit/nomEnsOrigen | Nom de l'ens origen |
+| //dadesTramit/nomEnsDesti | Nom de l'ens destí |
+| //dadesTramit/registreSortida | Bloc de dades corresponent a l'assentament de sortida (número i data) |
+| //dadesTramit/registreEntrada | Bloc de dades corresponent a l'assentament d'entrada (número i data) |
 | //resposta/document/guid | GUID del document que permet la descàrrega via URL de descàrrega (emprat en documents pesats els quals no es poden incrustar en el XML de resposta) |
 | respostaDocumentacioTramit/resultat | Bloc que informa del resultat de l'operació. Per més detalls consulteu [3.1.2.1. Resultat de l’operació](#3121-Resultat-de-la-operació) |
 
