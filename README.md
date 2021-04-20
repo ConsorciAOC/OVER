@@ -1132,7 +1132,7 @@ Si la documentació encara no està disponible, retornarà la següent resposta:
 
 ### 4.5.11. OVER_ACTUALITZACIO petició
 
-En aquest cas actualitzem el número de expedient relacionat amb el (codiInstanciaServei) 101167 d'Abrera.
+En aquest cas actualitzem el número de expedient relacionat amb el ```<codiInstanciaServei>``` 101167 d'Abrera.
 
 ```xml
 <Peticion xmlns="http://gencat.net/scsp/esquemes/peticion">
