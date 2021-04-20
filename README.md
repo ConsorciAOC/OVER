@@ -1215,6 +1215,8 @@ Numero d'expedient actualitzat dintre de l'EACAT.
 
 ### 4.5.12. OVER_ACTUALITZACIO resposta
 
+Resposta en el cas d'actualitzar el número d'epxpedient.
+
 ```xml
  <over:respostaActualitzacioTramit xmlns:over="http://www.aoc.cat/over">
     <over:peticioActualitzacioTramit>
