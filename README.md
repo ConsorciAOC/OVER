@@ -311,9 +311,9 @@ Exemple de com integrar-se amb el servei de tramitació de l’OVER. S’explica
 El procés de tramitació via integració està format per la part síncrona (OVER_INTEGRACIÓ) que retornarà de immediat la instància de tràmit i servei; i una part asíncrona que tramitarà el formulari i generarà tota la documentació pertinent, que podreu descarregar a posteriori.
 
 
-[Exemple XML de la TGEN0001.xml](TGEN0001.xml)
+Exemple XML de la [TGEN0001.xml](TGEN0001.xml)
 
-[XSD de la TGEN TGEN0001.xsd](TGEN0001.xsd)
+XSD de la TGEN [TGEN0001.xsd](TGEN0001.xsd)
 
 
 ## 4.1. Flux de tramitació
