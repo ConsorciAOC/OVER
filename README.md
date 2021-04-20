@@ -188,7 +188,7 @@ Permet obtenir d’OVER la informació del formulari de tramitació d’un deter
 ## 3.3. Obtenció de context de tramitació OVER_CONTEXT
 Ja no es fa servir, utilitzar per noves integracions la modalitat [OVER_INTEGRACIO](#311-Integració-sense-PDF-OVER_INTEGRACIO)
 
-Permet obtenir d’OVER el context de tramitació d’un tràmit pel qual no es vulgui obtenir el PDF de tramitació via la modalitat OVER_FORMULARI.
+Permet obtenir d’OVER el context de tramitació d’un tràmit pel qual no es vulgui obtenir el PDF de tramitació via la modalitat [OVER_FORMULARI](#32-Obtenció-de-formulari-de-tramitació-OVER_FORMULARI).
 
 ### 3.3.1. Petició dades específiques
 <p align="center">
@@ -453,7 +453,7 @@ Una vegada la tramitació s’hagi efectuat, podreu recuperar la documentació g
 
 •	XML_TRAMIT: Les dades que composen el tràmit, generades a partir de les dades rebudes.
 
-•	XML_TRAMIT_SIGNAT: XML_TRAMIT signat amb el certificat cedit.
+•	XML_TRAMIT_SIGNAT: XML_TRAMIT signat amb el certificat cedit o per defecte el del Consorci AOC.
 
 •	PDF_ORIGINAL: PDF planxat amb les dades rebudes.
 
