@@ -862,9 +862,9 @@ Si la documentació encara no està disponible, retornarà la següent resposta:
 
 A partir d'un codiInstanciaServei, retorna tots els tràmits inicials i respostes d'aquest. En aquest exemple tenim:
 
-Tràmit incial (TGEN0001) <over:codiInstanciaTramit>126190</over:codiInstanciaTramit>
+Tràmit incial (TGEN0001) ```<over:codiInstanciaTramit>126190</over:codiInstanciaTramit>```
 
-Tràmit de resposta (TGEN0002) <over:codiInstanciaTramit>126261</over:codiInstanciaTramit>
+Tràmit de resposta (TGEN0002) ```<over:codiInstanciaTramit>126261</over:codiInstanciaTramit>```
 
 ```xml
 <over:respostaConsultaExpedient xmlns:over="http://www.aoc.cat/over">
