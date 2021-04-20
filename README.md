@@ -90,7 +90,7 @@ Documentació d'integració d'OVER
        - [4.5.8. OVER_DOCUMENTACIO - Resposta](#458-OVER_DOCUMENTACIO-resposta)                       
        - [4.5.9. OVER_LLISTA_EXPEDIENT - Petició](#459-OVER_LLISTA_EXPEDIENTpetició)     
        - [4.5.10. OVER_LLISTA_EXPEDIENT - Resposta](#4510-OVER_LLISTA_EXPEDIENT-resposta)          
-       - 
+
 # 1. Introducció
 Aquest document detalla la missatgeria associada al servei de l'Oficina Virtual d’Emissió i Recepció, en endavant OVER.
 
@@ -1030,7 +1030,7 @@ Si la documentació encara no està disponible, retornarà la següent resposta:
 </Peticion>
 ```
 
-### 4.5.10. OVER_LLISTA_EXPEDIENT petició
+### 4.5.10. OVER_LLISTA_EXPEDIENT resposta
 
 ```xml
 <over:respostaLlistaExpedients xmlns:over="http://www.aoc.cat/over">
