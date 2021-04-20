@@ -2,8 +2,10 @@
 Documentació d'integració d'OVER
 
 <b>Control del document</b>
-<b>Informació general<b>
 
+<b>Informació general</b>
+
+|----           | ----------              |
 |Títol:         | OVER -  Document d’integració del servei|
 |Creat per:     | Departament de Projectes CAOC|
 |A revisar per: | Departament de Projectes CAOC|
