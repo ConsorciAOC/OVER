@@ -795,13 +795,13 @@ Si la documentació encara no està disponible, retornarà la següent resposta:
 ```xml
 <Peticion xmlns="http://gencat.net/scsp/esquemes/peticion">
   <Atributos>
-    <IdPeticion>CU1-OVER_CONSULTA_EXPEDIENT</IdPeticion>
+    <IdPeticion>CU1-OVER_CONSULTA_EXPEDIENT-${=(long)(System.currentTimeMillis())}</IdPeticion>
     <NumElementos>1</NumElementos>
     <TimeStamp/>
     <CodigoCertificado>OVER_CONSULTA_EXPEDIENT</CodigoCertificado>
     <CodigoProducto>OVER</CodigoProducto>
     <DatosAutorizacion>
-      <IdentificadorSolicitante>800180001</IdentificadorSolicitante>
+      <IdentificadorSolicitante>7996100002</IdentificadorSolicitante>
       <NombreSolicitante>BCN</NombreSolicitante>
       <Finalidad>PROVES</Finalidad>
     </DatosAutorizacion>
@@ -809,6 +809,11 @@ Si la documentació encara no està disponible, retornarà la següent resposta:
       <NifEmisor>Q0801175A</NifEmisor>
       <NombreEmisor>CAOC</NombreEmisor>
     </Emisor>
+    <Funcionario>
+      <NombreCompletoFuncionario>FUNCIONARIO</NombreCompletoFuncionario>
+      <NifFuncionario/>
+      <EMailFuncionario/>
+    </Funcionario>
   </Atributos>
   <Solicitudes>
     <SolicitudTransmision>
@@ -818,19 +823,34 @@ Si la documentació encara no està disponible, retornarà la següent resposta:
           <NombreEmisor>CAOC</NombreEmisor>
         </Emisor>
         <Solicitante>
-          <IdentificadorSolicitante>800180001</IdentificadorSolicitante>
+          <IdentificadorSolicitante>7996100002</IdentificadorSolicitante>
           <NombreSolicitante>BCN</NombreSolicitante>
           <Finalidad>PROVES</Finalidad>
           <Consentimiento>Si</Consentimiento>
+          <Funcionario>
+            <NombreCompletoFuncionario/>
+            <NifFuncionario/>
+            <EMailFuncionario/>
+          </Funcionario>
         </Solicitante>
+        <Titular>
+          <TipoDocumentacion>NIF</TipoDocumentacion>
+          <Documentacion/>
+          <NombreCompleto/>
+          <Nombre/>
+          <Apellido1/>
+          <Apellido2/>
+        </Titular>
         <Transmision>
           <CodigoCertificado>OVER_CONSULTA_EXPEDIENT</CodigoCertificado>
           <IdSolicitud>1</IdSolicitud>
+          <IdTransmision>EXPEDIENT</IdTransmision>
+          <FechaGeneracion/>
         </Transmision>
       </DatosGenericos>
       <DatosEspecificos>
         <peticioConsultaExpedient xmlns="http://www.aoc.cat/over">
-          <codiInstanciaServei>437014</codiInstanciaServei>
+          <codiInstanciaServei>110683</codiInstanciaServei>
         </peticioConsultaExpedient>
       </DatosEspecificos>
     </SolicitudTransmision>
@@ -840,36 +860,63 @@ Si la documentació encara no està disponible, retornarà la següent resposta:
 
 ### 4.5.6. OVER_CONSULTA_EXPEDIENT resposta
 
+A partir d'un codiInstanciaServei, retorna tots els tràmits inicials i respostes d'aquest. En aquest exemple tenim:
+
+Tràmit incial (TGEN0001) <over:codiInstanciaTramit>126190</over:codiInstanciaTramit>
+
+Tràmit de resposta (TGEN0002) <over:codiInstanciaTramit>126261</over:codiInstanciaTramit>
+
 ```xml
 <over:respostaConsultaExpedient xmlns:over="http://www.aoc.cat/over">
   <over:peticioConsultaExpedient>
-    <over:codiInstanciaServei>437014</over:codiInstanciaServei>
+     <over:codiInstanciaServei>110683</over:codiInstanciaServei>
   </over:peticioConsultaExpedient>
   <over:resposta>
-    <over:ensPromotor ine10="9610930008">Departament de Territori i Sostenibilitat</over:ensPromotor>
-    <over:serveiFuncional codi="TGEN0001">Tramesa genèrica</over:serveiFuncional>
-    <over:tramits>
-      <over:instanciaTramit>
-        <over:codiInstanciaTramit>400547</over:codiInstanciaTramit>
-        <over:tramitFuncional codi="TGEN0001">Tramesa genèrica</over:tramitFuncional>
-        <over:observacions>Assumpte ABC ob</over:observacions>
-        <over:data>2021-03-31T13:01:07.000+02:00</over:data>
-        <over:ensOrigen ine10="800180001">Ajuntament d'Abrera</over:ensOrigen>
-        <over:ensDesti ine10="9610930008">Departament de Territori i Sostenibilitat</over:ensDesti>
-        <over:registreSortida>
-          <over:numero>S/000040-2021</over:numero>
-          <over:data>2021-03-31T13:01:24.000+02:00</over:data>
-        </over:registreSortida>
-        <over:registreEntrada>
-          <over:numero>9033/70/2021</over:numero>
-          <over:data>2021-03-31T13:01:04.000+02:00</over:data>
-        </over:registreEntrada>
-      </over:instanciaTramit>
-    </over:tramits>
+     <over:ensPromotor ine10="7996100001">Ens de formació A</over:ensPromotor>
+     <over:serveiFuncional codi="TGEN0001">Tramesa genèrica</over:serveiFuncional>
+     <over:tramits>
+        <over:instanciaTramit>
+           <over:codiInstanciaTramit>126190</over:codiInstanciaTramit>
+           <over:tramitsResposta>
+              <over:codiInstanciaTramit>126261</over:codiInstanciaTramit>
+           </over:tramitsResposta>
+           <over:tramitFuncional codi="TGEN0001">Tramesa genèrica</over:tramitFuncional>
+           <over:observacions>assumpte</over:observacions>
+           <over:data>2021-04-15T11:51:05.000+02:00</over:data>
+           <over:ensOrigen ine10="7996100002">Ens de formació B</over:ensOrigen>
+           <over:ensDesti ine10="7996100001">Ens de formació A</over:ensDesti>
+           <over:registreSortida>
+              <over:numero>S/000002-2021</over:numero>
+              <over:data>2021-04-15T11:52:32.000+02:00</over:data>
+           </over:registreSortida>
+           <over:registreEntrada>
+              <over:numero>E2021000489</over:numero>
+              <over:data>2021-04-15T11:51:03.000+02:00</over:data>
+           </over:registreEntrada>
+           <over:resum>UlRJd01qRXdNREEwT0RrN01qQXlNUzB3TkMweE5WUXhNVG8xTVRvd015NHdNREFyTURJNk1EQTdOems1TmpFd01EQXdNanRGYm5NZ1pHVWdabTl5YldGamFjT3pJRUk3Q2drS0NRa0tDUWs3WVhOemRXMXdkR1U3Q2drSlpYaHdiM052T3dvSkNUc0tDUWs3T3dvS0NRa0tDUWs3T3pzS0NRb2dJQT09</over:resum>
+        </over:instanciaTramit>
+        <over:instanciaTramit>
+           <over:codiInstanciaTramit>126261</over:codiInstanciaTramit>
+           <over:codiInstanciaTramitPredecessor>126190</over:codiInstanciaTramitPredecessor>
+           <over:tramitFuncional codi="TGEN0002">Comunicació</over:tramitFuncional>
+           <over:observacions>Comunicació</over:observacions>
+           <over:data>2021-04-16T10:14:36.000+02:00</over:data>
+           <over:ensOrigen ine10="7996100001">Ens de formació A</over:ensOrigen>
+           <over:ensDesti ine10="7996100002">Ens de formació B</over:ensDesti>
+           <over:registreSortida>
+              <over:numero>S2021001536</over:numero>
+              <over:data>2021-04-16T10:14:34.000+02:00</over:data>
+           </over:registreSortida>
+           <over:registreEntrada>
+              <over:numero>E/000012-2021</over:numero>
+              <over:data>2021-04-16T10:16:06.000+02:00</over:data>
+           </over:registreEntrada>
+        </over:instanciaTramit>
+     </over:tramits>
   </over:resposta>
   <over:resultat>
-    <over:codiResultat>0</over:codiResultat>
-    <over:descripcio/>
+     <over:codiResultat>0</over:codiResultat>
+     <over:descripcio/>
   </over:resultat>
 </over:respostaConsultaExpedient>
 ```
