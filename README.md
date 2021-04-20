@@ -5,7 +5,7 @@ Documentació d'integració d'OVER
 
 <b>Informació general</b>
 
-|Títol:         | OVER -  Document d’integració del servei|
+|.|.|
 |----           | ----------              |
 |Títol:         | OVER -  Document d’integració del servei|
 |Creat per:     | Departament de Projectes CAOC|
