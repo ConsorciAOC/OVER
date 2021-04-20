@@ -14,9 +14,9 @@ Documentació d'integració d'OVER
 
 <b>Històric de revisions</b>
 
-|Versió         |Data           |Autor|Comentaris |
-|----           |----           |---- |            |
-|V1.0	|12/01/2012	|Projectes CAOC	|Creació del document|
+|Versió   |Data       |Autor          |Comentaris           |
+|----     |----       |----           |----                 |
+|V1.0	    |12/01/2012	|Projectes CAOC	|Creació del document |  
 
 
 
