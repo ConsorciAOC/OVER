@@ -90,7 +90,10 @@ Documentació d'integració d'OVER
        - [4.5.8. OVER_DOCUMENTACIO - Resposta](#458-OVER_DOCUMENTACIO-resposta)                       
 
 # 1. Introducció
-Aquest document detalla la missatgeria associada al servei de l'Oficina Virtual d’Emissió i Recepció, en endavant OVER. Per poder realitzar la integració cal conèixer prèviament la següent documentació:
+Aquest document detalla la missatgeria associada al servei de l'Oficina Virtual d’Emissió i Recepció, en endavant OVER.
+
+Per poder realitzar la integració cal conèixer prèviament la següent documentació:
+
 •	Document de Missatgeria Genèrica de la PCI del Consorci AOC.
 
 # 2. Transmissions de dades disponibles
