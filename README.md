@@ -1211,7 +1211,7 @@ Numero d'expedient actualitzat dintre de l'EACAT.
 <img align="center" src="img/OVER_ACTUALITZCIO_num_expedient.png" />
 </p> 
 
-En aquest cas actualitzem l'estat del número d'expedient relacionat amb el ```<codiInstanciaServei>``` 101167 d'Abrera.
+En aquest cas actualitzem l'estat de l'expedient relacionat amb el ```<codiInstanciaServei>``` 101167 d'Abrera.
 
 ```xml
 <Peticion xmlns="http://gencat.net/scsp/esquemes/peticion">
