@@ -90,7 +90,7 @@ Documentació d'integració d'OVER
        - [4.5.8. OVER_DOCUMENTACIO - Resposta](#458-OVER_DOCUMENTACIO-resposta)                       
        - [4.5.9. OVER_LLISTA_EXPEDIENT - Petició](#459-OVER_LLISTA_EXPEDIENT-petició)     
        - [4.5.10. OVER_LLISTA_EXPEDIENT - Resposta](#4510-OVER_LLISTA_EXPEDIENT-resposta)          
-       - [4.5.11. OVER_ACTUALITZACIO - Resposta](#4511-OVER_ACTUALITZACIO-petició)    
+       - [4.5.11. OVER_ACTUALITZACIO - Petició](#4511-OVER_ACTUALITZACIO-petició)    
        - [4.5.12. OVER_ACTUALITZACIO - Resposta](#4512-OVER_ACTUALITZACIO-resposta)    
        
 # 1. Introducció
