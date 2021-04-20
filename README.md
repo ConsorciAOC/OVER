@@ -124,14 +124,19 @@ A continuació es detalla la missatgeria corresponent a les modalitats de consum
 Operació que permet recuperar la documentació generada en el procés de tramitació.
 
 ### 3.1.1. Petició dades específiques
+<p align="center">
+<img align="center" src="img/peticio-dades-especifiques_OVER_DOCUMENTACIO.png" />
+</p>  
+
 | Element | Descripció |
 | --- | --- |
 | peticioDocumentacioTramit/codiInstanciaTramit | Identificador d'instància de tràmit del qual es vol obtenir la informació |
 | peticioDocumentacioTramit/numeroAssentament | Número d’assentament de tràmit |
+| peticioDocumentacioTramit/dadesTramit | Marcar amb '1' per a obtenir dades detallades del tràmit |
 
 ### 3.1.2. Resposta dades específiques
 <p align="center">
-<img align="center" src="img/resposta-dades-especifiques_1_OVER_DOCUMENTACIO.png" />
+<img align="center" src="img/resposta-dades-especifiques_OVER_DOCUMENTACIO.png" />
 </p>  
 
 | Element | Descripció |
