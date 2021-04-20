@@ -88,7 +88,9 @@ Documentació d'integració d'OVER
        - [4.5.6. OVER_CONSULTA_EXPEDIENT - Resposta](#456-OVER_CONSULTA_EXPEDIENT-resposta)     
        - [4.5.7. OVER_DOCUMENTACIO - Petició](#457-OVER_DOCUMENTACIO-petició)     
        - [4.5.8. OVER_DOCUMENTACIO - Resposta](#458-OVER_DOCUMENTACIO-resposta)                       
-
+       - [4.5.9. OVER_LLISTA_EXPEDIENT - Petició](#459-OVER_LLISTA_EXPEDIENTpetició)     
+       - [4.5.10. OVER_LLISTA_EXPEDIENT - Resposta](#4510-OVER_LLISTA_EXPEDIENT-resposta)          
+       - 
 # 1. Introducció
 Aquest document detalla la missatgeria associada al servei de l'Oficina Virtual d’Emissió i Recepció, en endavant OVER.
 
@@ -953,4 +955,175 @@ Si la documentació encara no està disponible, retornarà la següent resposta:
     <over:descripcio/>
   </over:resultat>
 </over:respostaDocumentacioTramit>
+```
+
+### 4.5.9. OVER_LLISTA_EXPEDIENT petició
+
+```xml
+<Peticion xmlns="http://gencat.net/scsp/esquemes/peticion">
+  <Atributos>
+    <IdPeticion>CU1-OVER_LLISTA_EXPEDIENTS-${=(long)(System.currentTimeMillis())}</IdPeticion>
+    <NumElementos>1</NumElementos>
+    <TimeStamp/>
+    <CodigoCertificado>OVER_LLISTA_EXPEDIENTS</CodigoCertificado>
+    <CodigoProducto>OVER</CodigoProducto>
+    <DatosAutorizacion>
+      <IdentificadorSolicitante>800180001</IdentificadorSolicitante>
+      <NombreSolicitante>BCN</NombreSolicitante>
+      <Finalidad>PROVES</Finalidad>
+    </DatosAutorizacion>
+    <Emisor>
+      <NifEmisor>Q0801175A</NifEmisor>
+      <NombreEmisor>CAOC</NombreEmisor>
+    </Emisor>
+    <Funcionario>
+      <NombreCompletoFuncionario>FUNCIONARIO</NombreCompletoFuncionario>
+      <NifFuncionario/>
+      <EMailFuncionario/>
+    </Funcionario>
+  </Atributos>
+  <Solicitudes>
+    <SolicitudTransmision>
+      <DatosGenericos>
+        <Emisor>
+          <NifEmisor>Q0801175A</NifEmisor>
+          <NombreEmisor>CAOC</NombreEmisor>
+        </Emisor>
+        <Solicitante>
+          <IdentificadorSolicitante>800180001</IdentificadorSolicitante>
+          <NombreSolicitante>BCN</NombreSolicitante>
+          <Finalidad>PROVES</Finalidad>
+          <Consentimiento>Si</Consentimiento>
+          <Funcionario>
+            <NombreCompletoFuncionario/>
+            <NifFuncionario/>
+            <EMailFuncionario/>
+          </Funcionario>
+        </Solicitante>
+        <Titular>
+          <TipoDocumentacion>NIF</TipoDocumentacion>
+          <Documentacion/>
+          <NombreCompleto/>
+          <Nombre/>
+          <Apellido1/>
+          <Apellido2/>
+        </Titular>
+        <Transmision>
+          <CodigoCertificado>OVER_LLISTA_EXPEDIENTS</CodigoCertificado>
+          <IdSolicitud>1</IdSolicitud>
+          <IdTransmision>EXPEDIENT</IdTransmision>
+          <FechaGeneracion/>
+        </Transmision>
+      </DatosGenericos>
+      <DatosEspecificos>
+        <peticioLlistaExpedients xmlns="http://www.aoc.cat/over">
+          <cerca>
+            <codiFuncionalTramit>TGEN0001</codiFuncionalTramit>
+            <codiFuncionalTramitTeResposta>false</codiFuncionalTramitTeResposta>
+            <dataInici>2021-03-01T08:00:00.000Z</dataInici>
+            <dataFi>2021-04-20T22:59:00.000Z</dataFi>
+          </cerca>
+        </peticioLlistaExpedients>
+      </DatosEspecificos>
+    </SolicitudTransmision>
+  </Solicitudes>
+</Peticion>
+```
+
+### 4.5.10. OVER_LLISTA_EXPEDIENT petició
+
+```xml
+<over:respostaLlistaExpedients xmlns:over="http://www.aoc.cat/over">
+  <over:peticioLlistaExpedients>
+     <over:cerca>
+        <over:codiFuncionalTramit>TGEN0001</over:codiFuncionalTramit>
+        <over:codiFuncionalTramitTeResposta>false</over:codiFuncionalTramitTeResposta>
+        <over:dataInici>2021-03-01T08:00:00.000Z</over:dataInici>
+        <over:dataFi>2021-04-20T22:59:00.000Z</over:dataFi>
+     </over:cerca>
+  </over:peticioLlistaExpedients>
+  <over:resposta>
+     <over:instanciaServei>
+        <over:codiInstanciaServei>436951</over:codiInstanciaServei>
+        <over:ensPromotor ine10="9610930008">Departament de Territori i Sostenibilitat</over:ensPromotor>
+        <over:serveiFuncional codi="TGEN0001">Tramesa genèrica</over:serveiFuncional>
+        <over:ensInteressat ine10="800180001">Ajuntament d'Abrera</over:ensInteressat>
+        <over:nTramits>0</over:nTramits>
+     </over:instanciaServei>
+     <over:instanciaServei>
+        <over:codiInstanciaServei>436973</over:codiInstanciaServei>
+        <over:ensPromotor ine10="800180001">Ajuntament d'Abrera</over:ensPromotor>
+        <over:serveiFuncional codi="TGEN0001">Tramesa genèrica</over:serveiFuncional>
+        <over:ensInteressat ine10="801930008">Ajuntament de Barcelona</over:ensInteressat>
+        <over:nTramits>1</over:nTramits>
+     </over:instanciaServei>
+     <over:instanciaServei>
+        <over:codiInstanciaServei>436989</over:codiInstanciaServei>
+        <over:ensPromotor ine10="9610930008">Departament de Territori i Sostenibilitat</over:ensPromotor>
+        <over:serveiFuncional codi="TGEN0001">Tramesa genèrica</over:serveiFuncional>
+        <over:ensInteressat ine10="800180001">Ajuntament d'Abrera</over:ensInteressat>
+        <over:nTramits>1</over:nTramits>
+     </over:instanciaServei>
+     <over:instanciaServei>
+        <over:codiInstanciaServei>436991</over:codiInstanciaServei>
+        <over:ensPromotor ine10="9610930008">Departament de Territori i Sostenibilitat</over:ensPromotor>
+        <over:serveiFuncional codi="TGEN0001">Tramesa genèrica</over:serveiFuncional>
+        <over:ensInteressat ine10="800180001">Ajuntament d'Abrera</over:ensInteressat>
+        <over:nTramits>1</over:nTramits>
+     </over:instanciaServei>
+     <over:instanciaServei>
+        <over:codiInstanciaServei>436998</over:codiInstanciaServei>
+        <over:ensPromotor ine10="9612050006">Departament de Benestar Social i Família</over:ensPromotor>
+        <over:serveiFuncional codi="TGEN0001">Tramesa genèrica</over:serveiFuncional>
+        <over:ensInteressat ine10="800180001">Ajuntament d'Abrera</over:ensInteressat>
+        <over:nTramits>1</over:nTramits>
+     </over:instanciaServei>
+     <over:instanciaServei>
+        <over:codiInstanciaServei>436999</over:codiInstanciaServei>
+        <over:ensPromotor ine10="9612050006">Departament de Benestar Social i Família</over:ensPromotor>
+        <over:serveiFuncional codi="TGEN0001">Tramesa genèrica</over:serveiFuncional>
+        <over:ensInteressat ine10="800180001">Ajuntament d'Abrera</over:ensInteressat>
+        <over:nTramits>1</over:nTramits>
+     </over:instanciaServei>
+     <over:instanciaServei>
+        <over:codiInstanciaServei>437000</over:codiInstanciaServei>
+        <over:ensPromotor ine10="9612050006">Departament de Benestar Social i Família</over:ensPromotor>
+        <over:serveiFuncional codi="TGEN0001">Tramesa genèrica</over:serveiFuncional>
+        <over:ensInteressat ine10="800180001">Ajuntament d'Abrera</over:ensInteressat>
+        <over:nTramits>1</over:nTramits>
+     </over:instanciaServei>
+     <over:instanciaServei>
+        <over:codiInstanciaServei>437001</over:codiInstanciaServei>
+        <over:ensPromotor ine10="9612050006">Departament de Benestar Social i Família</over:ensPromotor>
+        <over:serveiFuncional codi="TGEN0001">Tramesa genèrica</over:serveiFuncional>
+        <over:ensInteressat ine10="800180001">Ajuntament d'Abrera</over:ensInteressat>
+        <over:nTramits>1</over:nTramits>
+     </over:instanciaServei>
+     <over:instanciaServei>
+        <over:codiInstanciaServei>437003</over:codiInstanciaServei>
+        <over:ensPromotor ine10="9612050006">Departament de Benestar Social i Família</over:ensPromotor>
+        <over:serveiFuncional codi="TGEN0001">Tramesa genèrica</over:serveiFuncional>
+        <over:ensInteressat ine10="800180001">Ajuntament d'Abrera</over:ensInteressat>
+        <over:nTramits>1</over:nTramits>
+     </over:instanciaServei>
+     <over:instanciaServei>
+        <over:codiInstanciaServei>437013</over:codiInstanciaServei>
+        <over:ensPromotor ine10="9610930008">Departament de Territori i Sostenibilitat</over:ensPromotor>
+        <over:serveiFuncional codi="TGEN0001">Tramesa genèrica</over:serveiFuncional>
+        <over:ensInteressat ine10="800180001">Ajuntament d'Abrera</over:ensInteressat>
+        <over:nTramits>0</over:nTramits>
+     </over:instanciaServei>
+     <over:instanciaServei>
+        <over:codiInstanciaServei>437014</over:codiInstanciaServei>
+        <over:ensPromotor ine10="9610930008">Departament de Territori i Sostenibilitat</over:ensPromotor>
+        <over:serveiFuncional codi="TGEN0001">Tramesa genèrica</over:serveiFuncional>
+        <over:ensInteressat ine10="800180001">Ajuntament d'Abrera</over:ensInteressat>
+        <over:nTramits>0</over:nTramits>
+     </over:instanciaServei>
+  </over:resposta>
+  <over:resultat>
+     <over:codiResultat>0</over:codiResultat>
+     <over:descripcio/>
+  </over:resultat>
+</over:respostaLlistaExpedients>
 ```
