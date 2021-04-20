@@ -1205,7 +1205,7 @@ En aquest cas actualitzem el número d'expedient relacionat amb el ```<codiInsta
 </Peticion>
 ```
 
-Numero d'expedient actualitzat dintre de l'EACAT.
+Numero d'expedient actualitzat dintre de l'EACAT. Aquesta actualització <b>només</b> serà visible al vostre ens.
 
 <p align="center">
 <img align="center" src="img/OVER_ACTUALITZCIO_num_expedient.png" />
@@ -1284,7 +1284,7 @@ En aquest cas actualitzem l'estat de l'expedient relacionat amb el ```<codiInsta
 </Peticion>
 ```
 
-Estat actualitzat dintre de l'EACAT.
+Estat actualitzat dintre de l'EACAT. Aquesta actualització serà visible a l'origen i destí.
 
 <p align="center">
 <img align="center" src="img/OVER_ACTUALITZCIO_estat.png" />
@@ -1364,7 +1364,7 @@ En aquest cas actualitzem l'expedient relacionat amb el ```<codiInstanciaServei>
 </Peticion>
 ```
 
-Tipologia ```ALTRES``` actualitzat dintre de l'EACAT.
+Tipologia ```ALTRES``` actualitzat dintre de l'EACAT. Aquesta actualització serà visible a l'origen i destí.
 
 <p align="center">
 <img align="center" src="img/OVER_ACTUALITZCIO_altres.png" />
