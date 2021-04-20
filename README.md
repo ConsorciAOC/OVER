@@ -90,7 +90,9 @@ Documentació d'integració d'OVER
        - [4.5.8. OVER_DOCUMENTACIO - Resposta](#458-OVER_DOCUMENTACIO-resposta)                       
        - [4.5.9. OVER_LLISTA_EXPEDIENT - Petició](#459-OVER_LLISTA_EXPEDIENT-petició)     
        - [4.5.10. OVER_LLISTA_EXPEDIENT - Resposta](#4510-OVER_LLISTA_EXPEDIENT-resposta)          
-
+       - [4.5.11. OVER_ACTUALITZACIO - Resposta](#4511-OVER_ACTUALITZACIO-petició)    
+       - [4.5.12. OVER_ACTUALITZACIO - Resposta](#4512-OVER_ACTUALITZACIO-resposta)    
+       
 # 1. Introducció
 Aquest document detalla la missatgeria associada al servei de l'Oficina Virtual d’Emissió i Recepció, en endavant OVER.
 
@@ -1126,4 +1128,95 @@ Si la documentació encara no està disponible, retornarà la següent resposta:
      <over:descripcio/>
   </over:resultat>
 </over:respostaLlistaExpedients>
+```
+
+### 4.5.11. OVER_ACTUALITZACIO petició
+
+```xml
+<Peticion xmlns="http://gencat.net/scsp/esquemes/peticion">
+<Atributos>
+  <IdPeticion>CU1-OVER_ACTUALITZACIO-${=(long)(System.currentTimeMillis())}</IdPeticion>
+  <NumElementos>1</NumElementos>
+  <TimeStamp/>
+  <CodigoCertificado>OVER_ACTUALITZACIO</CodigoCertificado>
+  <CodigoProducto>OVER</CodigoProducto>
+  <DatosAutorizacion>
+    <IdentificadorSolicitante>800180001</IdentificadorSolicitante>
+    <NombreSolicitante>BCN</NombreSolicitante>
+    <Finalidad>PROVES</Finalidad>
+  </DatosAutorizacion>
+  <Emisor>
+    <NifEmisor>Q0801175A</NifEmisor>
+    <NombreEmisor>CAOC</NombreEmisor>
+  </Emisor>
+  <Funcionario>
+    <NombreCompletoFuncionario>FUNCIONARIO</NombreCompletoFuncionario>
+    <NifFuncionario/>
+    <EMailFuncionario/>
+  </Funcionario>
+</Atributos>
+<Solicitudes>
+  <SolicitudTransmision>
+    <DatosGenericos>
+      <Emisor>
+        <NifEmisor>Q0801175A</NifEmisor>
+        <NombreEmisor>CAOC</NombreEmisor>
+      </Emisor>
+      <Solicitante>
+        <IdentificadorSolicitante>800180001</IdentificadorSolicitante>
+        <NombreSolicitante>BCN</NombreSolicitante>
+        <Finalidad>PROVES</Finalidad>
+        <Consentimiento>Si</Consentimiento>
+        <Funcionario>
+          <NombreCompletoFuncionario/>
+          <NifFuncionario/>
+          <EMailFuncionario/>
+        </Funcionario>
+      </Solicitante>
+      <Titular>
+        <TipoDocumentacion>NIF</TipoDocumentacion>
+        <Documentacion/>
+        <NombreCompleto/>
+        <Nombre/>
+        <Apellido1/>
+        <Apellido2/>
+      </Titular>
+      <Transmision>
+        <CodigoCertificado>OVER_ACTUALITZACIO</CodigoCertificado>
+        <IdSolicitud>1</IdSolicitud>
+        <IdTransmision>EXPEDIENT</IdTransmision>
+        <FechaGeneracion/>
+      </Transmision>
+    </DatosGenericos>
+    <DatosEspecificos>
+      <peticioActualitzacioTramit xmlns="http://www.aoc.cat/over">
+        <codiInstanciaServei>101167</codiInstanciaServei>
+        <dada>
+          <tipus>NUM_EXPEDIENT</tipus>
+          <dada/>
+          <valor>111/222/PROVA</valor>
+        </dada>
+      </peticioActualitzacioTramit>
+    </DatosEspecificos>
+  </SolicitudTransmision>
+</Solicitudes>
+</Peticion>
+```
+### 4.5.12. OVER_ACTUALITZACIO resposta
+
+```xml
+ <over:respostaActualitzacioTramit xmlns:over="http://www.aoc.cat/over">
+    <over:peticioActualitzacioTramit>
+       <over:codiInstanciaServei>101167</over:codiInstanciaServei>
+       <over:dada>
+          <over:tipus>NUM_EXPEDIENT</over:tipus>
+          <over:dada/>
+          <over:valor>111/222/PROVA</over:valor>
+       </over:dada>
+    </over:peticioActualitzacioTramit>
+    <over:resultat>
+       <over:codiResultat>0</over:codiResultat>
+       <over:descripcio/>
+    </over:resultat>
+ </over:respostaActualitzacioTramit>
 ```
