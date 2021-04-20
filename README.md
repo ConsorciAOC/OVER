@@ -124,32 +124,31 @@ A continuació es detalla la missatgeria corresponent a les modalitats de consum
 Operació que permet recuperar la documentació generada en el procés de tramitació.
 
 ### 3.1.1. Petició dades específiques
-<p align="center">
-<img align="center" src="img/peticio-dades-especifiques_OVER_DOCUMENTACIO.png" />
-</p>  
+| Element | Descripció |
+| --- | --- |
+| peticioDocumentacioTramit/codiInstanciaTramit | Identificador d'instància de tràmit del qual es vol obtenir la informació |
+| peticioDocumentacioTramit/numeroAssentament | Número d’assentament de tràmit |
 
 ### 3.1.2. Resposta dades específiques
 <p align="center">
 <img align="center" src="img/resposta-dades-especifiques_1_OVER_DOCUMENTACIO.png" />
 </p>  
-<p align="center">
-<img align="center" src="img/resposta-dades-especifiques_2_OVER_DOCUMENTACIO.png" />
-</p>
 
 | Element | Descripció |
-| ---- | ---------- |
+| --- | --- |
 | respostaDocumentacioTramit/peticioDocumentacioTramit | Bloc de dades corresponent a la petició que genera la resposta |
 | respostaDocumentacioTramit/resposta/document | Bloc de dades corresponent a un document de tramitació |
 | //resposta/document/tipus | Tipus del document: <ul><li>ADJUNT: document adjunt (adjunt al formulari de tramitació)</li><li>ALTRES: altres evidències</li><li>MIS_ORIGINAL: dades MIS associades al formulari del PDF tramitat</li><li>MIS_ACTUALITZAT:  dades MIS actualitzades amb informació obtinguda durant el procés de tramitació</li><li>MUX_EVIDENCIA_ENTRADA: evidència de registre d'entrada</li><li>MUX_EVIDENCIA_SORTIDA: evidència de registre de sortida</li><li>PDF_DESCARREGA: PDF del tràmit descarregat</li><li>PDF_ORIGINAL: PDF del tràmit omplert per l'usuari</li><li>TIQUET: PDF amb el rebut dels registres electrònics</li><li>INT_PETICIO: Petició original si s'ha tramitat via OVER_INTEGRACIO</li><li>XML_DADES: XML de dades del formulari a tramitar</li><li>XML_DADES_SIGNAT: XML de dades signadades (si s'ha tramitat via OVER_INTEGRACIO)</li></ul> |
 | //resposta/document/nom | Nom del document en cas d’adjunt |
 | //resposta/document/contingut | Document codificat en base64 |
 | //resposta/document/guid | GUID del document que permet la descàrrega via URL de descàrrega (emprat en documents pesats els quals no es poden incrustar en el XML de resposta) |
-| respostaDocumentacioTramit/resultat | Bloc que informa del resultat de l'operació. Per més detalls consulteu l'apartat 3.1.2.1 d'aquest document |
+| respostaDocumentacioTramit/resultat | Bloc que informa del resultat de l'operació. Per més detalls consulteu [3.1.2.1. Resultat de l’operació](#3121-Resultat-de-la-operació) |
 
 #### 3.1.2.1 Resultat de la operació
-<p align="center">
-<img align="center" src="img/resultat_operacio_OVER_DOCUMENTACIO.png" />
-</p>  
+| Element | Descripció |
+| --- | --- |
+| //resultat/codiResultat | Codi de resultat (0:operació realitzada correctament, 1: error realitzant la operació) |
+| //resultat/descripcio | Descripció del resultat de l'operació |
 
 ## 3.2. Obtenció de formulari de tramitació OVER_FORMULARI
 Ja no es fa servir, utilitzar per noves integracions la modalitat [OVER_INTEGRACIO](#311-Integració-sense-PDF-OVER_INTEGRACIO)
