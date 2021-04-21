@@ -347,7 +347,7 @@ Mètode de tramitació mitjançant integració sense necessitat d'omplir i manip
 
 | Element | Descripció |
 | --- | --- |
-| peticioIntegracio/peticioFormulariTramit | Missatgeria [3.2.1. Petició dades específiques](#321-Petició-dades-específiques) |
+| peticioIntegracio/peticioFormulariTramit | Missatgeria [peticioFormulariTramit](#321-Petició-dades-específiques) |
 | peticioIntegracio/dadesContingut | Bloc de dades corresponent al contingut de les dades del formulari |
 | //dadesContingut/formulari | Cos del formulari en format XML. Ha de complir l'schema del tràmit funcional que es vol tramitar. Incloure l'element dintre d’una secció CDATA |
 | //dadesContingut/registreOrigen | Bloc de dades corresponent al registre d'origen en cas que es disposi i no vulgui que MUX torni a registrar de nou |
@@ -392,7 +392,7 @@ XSD de la TGEN [TGEN0001.xsd](TGEN0001.xsd)
 Permet realitzar la tramitació sense necessitat de descarregar, omplir i manipular formularis PDF. Utilitzant aquesta modalitat obtindreu el context (codi instància tràmit i servei) que permetrà recuperar la documentació generada i relacionada amb el tràmit.
 
 ### 4.2.1. OVER_FORMULARI
-Omplir la missatgeria definida del bloc [peticioFormulariTramit](#3111-Petició-dades-específiques)
+Omplir la missatgeria definida del bloc [peticioFormulariTramit](#321-Petició-dades-específiques)
 
 Un tràmit inicial es considera aquell que desencadena la resta del procés interadministratiu. Per exemple, en una subvenció qualsevol, el tràmit inicial és el de la sol·licitud.
 
