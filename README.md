@@ -204,7 +204,7 @@ Permet obtenir d'OVER la informació del formulari de tramitació d'un determina
 | //resposta/codiInstanciaTramit | Codi d'instància del tràmit generat |
 | //resposta/codiInstanciaServei | Codi d'instància de servei / fil d'execució associat a la instància de tràmit |
 | //resposta/formulari | PDF corresponent al formulari de tramitació o PDF d'error en cas d'incidència |
-| //resposta/ruta | (En desús) |
+| //resposta/ruta | Alternativa a formulari. Ruta del PDF de tramitació |
 | respostaFormulariTramit/resultat | Bloc que informa del resultat de l'operació. Per més detalls consulteu [3.1.2.1. Resultat de l'operació](#3121-Resultat-de-la-operació) |
 
 ## 3.3. Obtenció de context de tramitació OVER_CONTEXT
@@ -253,12 +253,36 @@ Així, amb aquesta modalitat, es poden executar tant tràmits inicials com tràm
 ### 3.4.1. Petició dades específiques
 <p align="center">
 <img align="center" src="img/peticio-dades-especifiques_OVER_TRAMITACIO.png" />
-</p>  
+</p>
+
+| Element | Descripció |
+| --- | --- |
+| peticioExecucioTramit/codiCataleg | Codi del catàleg |
+| peticioExecucioTramit/codiFuncionalServei | Codi funcional del servei |
+| peticioExecucioTramit/codiFuncionalTramit | Codi funcional del tràmit |
+| peticioExecucioTramit/codiInstanciaServei | Codi d'instància del servei / fil d'execució |
+| peticioExecucioTramit/codiInstanciaTramit | Codi d'instància de tràmit |
+| peticioExecucioTramit/formulari/contingut | Per a la transmissió del contingut del PDF, utilitzar l'estàndard MTOM |
+| peticioExecucioTramit/formulari/ruta | Alternativa a contingut. Ruta del PDF de tramitació |
+| peticioExecucioTramit/formulari/id | Identificador d’adjunt. Únic en la petició.
+
+Alternativament a contingut i ruta, es poden transferir tant el formulari de tramitació com els  adjunts seguint l’estàndard MTOM. En aquest cas cal informar el formulari de tramitació i els adjunts en l’element Contenido del bloc de dades genèriques Ficheros destinat a aquest efecte .
+
+Per identificar el fitxer corresponent al formulari de tramitació, caldrà alinear l’atribut Fichero@Id del bloc genèric amb l’element id de les dades específiques de la sol·licitud |
 
 ### 3.4.2. Resposta dades específiques
 <p align="center">
 <img align="center" src="img/resposta-dades-especifiques_OVER_TRAMITACIO.png" />
-</p> 
+</p>
+
+| Element | Descripció |
+| --- | --- |
+| respostaExecucioTramit/peticioExecucioTramit | Bloc de dades corresponent a la petició que genera la resposta |
+| respostaExecucioTramit/resposta | Bloc de dades corresponent a la resposta a la operació de tramitació |
+| //resposta/codiInstanciaServei | Codi d'instància de servei / fil d'execució associat a la instància de tràmit |
+| //resposta/codiInstanciaTramit | Codi d'instància del tràmit generat |
+| //resposta/tiquet | Document PDF en base64 amb el justificant de tramitació. |
+| respostaExecucioTramit/resultat | Bloc que informa del resultat de l'operació. Per més detalls consulteu [3.1.2.1. Resultat de l'operació](#3121-Resultat-de-la-operació) |
 
 ## 3.5. Actualització informació tràmit OVER_ACTUALITZACIO
 Permet associar informació a una determinada instància de servei (estat, número d'expedient o qualsevol altra informació que es mostrarà als usuaris).
