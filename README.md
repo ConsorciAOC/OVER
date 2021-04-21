@@ -177,12 +177,35 @@ Permet obtenir d’OVER la informació del formulari de tramitació d’un deter
 ### 3.2.1. Petició dades específiques
 <p align="center">
 <img align="center" src="img/peticio-dades-especifiques_OVER_FORMULARI.png" />
-</p>  
+</p>
+
+| Element | Descripció |
+| --- | --- |
+| peticioFormulariTramit/codiCataleg | Codi del catàleg |
+| peticioFormulariTramit/codiFuncionalServei | Codi funcional del servei |
+| peticioFormulariTramit/codiFuncionalTramit | Codi funcional del tràmit |
+| peticioFormulariTramit/codiInstanciaServei | Codi d'instància del servei / fil d'execució (en cas de tràmits NO inicials) |
+| peticioFormulariTramit/codiInstanciaTramitPredecessor | Codi d'instància de tràmit predecessor en cas del resposta a una instància de tràmit prèvia (tràmit NO inicial) |
+| peticioFormulariTramit/codiEns | Codi de l'ens amb el que l'ens propietari del catàleg realitza la tramitació |
+| peticioFormulariTramit/codiEnsOrigen | Codi de l'ens origen del tràmit, per aquells que ho requereixin |
+| peticioFormulariTramit/codiEnsDesti | Codi de l'ens destí del tràmit, per aquells que ho requereixin |
+| peticioFormulariTramit/dadesAddicionals | XML amb dades de pre-ompliment |
+| peticioFormulariTramit/groupID | Grup d'usuaris de destí del tràmit, per aquells que ho requereixin |
 
 ### 3.2.2. Resposta dades específiques
 <p align="center">
-<img align="center" src="img/resposta-dades-especifiques_1_OVER_FORMULARI.png" />
-</p>  
+<img align="center" src="img/resposta-dades-especifiques_OVER_FORMULARI.png" />
+</p>
+
+| Element | Descripció |
+| --- | --- |
+| respostaFormulariTramit/peticioFormulariTramit | Bloc de dades corresponent a la petició que genera la resposta |
+| respostaFormulariTramit/resposta | Bloc de dades corresponent a la resposta a la operació d’obtenció de PDF de tramitació |
+| //resposta/codiInstanciaTramit | Codi d'instància del tràmit generat |
+| //resposta/codiInstanciaServei | Codi d'instància de servei / fil d'execució associat a la instància de tràmit |
+| //resposta/formulari | PDF corresponent al formulari de tramitació o PDF d’error en cas d'incidència |
+| //resposta/ruta | (En desús) |
+| respostaFormulariTramit/resultat | Bloc que informa del resultat de l'operació. Per més detalls consulteu [3.1.2.1. Resultat de l’operació](#3121-Resultat-de-la-operació) |
 
 ## 3.3. Obtenció de context de tramitació OVER_CONTEXT
 Ja no es fa servir, utilitzar per noves integracions la modalitat [OVER_INTEGRACIO](#311-Integració-sense-PDF-OVER_INTEGRACIO)
