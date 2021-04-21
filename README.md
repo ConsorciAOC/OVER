@@ -5,28 +5,25 @@ Documentació d'integració d'OVER
 
 <b>Informació general</b>
 
-|Títol:         |OVER -  Document d’integració del servei|
-|----           | ----------              |
-|Creat per:     |Departament de Projectes CAOC|
-|A revisar per: |Departament de Projectes CAOC|
-|A aprovar per: |Departament de Projectes CAOC|
-
+| Títol | OVER -  Document d’integració del servei |
+| --- | --- |
+| Creat per | Departament de Projectes CAOC |
+| A revisar per | Departament de Projectes CAOC |
+| A aprovar per | Departament de Projectes CAOC |
 
 <b>Històric de revisions</b>
 
-|Versió|Data       |Autor          |Comentaris           |
-|----  |----       |----           |----                 |
-|V1.0	 |12/01/2012	|Projectes CAOC	|Creació del document |  
-|V1.1	 |05/11/2012	|Projectes CAOC	|Notificació directa vàlida per trameses amb signatura automàtica i incorporació d’usuari. Suport MTOM en tramitació OVER, descàrrega de documentació d’un tràmit a partir de número d’assentament i consulta de tràmits per rang de dates.|
-|V1.2	|23/01/2013	|Projectes CAOC	|NOTIFICACIO_DIRECTA permet informar oficines de registre origen i destí.|
-|V1.3	|05/11/2013	|Operacions CAOC	|NOTIFICACIO_DIRECTA permet informar les adreces de correu electrònic a qui es notifica la tramesa.|
-|V1.4	|27/02/2014	|Operacions CAOC	|OVER_FORMULARI permet informar XML amb dades de preompliment.|
-|V1.5	|08/03/2018	|Suport Tècnic AOC	|Afegim detalls del flux per integracions|
-|V2.0	|05/10/2020	|Suport Tècnic AOC	|Revisió canvis URL a nous frontals PCI 3.0|
-|V2.1	|08/02/2021	|Suport Tècnic AOC	|Nova missatgeria consulta expedients|
-|V2.2	|01/04/2021	|Suport Tècnic AOC	|Nova modalitat OVER_INTEGRACIO|
-
-
+| Versió |Data | Autor | Comentaris |
+| --- | --- | --- | --- |
+| V1.0 | 12/01/2012 | Projectes CAOC | Creació del document |
+| V1.1 | 05/11/2012 | Projectes CAOC | Notificació directa vàlida per trameses amb signatura automàtica i incorporació d’usuari. Suport MTOM en tramitació OVER, descàrrega de documentació d’un tràmit a partir de número d’assentament i consulta de tràmits per rang de dates |
+| V1.2 | 23/01/2013 | Projectes CAOC | NOTIFICACIO_DIRECTA permet informar oficines de registre origen i destí |
+| V1.3 | 05/11/2013 | Operacions CAOC | NOTIFICACIO_DIRECTA permet informar les adreces de correu electrònic a qui es notifica la tramesa |
+| V1.4 | 27/02/2014 | Operacions CAOC | OVER_FORMULARI permet informar XML amb dades de preompliment |
+| V1.5 | 08/03/2018 | Suport Tècnic AOC | Afegim detalls del flux per integracions |
+| V2.0 | 05/10/2020 | Suport Tècnic AOC | Revisió canvis URL a nous frontals PCI 3.0 |
+| V2.1 | 08/02/2021 | Suport Tècnic AOC | Nova missatgeria consulta expedients |
+| V2.2 | 01/04/2021 | Suport Tècnic AOC | Nova modalitat OVER_INTEGRACIO |
 
 # Taula de continguts
 
@@ -103,23 +100,23 @@ Per poder realitzar la integració cal conèixer prèviament la següent documen
 # 2. Transmissions de dades disponibles
 Les dades i operacions disponibles a través del servei són les que es presenten a continuació:
 
-|EMISSOR|
-|----|
-|Consorci Administració Oberta de Catalunya|
+| EMISSOR |
+| --- |
+| Consorci Administració Oberta de Catalunya |
 
-|PRODUCTE | MODALITAT                                                                             | DESCRIPCIO|
-|----     | ----------                                                                            | ----------|
-|OVER     | [OVER_DOCUMENTACIO](#31-Descàrrega-de-la-documentació-tràmit-OVER_DOCUMENTACIO)       | Operació de descàrrega de documentació associada a un tràmit|
-|OVER     | [OVER_FORMULARI](#32-Obtenció-de-formulari-de-tramitació-OVER_FORMULARI)              | Operació d'obtenció del formulari de tramitació d'un tràmit|
-|OVER     |	[OVER_CONTEXT](#33-Obtenció-de-context-de-tramitació-OVER_CONTEXT)                    | Operació d'obtenció de les dades de context d’un tràmit|
-|OVER     |	[OVER_TRAMITACIO](#34-Tramitació-OVER_TRAMITACIO)                                     | Operació d'inici d’una instància de tràmit|
-|OVER     | [OVER_ACTUALITZACIO](#35-Actualització-informació-tràmit-OVER_ACTUALITZACIO)          | Operació que permet assignar informació a una instància de servei (estat, número d'expedient i altres dades)|
-|OVER     |	[OVER_CONSULTA](#36-Consulta-de-tràmits-OVER_CONSULTA)                                |	Consulta d'instàncies de tràmit a partir d’un rang de dates |
-|OVER     | [OVER_LLISTA_EXPEDIENTS](#37-Llista-expedients-de-serveis-OVER_LLISTA_EXPEDIENTS)     | Llista expedients de tramitacions realitzades a partir de paràmetres clau o cerca.|
-|OVER     |	[OVER_CONSULTA_EXPEDIENT](#38-Consulta-expedient-OVER_CONSULTA_EXPEDIENT)             | Consulta les tramitacions i informació relacionada sobre un expedient|
-|OVER     |	[OVER_LLISTA_SERVEIS](#39-Llista-serveis-funcionals-OVER_LLISTA_SERVEIS)              | Llista serveis funcionals a partir d'un catàleg|
-|OVER     |	[OVER_LLISTA_TRAMITS](#310-Llista-tràmits-funcionals-OVER_LLISTA_TRAMITS)             | Llista tràmits funcionals a partir d’un catàleg i servei|
-|OVER     |	[OVER_INTEGRACIO](#311-Integració-sense-PDF-OVER_INTEGRACIO)                          | Mètode de tramitació mitjançant integració sense necessitat d'omplir i manipular formularis PDF|
+| PRODUCTE | MODALITAT | DESCRIPCIO |
+| --- | --- | --------- |
+| OVER | [OVER_DOCUMENTACIO](#31-Descàrrega-de-la-documentació-tràmit-OVER_DOCUMENTACIO) | Operació de descàrrega de documentació associada a un tràmit |
+| OVER | [OVER_FORMULARI](#32-Obtenció-de-formulari-de-tramitació-OVER_FORMULARI) | Operació d'obtenció del formulari de tramitació d'un tràmit |
+| OVER | [OVER_CONTEXT](#33-Obtenció-de-context-de-tramitació-OVER_CONTEXT) | Operació d'obtenció de les dades de context d’un tràmit |
+| OVER | [OVER_TRAMITACIO](#34-Tramitació-OVER_TRAMITACIO) | Operació d'inici d’una instància de tràmit |
+| OVER | [OVER_ACTUALITZACIO](#35-Actualització-informació-tràmit-OVER_ACTUALITZACIO) | Operació que permet assignar informació a una instància de servei (estat, número d'expedient i altres dades |
+| OVER | [OVER_CONSULTA](#36-Consulta-de-tràmits-OVER_CONSULTA) |	Consulta d'instàncies de tràmit a partir d’un rang de dates |
+| OVER | [OVER_LLISTA_EXPEDIENTS](#37-Llista-expedients-de-serveis-OVER_LLISTA_EXPEDIENTS) | Llista expedients de tramitacions realitzades a partir de paràmetres clau o cerca |
+| OVER | [OVER_CONSULTA_EXPEDIENT](#38-Consulta-expedient-OVER_CONSULTA_EXPEDIENT) | Consulta les tramitacions i informació relacionada sobre un expedient |
+| OVER | [OVER_LLISTA_SERVEIS](#39-Llista-serveis-funcionals-OVER_LLISTA_SERVEIS) | Llista serveis funcionals a partir d'un catàleg |
+| OVER | [OVER_LLISTA_TRAMITS](#310-Llista-tràmits-funcionals-OVER_LLISTA_TRAMITS) | Llista tràmits funcionals a partir d’un catàleg i servei |
+| OVER | [OVER_INTEGRACIO](#311-Integració-sense-PDF-OVER_INTEGRACIO) | Mètode de tramitació mitjançant integració sense necessitat d'omplir i manipular formularis PDF |
 
 # 3. Missatgeria del servei
 A continuació es detalla la missatgeria corresponent a les modalitats de consum del producte OVER.
