@@ -5,7 +5,7 @@ Documentació d'integració d'OVER
 
 <b>Informació general</b>
 
-| Títol | OVER -  Document d’integració del servei |
+| Títol | OVER -  Document d'integració del servei |
 | --- | --- |
 | Creat per | Departament de Projectes CAOC |
 | A revisar per | Departament de Projectes CAOC |
@@ -16,7 +16,7 @@ Documentació d'integració d'OVER
 | Versió |Data | Autor | Comentaris |
 | --- | --- | --- | --- |
 | V1.0 | 12/01/2012 | Projectes CAOC | Creació del document |
-| V1.1 | 05/11/2012 | Projectes CAOC | Notificació directa vàlida per trameses amb signatura automàtica i incorporació d’usuari. Suport MTOM en tramitació OVER, descàrrega de documentació d’un tràmit a partir de número d’assentament i consulta de tràmits per rang de dates |
+| V1.1 | 05/11/2012 | Projectes CAOC | Notificació directa vàlida per trameses amb signatura automàtica i incorporació d'usuari. Suport MTOM en tramitació OVER, descàrrega de documentació d'un tràmit a partir de número d'assentament i consulta de tràmits per rang de dates |
 | V1.2 | 23/01/2013 | Projectes CAOC | NOTIFICACIO_DIRECTA permet informar oficines de registre origen i destí |
 | V1.3 | 05/11/2013 | Operacions CAOC | NOTIFICACIO_DIRECTA permet informar les adreces de correu electrònic a qui es notifica la tramesa |
 | V1.4 | 27/02/2014 | Operacions CAOC | OVER_FORMULARI permet informar XML amb dades de preompliment |
@@ -33,7 +33,7 @@ Documentació d'integració d'OVER
    * [3.1. Descàrrega de la documentació d'un tràmit (OVER_DOCUMENTACIO)](#31-Descàrrega-de-la-documentació-tràmit-OVER_DOCUMENTACIO)
       - [3.1.1. Petició dades específiques](#311-Petició-dades-específiques)
       - [3.1.2. Resposta dades específiques](#312-Resposta-dades-específiques)
-          - [3.1.2.1. Resultat de l’operació](#3121-Resultat-de-la-operació)   
+          - [3.1.2.1. Resultat de l'operació](#3121-Resultat-de-la-operació)   
    * [3.2. Obtenció de formulari de tramitació (OVER_FORMULARI)](#32-Obtenció-de-formulari-de-tramitació-OVER_FORMULARI)
       - [3.2.1. Petició dades específiques](#321-Petició-dades-específiques)
       - [3.2.2. Resposta dades específiques](#322-Resposta-dades-específiques)
@@ -69,7 +69,7 @@ Documentació d'integració d'OVER
    * [4.2. OVER_INTEGRACIO](#42-OVER_INTEGRACIO)
        - [4.2.1. OVER_FORMULARI](#421-OVER_FORMULARI)
        - [4.2.2. Contingut del formulari](#422-Contingut-del-formualari)
-       - [4.2.3. Registre d’entrada / sortida](#423-Registre-entrada-sortida)
+       - [4.2.3. Registre d'entrada / sortida](#423-Registre-entrada-sortida)
        - [4.2.4. Documentació annexa](#424-Documentació-annexa)
    * [4.3. Signatura](#43-Signatura)
    * [4.4. Descàrrega de documentació](#44-Descàrrega-de-documentació)
@@ -91,7 +91,7 @@ Documentació d'integració d'OVER
        - [4.5.12. OVER_ACTUALITZACIO - Resposta](#4512-OVER_ACTUALITZACIO-resposta)    
        
 # 1. Introducció
-Aquest document detalla la missatgeria associada al servei de l'Oficina Virtual d’Emissió i Recepció, en endavant OVER.
+Aquest document detalla la missatgeria associada al servei de l'Oficina Virtual d'Emissió i Recepció, en endavant OVER.
 
 Per poder realitzar la integració cal conèixer prèviament la següent documentació:
 
@@ -108,14 +108,14 @@ Les dades i operacions disponibles a través del servei són les que es presente
 | --- | --- | --------- |
 | OVER | [OVER_DOCUMENTACIO](#31-Descàrrega-de-la-documentació-tràmit-OVER_DOCUMENTACIO) | Operació de descàrrega de documentació associada a un tràmit |
 | OVER | [OVER_FORMULARI](#32-Obtenció-de-formulari-de-tramitació-OVER_FORMULARI) | Operació d'obtenció del formulari de tramitació d'un tràmit |
-| OVER | [OVER_CONTEXT](#33-Obtenció-de-context-de-tramitació-OVER_CONTEXT) | Operació d'obtenció de les dades de context d’un tràmit |
-| OVER | [OVER_TRAMITACIO](#34-Tramitació-OVER_TRAMITACIO) | Operació d'inici d’una instància de tràmit |
+| OVER | [OVER_CONTEXT](#33-Obtenció-de-context-de-tramitació-OVER_CONTEXT) | Operació d'obtenció de les dades de context d'un tràmit |
+| OVER | [OVER_TRAMITACIO](#34-Tramitació-OVER_TRAMITACIO) | Operació d'inici d'una instància de tràmit |
 | OVER | [OVER_ACTUALITZACIO](#35-Actualització-informació-tràmit-OVER_ACTUALITZACIO) | Operació que permet assignar informació a una instància de servei (estat, número d'expedient i altres dades |
-| OVER | [OVER_CONSULTA](#36-Consulta-de-tràmits-OVER_CONSULTA) |	Consulta d'instàncies de tràmit a partir d’un rang de dates |
+| OVER | [OVER_CONSULTA](#36-Consulta-de-tràmits-OVER_CONSULTA) |	Consulta d'instàncies de tràmit a partir d'un rang de dates |
 | OVER | [OVER_LLISTA_EXPEDIENTS](#37-Llista-expedients-de-serveis-OVER_LLISTA_EXPEDIENTS) | Llista expedients de tramitacions realitzades a partir de paràmetres clau o cerca |
 | OVER | [OVER_CONSULTA_EXPEDIENT](#38-Consulta-expedient-OVER_CONSULTA_EXPEDIENT) | Consulta les tramitacions i informació relacionada sobre un expedient |
 | OVER | [OVER_LLISTA_SERVEIS](#39-Llista-serveis-funcionals-OVER_LLISTA_SERVEIS) | Llista serveis funcionals a partir d'un catàleg |
-| OVER | [OVER_LLISTA_TRAMITS](#310-Llista-tràmits-funcionals-OVER_LLISTA_TRAMITS) | Llista tràmits funcionals a partir d’un catàleg i servei |
+| OVER | [OVER_LLISTA_TRAMITS](#310-Llista-tràmits-funcionals-OVER_LLISTA_TRAMITS) | Llista tràmits funcionals a partir d'un catàleg i servei |
 | OVER | [OVER_INTEGRACIO](#311-Integració-sense-PDF-OVER_INTEGRACIO) | Mètode de tramitació mitjançant integració sense necessitat d'omplir i manipular formularis PDF |
 
 # 3. Missatgeria del servei
@@ -134,7 +134,7 @@ Operació que permet recuperar la documentació generada en el procés de tramit
 | Element | Descripció |
 | --- | --- |
 | peticioDocumentacioTramit/codiInstanciaTramit | Identificador d'instància de tràmit del qual es vol obtenir la informació |
-| peticioDocumentacioTramit/numeroAssentament | Número d’assentament de tràmit |
+| peticioDocumentacioTramit/numeroAssentament | Número d'assentament de tràmit |
 | peticioDocumentacioTramit/dadesTramit | Marcar amb '1' per a obtenir dades detallades del tràmit |
 
 ### 3.1.2. Resposta dades específiques
@@ -147,7 +147,7 @@ Operació que permet recuperar la documentació generada en el procés de tramit
 | respostaDocumentacioTramit/peticioDocumentacioTramit | Bloc de dades corresponent a la petició que genera la resposta |
 | respostaDocumentacioTramit/resposta/document | Bloc de dades corresponent a un document de tramitació |
 | //resposta/document/tipus | Tipus del document: <ul><li>ADJUNT: document adjunt (adjunt al formulari de tramitació)</li><li>ALTRES: altres evidències</li><li>MIS_ORIGINAL: dades MIS associades al formulari del PDF tramitat</li><li>MIS_ACTUALITZAT:  dades MIS actualitzades amb informació obtinguda durant el procés de tramitació</li><li>MUX_EVIDENCIA_ENTRADA: evidència de registre d'entrada</li><li>MUX_EVIDENCIA_SORTIDA: evidència de registre de sortida</li><li>PDF_DESCARREGA: PDF del tràmit descarregat</li><li>PDF_ORIGINAL: PDF del tràmit omplert per l'usuari</li><li>TIQUET: PDF amb el rebut dels registres electrònics</li><li>INT_PETICIO: Petició original si s'ha tramitat via [OVER_INTEGRACIO](#311-Integració-sense-PDF-OVER_INTEGRACIO)</li><li>XML_DADES: XML de dades del formulari a tramitar</li><li>XML_DADES_SIGNAT: XML de dades signadades (si s'ha tramitat via [OVER_INTEGRACIO](#311-Integració-sense-PDF-OVER_INTEGRACIO))</li></ul> |
-| //resposta/document/nom | Nom del document en cas d’adjunt |
+| //resposta/document/nom | Nom del document en cas d'adjunt |
 | //resposta/document/contingut | Document codificat en base64 |
 | respostaDocumentacioTramit/resposta/dadesTramit | Bloc de dades corresponent a dades detallades del tràmit |
 | //dadesTramit/codiInstanciaServei | Codi d'instància del servei / fil d'execució |
@@ -161,7 +161,7 @@ Operació que permet recuperar la documentació generada en el procés de tramit
 | //dadesTramit/registreSortida | Bloc de dades corresponent a l'assentament de sortida (número i data) |
 | //dadesTramit/registreEntrada | Bloc de dades corresponent a l'assentament d'entrada (número i data) |
 | //resposta/document/guid | GUID del document que permet la descàrrega via URL de descàrrega (emprat en documents pesats els quals no es poden incrustar en el XML de resposta) |
-| respostaDocumentacioTramit/resultat | Bloc que informa del resultat de l'operació. Per més detalls consulteu [3.1.2.1. Resultat de l’operació](#3121-Resultat-de-la-operació) |
+| respostaDocumentacioTramit/resultat | Bloc que informa del resultat de l'operació. Per més detalls consulteu [3.1.2.1. Resultat de l'operació](#3121-Resultat-de-la-operació) |
 
 #### 3.1.2.1 Resultat de la operació
 | Element | Descripció |
@@ -172,7 +172,7 @@ Operació que permet recuperar la documentació generada en el procés de tramit
 ## 3.2. Obtenció de formulari de tramitació OVER_FORMULARI
 Ja no es fa servir, utilitzar per noves integracions la modalitat [OVER_INTEGRACIO](#311-Integració-sense-PDF-OVER_INTEGRACIO)
 
-Permet obtenir d’OVER la informació del formulari de tramitació d’un determinat tràmit (preompliment).
+Permet obtenir d'OVER la informació del formulari de tramitació d'un determinat tràmit (preompliment).
 
 ### 3.2.1. Petició dades específiques
 <p align="center">
@@ -200,17 +200,17 @@ Permet obtenir d’OVER la informació del formulari de tramitació d’un deter
 | Element | Descripció |
 | --- | --- |
 | respostaFormulariTramit/peticioFormulariTramit | Bloc de dades corresponent a la petició que genera la resposta |
-| respostaFormulariTramit/resposta | Bloc de dades corresponent a la resposta a la operació d’obtenció de PDF de tramitació |
+| respostaFormulariTramit/resposta | Bloc de dades corresponent a la resposta a la operació d'obtenció de PDF de tramitació |
 | //resposta/codiInstanciaTramit | Codi d'instància del tràmit generat |
 | //resposta/codiInstanciaServei | Codi d'instància de servei / fil d'execució associat a la instància de tràmit |
-| //resposta/formulari | PDF corresponent al formulari de tramitació o PDF d’error en cas d'incidència |
+| //resposta/formulari | PDF corresponent al formulari de tramitació o PDF d'error en cas d'incidència |
 | //resposta/ruta | (En desús) |
-| respostaFormulariTramit/resultat | Bloc que informa del resultat de l'operació. Per més detalls consulteu [3.1.2.1. Resultat de l’operació](#3121-Resultat-de-la-operació) |
+| respostaFormulariTramit/resultat | Bloc que informa del resultat de l'operació. Per més detalls consulteu [3.1.2.1. Resultat de l'operació](#3121-Resultat-de-la-operació) |
 
 ## 3.3. Obtenció de context de tramitació OVER_CONTEXT
 Ja no es fa servir, utilitzar per noves integracions la modalitat [OVER_INTEGRACIO](#311-Integració-sense-PDF-OVER_INTEGRACIO)
 
-Permet obtenir d’OVER el context de tramitació d’un tràmit pel qual no es vulgui obtenir el PDF de tramitació via la modalitat [OVER_FORMULARI](#32-Obtenció-de-formulari-de-tramitació-OVER_FORMULARI).
+Permet obtenir d'OVER el context de tramitació d'un tràmit pel qual no es vulgui obtenir el PDF de tramitació via la modalitat [OVER_FORMULARI](#32-Obtenció-de-formulari-de-tramitació-OVER_FORMULARI).
 
 ### 3.3.1. Petició dades específiques
 <p align="center">
@@ -228,10 +228,10 @@ Ja no es fa servir, utilitzar per noves integracions la modalitat [OVER_INTEGRAC
 Aquesta modalitat permet iniciar un procés de tramitació a OVER.
 OVER permet classificar els tràmits que gestiona en dos grans grups:
 
-•	Tràmits inicials: són tràmits que no depenen de cap altre per a executar-se i, per tant, poden ser iniciats en qualsevol moment. Quan s’executen, aquest tràmits creen una instància de servei (fil d’execució / codiInstanciaServei).
+•	Tràmits inicials: són tràmits que no depenen de cap altre per a executar-se i, per tant, poden ser iniciats en qualsevol moment. Quan s'executen, aquest tràmits creen una instància de servei (fil d'execució / codiInstanciaServei).
 
-•	Tràmits no-inicials: són tràmits que només poden ser executats dins del context d’una instància de servei (fil d’execució / codiInstanciaServei) ja existent. Els tràmits no inicials depenen d’un tràmit previ.
-Així, amb aquesta modalitat, es poden executar tant tràmits inicials com tràmits no-inicials. Per aquesta segona opció, cal afegir a la petició d’execució el codi de la instància de servei (codiInstanciaServei).
+•	Tràmits no-inicials: són tràmits que només poden ser executats dins del context d'una instància de servei (fil d'execució / codiInstanciaServei) ja existent. Els tràmits no inicials depenen d'un tràmit previ.
+Així, amb aquesta modalitat, es poden executar tant tràmits inicials com tràmits no-inicials. Per aquesta segona opció, cal afegir a la petició d'execució el codi de la instància de servei (codiInstanciaServei).
 
 ### 3.4.1. Petició dades específiques
 <p align="center">
@@ -244,7 +244,7 @@ Així, amb aquesta modalitat, es poden executar tant tràmits inicials com tràm
 </p> 
 
 ## 3.5. Actualització informació tràmit OVER_ACTUALITZACIO
-Permet associar informació a una determinada instància de servei (estat, número d’expedient o qualsevol altra informació que es mostrarà als usuaris).
+Permet associar informació a una determinada instància de servei (estat, número d'expedient o qualsevol altra informació que es mostrarà als usuaris).
 
 ### 3.5.1. Petició dades específiques
 <p align="center">
@@ -257,12 +257,12 @@ Permet associar informació a una determinada instància de servei (estat, núme
 </p> 
 
 ## 3.6. Consulta de tràmits OVER_CONSULTA
-Permet consultar els tràmits rebuts i enviats de l’ens que fa la consulta a partir d’un rang de dates.
+Permet consultar els tràmits rebuts i enviats de l'ens que fa la consulta a partir d'un rang de dates.
 
 ### 3.6.1. Petició dades específiques
 <p align="center">
 <img align="center" src="img/peticio-dades-especifiques_OVER_CONSULTA.png" />
-</p>  
+</p>
 
 ### 3.6.2. Resposta dades específiques
 <p align="center">
@@ -273,40 +273,89 @@ Permet consultar els tràmits rebuts i enviats de l’ens que fa la consulta a p
 </p> 
 
 ## 3.7. Llista expedients de serveis OVER_LLISTA_EXPEDIENTS
-Permet llistar expedients de tramitacions realitzades a partir de paràmetres clau o cerca. Només mostrarà les dades de l’ens autoritzat a la petició.
+Permet llistar expedients de tramitacions realitzades a partir de paràmetres clau o cerca. Només mostrarà les dades de l'ens autoritzat a la petició.
 
 ### 3.7.1. Petició dades específiques
 <p align="center">
 <img align="center" src="img/peticio-dades-especifiques_OVER_LLISTA_EXPEDIENTS.png" />
-</p>  
+</p>
+
+| Element | Descripció |
+| --- | --- |
+| peticioLlistaExpedients/codiInstanciaTramit | Codi d'instància del servei / fil d'execució |
+| peticioLlistaExpedients/numExpedient | Codi d'instància del servei / fil d'execució |
+| peticioLlistaExpedients/numRegistre | Codi d'instància del servei / fil d'execució |
+| //cerca/codiEnsPromotor | Opcional. Codi d'ens del promotor del servei |
+| //cerca/codiFuncionalServei | Opcional. Codi funcional del servei |
+| //cerca/codiFuncionalTramit | Opcional. Codi funcional del tràmit |
+| //cerca/codiFuncionalTramitTeResposta | Opcional. Només vàlid en cas d'omplir el codi funcional del tràmit, que pot tenir o no tràmits resposta |
+| //cerca/codiEnsInteressat | Opcional. Codi d'ens interessat en la tramitació |
+| //cerca/dataInici | Rang de dates de tramitació a consultar (data llindar inferior) |
+| //cerca/dataFi | Rang de dates de tramitació a consultar (data llindar superior) |
+| peticioLlistaExpedients/codiInstanciaTramit | Codi d'instància del tràmit localitzat dins l'expedient |
+| peticioLlistaExpedients/numExpedient | Número d'expedient relacionat al servei de tramitació |
+| peticioLlistaExpedients/numRegistre | Número de registre del tràmit localitzat dins l'expedient |
 
 ### 3.7.2. Resposta dades específiques
 <p align="center">
 <img align="center" src="img/resposta-dades-especifiques_OVER_LLISTA_EXPEDIENTS.png" />
-</p> 
+</p>
 
+| Element | Descripció |
+| --- | --- |
+| respostaLlistatExpedients/peticioLlistatExpedients | Bloc de dades corresponent a la petició que genera la resposta |
+| respostaLlistatExpedients/resposta | Bloc de dades corresponent a la resposta a la operació de llistat |
+| //resposta/instanciaServei | Bloc de dades corresponent al conjunt d'instàncies de servei de tràmits realitzats que compleixen els requisits de la petició |
+| //instanciaServei/codiInstanciaServei | Codi d'instància del servei / fil d'execució |
+| //instanciaServei/ensPromotor | Codi d'ens del promotor del servei |
+| //instanciaServei/serveiFuncional | Codi i nom funcional del servei |
+| //instanciaServei/ensInteressat | Codi d'ens interessat en la tramitació |
+| //instanciaServei/nTramits | Nombre de tràmits que conté l'expedient |
+| respostaLlistatExpedients/resultat | Bloc que informa del resultat de l'operació. Per més detalls consulteu [3.1.2.1. Resultat de l'operació](#3121-Resultat-de-la-operació) |
 
 ## 3.8. Consulta expedient OVER_CONSULTA_EXPEDIENT
-Permet consultar les tramitacions i informació relacionada sobre un expedient. Només mostrarà les dades de l’ens autoritzat a la petició.
+Permet consultar les tramitacions i informació relacionada sobre un expedient. Només mostrarà les dades de l'ens autoritzat a la petició.
 
 ### 3.8.1. Petició dades específiques
 <p align="center">
 <img align="center" src="img/peticio-dades-especifiques_OVER_CONSULTA_EXPEDIENT.png" />
-</p>  
+</p>
+
+| Element | Descripció |
+| --- | --- |
+| peticioConsultaExpedient/codiInstanciaServei | Codi d'instància del servei / fil d'execució |
 
 ### 3.8.2. Resposta dades específiques
 <p align="center">
 <img align="center" src="img/resposta-dades-especifiques_1_OVER_CONSULTA_EXPEDIENT.png" />
-</p> 
+</p>
 <p align="center">
 <img align="center" src="img/resposta-dades-especifiques_2_OVER_CONSULTA_EXPEDIENT.png" />
-</p> 
-<p align="center">
-<img align="center" src="img/resposta-dades-especifiques_3_OVER_CONSULTA_EXPEDIENT.png" />
-</p> 
-<p align="center">
-<img align="center" src="img/resposta-dades-especifiques_4_OVER_CONSULTA_EXPEDIENT.png" />
-</p> 
+</p>
+
+| Element | Descripció |
+| --- | --- |
+| respostaConsultaExpedient/peticioConsultaExpedient | Bloc de dades corresponent a la petició que genera la resposta |
+| respostaConsultaExpedient/resposta | Bloc de dades corresponent a la resposta a la operació de consulta |
+| //resposta/ensPromotor | Codi d'ens del promotor del servei |
+| //resposta/serveiFuncional | Codi i nom funcional del servei |
+| //resposta/informacioRelacionada | Bloc de dades corresponent al conjunt de dades relacionades amb l'expedient, com el número d'expedient donar per cada ens tramitador, canvi d'estat de l'expedient, ... |
+| //informacioRelacionada/info | Bloc de dades corresponent a la informació relacionada. El seu tipus de dada, data d'inserció i valor |
+| //resposta/tramits | Bloc de dades corresponent als tràmits de l'expedient |
+| //tramits/instanciaTramit | Bloc de dades corresponent al conjunt d'instàncies de tràmits realitzats que compleixen els requisits de la petició |
+| //instanciaTramit/codiInstanciaTramit | Codi d'instància del tràmit localitzat dins d'un expedient |
+| //instanciaTramit/codiInstanciaTramitPredecessor | Codi d'instància del tràmit del tràmit anterior al tràmit actual |
+| //instanciaTramit/tramitsResposta | Bloc de dades corresponent al conjunt de tràmits resposta al tràmit actua |
+| //instanciaTramit/tramitsResposta/codiInstanciaTramit | Codi d'instància del tràmit successor |
+| //instanciaTramit/tramitFuncional | Codi i nom funcional del tràmit |
+| //instanciaTramit/observacions | Títol o nom procediment del tràmit |
+| //instanciaTramit/data | Data de tramitació |
+| //instanciaTramit/ensOrigen | Codi i nom de l'ens origen |
+| //instanciaTramit/ensDesti | Codi i nom de l'ens destí |
+| //instanciaTramit/registreEntrada | Bloc de dades corresponent a l'assentament d'entrada d'un tràmit (número i data) |
+| //instanciaTramit/registreSortida | Bloc de dades corresponent a l'assentament de sortida d'un tràmit (número i data) |
+| //instanciaTramit/resum | Bloc de dades en Base64 on trobem el resum del tràmit |
+| respostaConsultaExpedient/resultat | Bloc que informa del resultat de l'operació. Per més detalls consulteu [3.1.2.1. Resultat de l'operació](#3121-Resultat-de-la-operació) |
 
 ## 3.9. Llista serveis funcionals OVER_LLISTA_SERVEIS
 Permet llistar serveis funcionals a partir d'un catàleg
@@ -319,7 +368,7 @@ Permet llistar serveis funcionals a partir d'un catàleg
 | Element | Descripció |
 | --- | --- |
 | peticioLlistaServeis/codiEnsPromotor | Codi d'ens del promotor del servei |
-| peticioLlistaServeis/mostrarInactius | Opcional. Marcar com a “true” per mostrar tràmits actius i inactius. Per defecte, si no s’informa, només mostra actius |
+| peticioLlistaServeis/mostrarInactius | Opcional. Marcar com a “true” per mostrar tràmits actius i inactius. Per defecte, si no s'informa, només mostra actius |
 
 ### 3.9.2. Resposta dades específiques
 <p align="center">
@@ -335,10 +384,10 @@ Permet llistar serveis funcionals a partir d'un catàleg
 | //servei/dataInici | Data d'inici del període de tramitació del servei, en cas que estigui establerta |
 | //servei/dataFi | Data de fi del període de tramitació del servei, en cas que estigui establerta |
 | //servei/actiu | Servei actiu per a la seva tramitació. En cas que hi hagi dates especificades, cal que la data actual encaixi dins el rang de dates |
-| respostaLlistaServeis/resultat | Bloc que informa del resultat de l'operació. Per més detalls consulteu [3.1.2.1. Resultat de l’operació](#3121-Resultat-de-la-operació) |
+| respostaLlistaServeis/resultat | Bloc que informa del resultat de l'operació. Per més detalls consulteu [3.1.2.1. Resultat de l'operació](#3121-Resultat-de-la-operació) |
 
 ## 3.10. Llista tràmits funcionals OVER_LLISTA_TRAMITS
-Permet llistar tràmits funcionals a partir d’un catàleg i servei.
+Permet llistar tràmits funcionals a partir d'un catàleg i servei.
 
 ### 3.10.1. Petició dades específiques
 <p align="center">
@@ -359,16 +408,16 @@ Permet llistar tràmits funcionals a partir d’un catàleg i servei.
 | --- | --- |
 | respostaLlistaTramits/peticioLlistaTramits | Bloc de dades corresponent a la petició que genera la resposta |
 | respostaLlistaTramits/resposta | Bloc de dades corresponent a la resposta a la operació de consulta |
-| //resposta/tramit | Bloc de dades corresponent als tràmits del servei de l’expedient |
+| //resposta/tramit | Bloc de dades corresponent als tràmits del servei de l'expedient |
 | //tramit/tramit | Codi i nom funcional del tràmit |
 | //tramit/inicial | S'informarà en cas que el tràmit sigui inicial (no requereix predecessor) |
 | //tramit/tramitsResposta | Bloc de dades corresponent al conjunt de tràmits predecessors al tràmit actual |
 | //tramit/tramitsResposta/tramit | Codi i nom funcional del tràmit predecessor |
-| //tramit/dataInici | Data d’inici del període de tramitació del tràmit, en cas que estigui establerta |
+| //tramit/dataInici | Data d'inici del període de tramitació del tràmit, en cas que estigui establerta |
 | //tramit/dataFi | Data de fi del període de tramitació del tràmit, en cas que estigui establerta |
 | //tramit/actiu | Tràmit actiu per a la seva tramitació. En cas que hi hagi dates especificades, cal que la data actual encaixi dins el rang de dates |
 | //tramit/integrable | Tramitació disponible a través de l'operació OVER_INTEGRACIO |
-| respostaLlistaTramits/resultat | Bloc que informa del resultat de l'operació. Per més detalls consulteu [3.1.2.1. Resultat de l’operació](#3121-Resultat-de-la-operació) |
+| respostaLlistaTramits/resultat | Bloc que informa del resultat de l'operació. Per més detalls consulteu [3.1.2.1. Resultat de l'operació](#3121-Resultat-de-la-operació) |
 
 ## 3.11. Integració sense PDF OVER_INTEGRACIO
 Mètode de tramitació mitjançant integració sense necessitat d'omplir i manipular formularis PDF.
@@ -382,9 +431,9 @@ Mètode de tramitació mitjançant integració sense necessitat d'omplir i manip
 | --- | --- |
 | peticioIntegracio/peticioFormulariTramit | Missatgeria [peticioFormulariTramit](#321-Petició-dades-específiques) |
 | peticioIntegracio/dadesContingut | Bloc de dades corresponent al contingut de les dades del formulari |
-| //dadesContingut/formulari | Cos del formulari en format XML. Ha de complir l'schema del tràmit funcional que es vol tramitar. Incloure l'element dintre d’una secció CDATA |
+| //dadesContingut/formulari | Cos del formulari en format XML. Ha de complir l'schema del tràmit funcional que es vol tramitar. Incloure l'element dintre d'una secció CDATA |
 | //dadesContingut/registreOrigen | Bloc de dades corresponent al registre d'origen en cas que es disposi i no vulgui que MUX torni a registrar de nou |
-| //registreOrigen/dataRegistre | Data del registre d’origen |
+| //registreOrigen/dataRegistre | Data del registre d'origen |
 | //registreOrigen/assentamentRegistre | Número d'assentament d'origen |
 | //registreOrigen/evidenciaRegistre | Evidència de registre d'origen en Base64 |
 | //dadesContingut/registreDesti | Bloc de dades corresponent al registre de destí en cas que es disposi i no vulgui que MUX torni a registrar de nou |
@@ -400,13 +449,13 @@ Mètode de tramitació mitjançant integració sense necessitat d'omplir i manip
 | Element | Descripció |
 | --- | --- |
 | respostaIntegracio/peticioIntegracio | Bloc de dades corresponent a la petició que genera la resposta |
-| respostaIntegracio/resposta | Bloc de dades corresponent a la resposta a la operació d’obtenció de PDF de tramitació |
+| respostaIntegracio/resposta | Bloc de dades corresponent a la resposta a la operació d'obtenció de PDF de tramitació |
 | //resposta/codiInstanciaTramit | Codi d'instància del tràmit generat |
 | //resposta/codiInstanciaServei | Codi d'instància de servei / fil d'execució associat a la instància de tràmit |
-| respostaIntegracio/resultat | Bloc que informa del resultat de l'operació. Per més detalls consulteu [3.1.2.1. Resultat de l’operació](#3121-Resultat-de-la-operació) |
+| respostaIntegracio/resultat | Bloc que informa del resultat de l'operació. Per més detalls consulteu [3.1.2.1. Resultat de l'operació](#3121-Resultat-de-la-operació) |
 
 # 4. Exemple integració
-Exemple de com integrar-se amb el servei de tramitació de l’OVER. S’explicarà com utilitzar l'[OVER_INTEGRACIO](#311-Integració-sense-PDF-OVER_INTEGRACIO) sense necessitat de manipular formularis PDF. Els exemples van orientats a la integració amb la tramesa genèrica (TGEN).
+Exemple de com integrar-se amb el servei de tramitació de l'OVER. S'explicarà com utilitzar l'[OVER_INTEGRACIO](#311-Integració-sense-PDF-OVER_INTEGRACIO) sense necessitat de manipular formularis PDF. Els exemples van orientats a la integració amb la tramesa genèrica (TGEN).
 
 El procés de tramitació via integració està format per la part síncrona ([OVER_INTEGRACIO](#311-Integració-sense-PDF-OVER_INTEGRACIO)) que retornarà de immediat la instància de tràmit i servei; i una part asíncrona que tramitarà el formulari i generarà tota la documentació pertinent, que podreu descarregar a posteriori.
 
@@ -441,7 +490,7 @@ En el següent quadre es pot veure que només es pot respondre a la TGEN0001 amb
 <img align="center" src="img/tramit_resposta.PNG" />
 </p> 
 
-<b>Exemple de petició d’un tràmit inicial:</b>
+<b>Exemple de petició d'un tràmit inicial:</b>
 
 ```xml
 <DatosEspecificos>
@@ -454,7 +503,7 @@ En el següent quadre es pot veure que només es pot respondre a la TGEN0001 amb
 </DatosEspecificos>
 ```
 
-<b>Exemple de petició d’un tràmit de resposta (tràmit NO inicial):</b>
+<b>Exemple de petició d'un tràmit de resposta (tràmit NO inicial):</b>
   
 En aquest cas cal indicar el tràmit predecessor ```<codiInstanciaTramitPredecessor>``` 
   
@@ -473,7 +522,7 @@ En aquest cas cal indicar el tràmit predecessor ```<codiInstanciaTramitPredeces
 
 ### 4.2.2. Contingut del formulari
 
-Dades en format XML que representen el contingut del formulari. Aquestes han de complir l’schema XSD que es proporcionarà per servei i tràmit funcional al que s’integra. Al mateix temps, si el tràmit ho requereix, es faran validacions lògiques sobre les dades, per exemple la validació d’un NIF.
+Dades en format XML que representen el contingut del formulari. Aquestes han de complir l'schema XSD que es proporcionarà per servei i tràmit funcional al que s'integra. Al mateix temps, si el tràmit ho requereix, es faran validacions lògiques sobre les dades, per exemple la validació d'un NIF.
 
 <b>Exemple de contingut del formulari:</b>
 
@@ -486,7 +535,7 @@ Dades en format XML que representen el contingut del formulari. Aquestes han de 
 
 ### 4.2.3. Registre entrada sortida
 
-El procés de tramitació sempre farà un registre d’entrada i un de sortida. En cas de disposar de registre, pots informar-lo i quan aquest es tramiti no es farà un nou registre.
+El procés de tramitació sempre farà un registre d'entrada i un de sortida. En cas de disposar de registre, pots informar-lo i quan aquest es tramiti no es farà un nou registre.
 
 <b>Exemple de registre de sortida i entrada:</b>
 
@@ -514,13 +563,13 @@ La documentació que es vulgui annexar a la tramitació, caldrà fer-la via MTOM
 
 ## 4.3. Signatura
 
-Les dades generades a partir de les dades rebudes es signaran amb el certificat del vostre organisme cedit al Consorci AOC. En cas de no disposar d’aquest certificat o que ja no sigui vàlid, es signarà amb el certificar propi del Consorci AOC.
+Les dades generades a partir de les dades rebudes es signaran amb el certificat del vostre organisme cedit al Consorci AOC. En cas de no disposar d'aquest certificat o que ja no sigui vàlid, es signarà amb el certificar propi del Consorci AOC.
 
 La signatura que es generarà serà XADES Enveloped amb segell de temps.
 
 ## 4.4. Descàrrega de documentació
 
-Una vegada la tramitació s’hagi efectuat, podreu recuperar la documentació generada relacionada amb la tramitació. Els documents que s’obtindran seran:
+Una vegada la tramitació s'hagi efectuat, podreu recuperar la documentació generada relacionada amb la tramitació. Els documents que s'obtindran seran:
 
 •	XML_TRAMIT: Les dades que composen el tràmit, generades a partir de les dades rebudes.
 
@@ -532,16 +581,16 @@ Una vegada la tramitació s’hagi efectuat, podreu recuperar la documentació g
 
 •	TIQUET: PDF_ORIGINAL + dades rellevants de la tramitació (identificadors, data, registre,...)
 
-Aquesta documentació es pot recuperar per dues vies: MUX_DESCARREGA (requereix [OVER_CONSULTA_EXPEDIENT](#38-Consulta-expedient-OVER_CONSULTA_EXPEDIENT) previ) o [OVER_DOCUMENTACIO](#31-Descàrrega-de-la-documentació-tràmit-OVER_DOCUMENTACIO)  .
+Aquesta documentació es pot recuperar per dues vies: MUX_DESCARREGA (requereix [OVER_CONSULTA_EXPEDIENT](#38-Consulta-expedient-OVER_CONSULTA_EXPEDIENT) previ) o [OVER_DOCUMENTACIO](#31-Descàrrega-de-la-documentació-tràmit-OVER_DOCUMENTACIO).
 
 
 ### 4.4.1. MUX_DESCARREGA
 
-Requereix com a paràmetre d’entrada el número d’assentament del tràmit generat pel MUX. Aquest es pot cercar via [OVER_CONSULTA_EXPEDIENT](#38-Consulta-expedient-OVER_CONSULTA_EXPEDIENT) amb el codi instància servei retornat per [OVER_INTEGRACIO](#311-Integració-sense-PDF-OVER_INTEGRACIO).
+Requereix com a paràmetre d'entrada el número d'assentament del tràmit generat pel MUX. Aquest es pot cercar via [OVER_CONSULTA_EXPEDIENT](#38-Consulta-expedient-OVER_CONSULTA_EXPEDIENT) amb el codi instància servei retornat per [OVER_INTEGRACIO](#311-Integració-sense-PDF-OVER_INTEGRACIO).
 
-En cas d’haver informat el registre propi i no haver fet servir MUX, aquesta via no funcionarà i cal fer servir [OVER_DOCUMENTACIO](#31-Descàrrega-de-la-documentació-tràmit-OVER_DOCUMENTACIO)  .
+En cas d'haver informat el registre propi i no haver fet servir MUX, aquesta via no funcionarà i cal fer servir [OVER_DOCUMENTACIO](#31-Descàrrega-de-la-documentació-tràmit-OVER_DOCUMENTACIO)  .
 
-Si no es troba l’assentament demanat, retornarà la següent resposta:
+Si no es troba l'assentament demanat, retornarà la següent resposta:
 
 ```xml
 <ns0:RespostaRegistre xmlns:ns0="http://net.aocat/MUX2/RespostaRegistre" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
@@ -573,7 +622,7 @@ Si la documentació encara no està disponible, retornarà la següent resposta:
 
 ### 4.4.2. OVER_CONSULTA_EXPEDIENT
 
-En cas de no disposar de número d’assentament, cal cercar-lo a partir del codi instància servei retornat per [OVER_INTEGRACIO](#311-Integració-sense-PDF-OVER_INTEGRACIO).
+En cas de no disposar de número d'assentament, cal cercar-lo a partir del codi instància servei retornat per [OVER_INTEGRACIO](#311-Integració-sense-PDF-OVER_INTEGRACIO).
 
 Si la documentació encara no està disponible, retornarà la següent resposta:
 
@@ -589,7 +638,7 @@ Si la documentació encara no està disponible, retornarà la següent resposta:
 
 ### 4.4.3. OVER_DOCUMENTACIO
 
-Requereix com a paràmetre d’entrada el codi instància tràmit retornat per [OVER_INTEGRACIO](#311-Integració-sense-PDF-OVER_INTEGRACIO).
+Requereix com a paràmetre d'entrada el codi instància tràmit retornat per [OVER_INTEGRACIO](#311-Integració-sense-PDF-OVER_INTEGRACIO).
 
 Si la documentació encara no està disponible, retornarà la següent resposta:
 
