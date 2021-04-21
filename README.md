@@ -215,12 +215,29 @@ Permet obtenir d'OVER el context de tramitació d'un tràmit pel qual no es vulg
 ### 3.3.1. Petició dades específiques
 <p align="center">
 <img align="center" src="img/peticio-dades-especifiques_OVER_CONTEXT.png" />
-</p>  
+</p>
+
+| Element | Descripció |
+| --- | --- |
+| peticioContextTramit/codiCataleg | Codi del catàleg |
+| peticioContextTramit/codiFuncionalServei | Codi funcional del servei |
+| peticioContextTramit/codiFuncionalTramit | Codi funcional del tràmit |
+| peticioContextTramit/codiInstanciaServei | Codi d'instància del servei / fil d'execució (en cas de tràmits NO inicials) |
+| peticioContextTramit/codiInstanciaTramitPredecessor | Codi d'instància de tràmit predecessor en cas del resposta a una instància de tràmit prèvia (tràmit NO inicial) |
+| peticioContextTramit/codiEns | Codi de l'ens amb el que l'ens propietari del catàleg realitza la tramitació |
 
 ### 3.3.2. Resposta dades específiques
 <p align="center">
 <img align="center" src="img/resposta-dades-especifiques_OVER_CONTEXT.png" />
-</p> 
+</p>
+
+| Element | Descripció |
+| --- | --- |
+| respostaContextTramit/peticioContextTramit | Bloc de dades corresponent a la petició que genera la resposta |
+| respostaContextTramit/resposta | Bloc de dades corresponent a la resposta a la operació d'obtenció de PDF de tramitació |
+| //resposta/codiInstanciaTramit | Codi d'instància del tràmit generat |
+| //resposta/codiInstanciaServei | Codi d'instància de servei / fil d'execució associat a la instància de tràmit |
+| respostaContextTramit/resultat | Bloc que informa del resultat de l'operació. Per més detalls consulteu [3.1.2.1. Resultat de l'operació](#3121-Resultat-de-la-operació) |
 
 ## 3.4. Tramitació OVER_TRAMITACIO
 Ja no es fa servir, utilitzar per noves integracions la modalitat [OVER_INTEGRACIO](#311-Integració-sense-PDF-OVER_INTEGRACIO)
