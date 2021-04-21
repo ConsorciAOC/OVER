@@ -318,11 +318,8 @@ Permet llistar serveis funcionals a partir d'un catàleg
 
 | Element | Descripció |
 | --- | --- |
-| respostaIntegracio/peticioIntegracio | Bloc de dades corresponent a la petició que genera la resposta |
-| respostaIntegracio/resposta | Bloc de dades corresponent a la resposta a la operació d’obtenció de PDF de tramitació |
-| //resposta/codiInstanciaTramit | Codi d'instància del tràmit generat |
-| //resposta/codiInstanciaServei | Codi d'instància de servei / fil d'execució associat a la instància de tràmit |
-| respostaIntegracio/resultat | Bloc que informa del resultat de l'operació. Per més detalls consulteu [3.1.2.1. Resultat de l’operació](#3121-Resultat-de-la-operació) |
+| peticioLlistaServeis/codiEnsPromotor | Codi d'ens del promotor del servei |
+| peticioLlistaServeis/mostrarInactius | Opcional. Marcar com a “true” per mostrar tràmits actius i inactius. Per defecte, si no s’informa, només mostra actius |
 
 ### 3.9.2. Resposta dades específiques
 <p align="center">
@@ -331,11 +328,14 @@ Permet llistar serveis funcionals a partir d'un catàleg
 
 | Element | Descripció |
 | --- | --- |
-| respostaIntegracio/peticioIntegracio | Bloc de dades corresponent a la petició que genera la resposta |
-| respostaIntegracio/resposta | Bloc de dades corresponent a la resposta a la operació d’obtenció de PDF de tramitació |
-| //resposta/codiInstanciaTramit | Codi d'instància del tràmit generat |
-| //resposta/codiInstanciaServei | Codi d'instància de servei / fil d'execució associat a la instància de tràmit |
-| respostaIntegracio/resultat | Bloc que informa del resultat de l'operació. Per més detalls consulteu [3.1.2.1. Resultat de l’operació](#3121-Resultat-de-la-operació) |
+| respostaLlistaServeis/peticioLlistaServeis | Bloc de dades corresponent a la petició que genera la resposta |
+| respostaLlistaServeis/resposta | Bloc de dades corresponent a la resposta a la operació de consulta |
+| //resposta/servei | Bloc de dades corresponent als serveis de l'expedient |
+| //servei/servei | Codi i nom funcional del servei |
+| //servei/dataInici | Data d'inici del període de tramitació del servei, en cas que estigui establerta |
+| //servei/dataFi | Data de fi del període de tramitació del servei, en cas que estigui establerta |
+| //servei/actiu | Servei actiu per a la seva tramitació. En cas que hi hagi dates especificades, cal que la data actual encaixi dins el rang de dates |
+| respostaLlistaServeis/resultat | Bloc que informa del resultat de l'operació. Per més detalls consulteu [3.1.2.1. Resultat de l’operació](#3121-Resultat-de-la-operació) |
 
 ## 3.10. Llista tràmits funcionals OVER_LLISTA_TRAMITS
 Permet llistar tràmits funcionals a partir d’un catàleg i servei.
@@ -347,11 +347,8 @@ Permet llistar tràmits funcionals a partir d’un catàleg i servei.
 
 | Element | Descripció |
 | --- | --- |
-| respostaIntegracio/peticioIntegracio | Bloc de dades corresponent a la petició que genera la resposta |
-| respostaIntegracio/resposta | Bloc de dades corresponent a la resposta a la operació d’obtenció de PDF de tramitació |
-| //resposta/codiInstanciaTramit | Codi d'instància del tràmit generat |
-| //resposta/codiInstanciaServei | Codi d'instància de servei / fil d'execució associat a la instància de tràmit |
-| respostaIntegracio/resultat | Bloc que informa del resultat de l'operació. Per més detalls consulteu [3.1.2.1. Resultat de l’operació](#3121-Resultat-de-la-operació) |
+| peticioLlistaTramits/codiEnsPromotor | Codi d'ens del promotor del servei |
+| peticioLlistaTramits/codiFuncionalServei |Codi funcional del servei |
 
 ### 3.10.2. Resposta dades específiques
 <p align="center">
@@ -360,11 +357,18 @@ Permet llistar tràmits funcionals a partir d’un catàleg i servei.
 
 | Element | Descripció |
 | --- | --- |
-| respostaIntegracio/peticioIntegracio | Bloc de dades corresponent a la petició que genera la resposta |
-| respostaIntegracio/resposta | Bloc de dades corresponent a la resposta a la operació d’obtenció de PDF de tramitació |
-| //resposta/codiInstanciaTramit | Codi d'instància del tràmit generat |
-| //resposta/codiInstanciaServei | Codi d'instància de servei / fil d'execució associat a la instància de tràmit |
-| respostaIntegracio/resultat | Bloc que informa del resultat de l'operació. Per més detalls consulteu [3.1.2.1. Resultat de l’operació](#3121-Resultat-de-la-operació) |
+| respostaLlistaTramits/peticioLlistaTramits | Bloc de dades corresponent a la petició que genera la resposta |
+| respostaLlistaTramits/resposta | Bloc de dades corresponent a la resposta a la operació de consulta |
+| //resposta/tramit | Bloc de dades corresponent als tràmits del servei de l’expedient |
+| //tramit/tramit | Codi i nom funcional del tràmit |
+| //tramit/inicial | S'informarà en cas que el tràmit sigui inicial (no requereix predecessor) |
+| //tramit/tramitsResposta | Bloc de dades corresponent al conjunt de tràmits predecessors al tràmit actual |
+| //tramit/tramitsResposta/tramit | Codi i nom funcional del tràmit predecessor |
+| //tramit/dataInici | Data d’inici del període de tramitació del tràmit, en cas que estigui establerta |
+| //tramit/dataFi | Data de fi del període de tramitació del tràmit, en cas que estigui establerta |
+| //tramit/actiu | Tràmit actiu per a la seva tramitació. En cas que hi hagi dates especificades, cal que la data actual encaixi dins el rang de dates |
+| //tramit/integrable | Tramitació disponible a través de l'operació OVER_INTEGRACIO |
+| respostaLlistaTramits/resultat | Bloc que informa del resultat de l'operació. Per més detalls consulteu [3.1.2.1. Resultat de l’operació](#3121-Resultat-de-la-operació) |
 
 ## 3.11. Integració sense PDF OVER_INTEGRACIO
 Mètode de tramitació mitjançant integració sense necessitat d'omplir i manipular formularis PDF.
