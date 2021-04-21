@@ -264,11 +264,11 @@ Així, amb aquesta modalitat, es poden executar tant tràmits inicials com tràm
 | peticioExecucioTramit/codiInstanciaTramit | Codi d'instància de tràmit |
 | peticioExecucioTramit/formulari/contingut | Per a la transmissió del contingut del PDF, utilitzar l'estàndard MTOM |
 | peticioExecucioTramit/formulari/ruta | Alternativa a contingut. Ruta del PDF de tramitació |
-| peticioExecucioTramit/formulari/id | Identificador d’adjunt. Únic en la petició.
+| peticioExecucioTramit/formulari/id | Identificador d'adjunt. Únic en la petició.
 
-Alternativament a contingut i ruta, es poden transferir tant el formulari de tramitació com els  adjunts seguint l’estàndard MTOM. En aquest cas cal informar el formulari de tramitació i els adjunts en l’element Contenido del bloc de dades genèriques Ficheros destinat a aquest efecte .
+Alternativament a contingut i ruta, es poden transferir tant el formulari de tramitació com els  adjunts seguint l'estàndard MTOM. En aquest cas cal informar el formulari de tramitació i els adjunts en l'element Contenido del bloc de dades genèriques Ficheros destinat a aquest efecte .
 
-Per identificar el fitxer corresponent al formulari de tramitació, caldrà alinear l’atribut Fichero@Id del bloc genèric amb l’element id de les dades específiques de la sol·licitud |
+Per identificar el fitxer corresponent al formulari de tramitació, caldrà alinear l'atribut Fichero@Id del bloc genèric amb l'element id de les dades específiques de la sol·licitud |
 
 ### 3.4.2. Resposta dades específiques
 <p align="center">
@@ -290,12 +290,25 @@ Permet associar informació a una determinada instància de servei (estat, núme
 ### 3.5.1. Petició dades específiques
 <p align="center">
 <img align="center" src="img/peticio-dades-especifiques_OVER_ACTUALITZACIO.png" />
-</p>  
+</p>
+
+| Element | Descripció |
+| --- | --- |
+| peticioActualitzacioTramit/codiInstanciaServei | Codi d'instància de servei / fil d'execució |
+| peticioActualitzacioTramit/dada | Bloc de dades corresponent a la informació que es vol associar a la instància de servei |
+| //dada/tipus | Codi funcional del tràmit |
+| //dada/dada | Tipus de dada:<ul><li>NUM_EXPEDIENT: número d'expedient (el sistema emmagatzema dos números d'expedient: un vinculat a l'ens propietari del catàleg i un altre de l'ens tramitador).</li><li>ESTAT: estat.</li><li>ALTRES: altra informació</li></ul> |
+| //dada/valor | Valor de la dada |
 
 ### 3.5.2. Resposta dades específiques
 <p align="center">
 <img align="center" src="img/resposta-dades-especifiques_OVER_ACTUALITZACIO.png" />
-</p> 
+</p>
+
+| Element | Descripció |
+| --- | --- |
+| respostaActualitzacioTramit/peticioActualitzacioTramit | Bloc de dades corresponent a la petició que genera la resposta |
+| respostaActualitzacioTramit/resultat | Bloc que informa del resultat de l'operació. Per més detalls consulteu [3.1.2.1. Resultat de l'operació](#3121-Resultat-de-la-operació) |
 
 ## 3.6. Consulta de tràmits OVER_CONSULTA
 Permet consultar els tràmits rebuts i enviats de l'ens que fa la consulta a partir d'un rang de dates.
@@ -305,13 +318,34 @@ Permet consultar els tràmits rebuts i enviats de l'ens que fa la consulta a par
 <img align="center" src="img/peticio-dades-especifiques_OVER_CONSULTA.png" />
 </p>
 
+| Element | Descripció |
+| --- | --- |
+| peticioConsultaTramits/codiCataleg | Codi del catàleg a consultar |
+| peticioConsultaTramits/codiFuncionalServei | Codi funcional del servei a consultar |
+| peticioConsultaTramits/codiFuncionalTramit | Codi funcional del tràmit a consultar |
+| peticioConsultaTramits/dataInici | Rang de dates de tramitació a consultar (data llindar inferior). El rang entre dates no pot superar una setmana |
+| peticioConsultaTramits/dataFi | Rang de dates de tramitació a consultar (data llindar superior) |
+| peticioConsultaTramits/tipus | Opcional. Si no s'informa es contemplen tant entrades com sortides. Si es vol especificar el tipus:<ul><li>E: entrades / tràmits rebuts</li><li>S: sortides / tràmits enviats</li></ul> |
+
 ### 3.6.2. Resposta dades específiques
 <p align="center">
-<img align="center" src="img/resposta-dades-especifiques_1_OVER_CONSULTA.png" />
-</p> 
-<p align="center">
-<img align="center" src="img/resposta-dades-especifiques_2_OVER_CONSULTA.png" />
-</p> 
+<img align="center" src="img/resposta-dades-especifiques_OVER_CONSULTA.png" />
+</p>
+
+| Element | Descripció |
+| --- | --- |
+| respostaConsultaTramits/peticioConsultaTramits | Bloc de dades corresponent a la petició que genera la resposta |
+| respostaConsultaTramits/resposta | Bloc de dades corresponent a la resposta a la operació de consulta |
+| //resposta/instanciaTramit | Bloc de dades corresponent a una instància de tràmit que s'ha tramitat dins del rang de dates informat |
+| //instanciaTramit/codiInstanciaServei | Codi d'instància del servei / fil d'execució |
+| //instanciaTramit/codiInstanciaTramit | Codi d'instància del tràmit |
+| //instanciaTramit/codiInstanciaTramitPredecessor | Codi d'instància del tràmit predecessor |
+| //instanciaTramit/data | Data de tramitació |
+| //instanciaTramit/codiEns | Codi de l'ens amb el que es tramita |
+| //instanciaTramit/nomEns | Nom de l'ens amb el que es tramita |
+| //instanciaTramit/registreSortida | Bloc de dades corresponent a l'assentament de sortida en cas d'un enviament (número i data) |
+| //instanciaTramit/registreEntrada | Bloc de dades corresponent a l'assentament d'entrada en cas d'una recepció (número i data) |
+| respostaConsultaTramits/resultat | Bloc que informa del resultat de l'operació. Per més detalls consulteu [3.1.2.1. Resultat de l'operació](#3121-Resultat-de-la-operació) |
 
 ## 3.7. Llista expedients de serveis OVER_LLISTA_EXPEDIENTS
 Permet llistar expedients de tramitacions realitzades a partir de paràmetres clau o cerca. Només mostrarà les dades de l'ens autoritzat a la petició.
