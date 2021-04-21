@@ -314,12 +314,28 @@ Permet llistar serveis funcionals a partir d'un catàleg
 ### 3.9.1. Petició dades específiques
 <p align="center">
 <img align="center" src="img/peticio-dades-especifiques_OVER_LLISTA_SERVEIS.png" />
-</p>  
+</p>
+
+| Element | Descripció |
+| --- | --- |
+| respostaIntegracio/peticioIntegracio | Bloc de dades corresponent a la petició que genera la resposta |
+| respostaIntegracio/resposta | Bloc de dades corresponent a la resposta a la operació d’obtenció de PDF de tramitació |
+| //resposta/codiInstanciaTramit | Codi d'instància del tràmit generat |
+| //resposta/codiInstanciaServei | Codi d'instància de servei / fil d'execució associat a la instància de tràmit |
+| respostaIntegracio/resultat | Bloc que informa del resultat de l'operació. Per més detalls consulteu [3.1.2.1. Resultat de l’operació](#3121-Resultat-de-la-operació) |
 
 ### 3.9.2. Resposta dades específiques
 <p align="center">
 <img align="center" src="img/resposta-dades-especifiques_OVER_LLISTA_SERVEIS.png" />
-</p> 
+</p>
+
+| Element | Descripció |
+| --- | --- |
+| respostaIntegracio/peticioIntegracio | Bloc de dades corresponent a la petició que genera la resposta |
+| respostaIntegracio/resposta | Bloc de dades corresponent a la resposta a la operació d’obtenció de PDF de tramitació |
+| //resposta/codiInstanciaTramit | Codi d'instància del tràmit generat |
+| //resposta/codiInstanciaServei | Codi d'instància de servei / fil d'execució associat a la instància de tràmit |
+| respostaIntegracio/resultat | Bloc que informa del resultat de l'operació. Per més detalls consulteu [3.1.2.1. Resultat de l’operació](#3121-Resultat-de-la-operació) |
 
 ## 3.10. Llista tràmits funcionals OVER_LLISTA_TRAMITS
 Permet llistar tràmits funcionals a partir d’un catàleg i servei.
@@ -327,15 +343,28 @@ Permet llistar tràmits funcionals a partir d’un catàleg i servei.
 ### 3.10.1. Petició dades específiques
 <p align="center">
 <img align="center" src="img/peticio-dades-especifiques_OVER_LLISTA_TRAMITS.png" />
-</p>  
+</p>
+
+| Element | Descripció |
+| --- | --- |
+| respostaIntegracio/peticioIntegracio | Bloc de dades corresponent a la petició que genera la resposta |
+| respostaIntegracio/resposta | Bloc de dades corresponent a la resposta a la operació d’obtenció de PDF de tramitació |
+| //resposta/codiInstanciaTramit | Codi d'instància del tràmit generat |
+| //resposta/codiInstanciaServei | Codi d'instància de servei / fil d'execució associat a la instància de tràmit |
+| respostaIntegracio/resultat | Bloc que informa del resultat de l'operació. Per més detalls consulteu [3.1.2.1. Resultat de l’operació](#3121-Resultat-de-la-operació) |
 
 ### 3.10.2. Resposta dades específiques
 <p align="center">
-<img align="center" src="img/resposta-dades-especifiques_1_OVER_LLISTA_TRAMITS.png" />
-</p> 
-<p align="center">
-<img align="center" src="img/resposta-dades-especifiques_2_OVER_LLISTA_TRAMITS.png" />
-</p> 
+<img align="center" src="img/resposta-dades-especifiques_OVER_LLISTA_TRAMITS.png" />
+</p>
+
+| Element | Descripció |
+| --- | --- |
+| respostaIntegracio/peticioIntegracio | Bloc de dades corresponent a la petició que genera la resposta |
+| respostaIntegracio/resposta | Bloc de dades corresponent a la resposta a la operació d’obtenció de PDF de tramitació |
+| //resposta/codiInstanciaTramit | Codi d'instància del tràmit generat |
+| //resposta/codiInstanciaServei | Codi d'instància de servei / fil d'execució associat a la instància de tràmit |
+| respostaIntegracio/resultat | Bloc que informa del resultat de l'operació. Per més detalls consulteu [3.1.2.1. Resultat de l’operació](#3121-Resultat-de-la-operació) |
 
 ## 3.11. Integració sense PDF OVER_INTEGRACIO
 Mètode de tramitació mitjançant integració sense necessitat d'omplir i manipular formularis PDF.
