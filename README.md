@@ -342,19 +342,35 @@ Mètode de tramitació mitjançant integració sense necessitat d'omplir i manip
 
 ### 3.11.1. Petició dades específiques
 <p align="center">
-<img align="center" src="img/peticio-dades-especifiques_1_OVER_INTEGRACIO.png" />
-</p>  
-<p align="center">
-<img align="center" src="img/peticio-dades-especifiques_2_new_OVER_INTEGRACIO.png" />
-</p> 
-<p align="center">
-<img align="center" src="img/peticio-dades-especifiques_3_OVER_INTEGRACIO.png" />
-</p> 
+<img align="center" src="img/peticio-dades-especifiques_OVER_INTEGRACIO.png" />
+</p>
+
+| Element | Descripció |
+| --- | --- |
+| peticioIntegracio/peticioFormulariTramit | Missatgeria [3.2.1. Petició dades específiques](#321-Petició-dades-específiques) |
+| peticioIntegracio/dadesContingut | Bloc de dades corresponent al contingut de les dades del formulari |
+| //dadesContingut/formulari | Cos del formulari en format XML. Ha de complir l'schema del tràmit funcional que es vol tramitar. Incloure l'element dintre d’una secció CDATA |
+| //dadesContingut/registreOrigen | Bloc de dades corresponent al registre d'origen en cas que es disposi i no vulgui que MUX torni a registrar de nou |
+| //registreOrigen/dataRegistre | Data del registre d’origen |
+| //registreOrigen/assentamentRegistre | Número d'assentament d'origen |
+| //registreOrigen/evidenciaRegistre | Evidència de registre d'origen en Base64 |
+| //dadesContingut/registreDesti | Bloc de dades corresponent al registre de destí en cas que es disposi i no vulgui que MUX torni a registrar de nou |
+| //registreDesti/dataRegistre | Data del registre de destí |
+| //registreDesti/assentamentRegistre | Número d'assentament de destí |
+| //registreDesti/evidenciaRegistre | Evidència de registre de destí en Base64 |
 
 ### 3.11.2. Resposta dades específiques
 <p align="center">
 <img align="center" src="img/resposta-dades-especifiques_OVER_INTEGRACIO.png" />
-</p> 
+</p>
+
+| Element | Descripció |
+| --- | --- |
+| respostaIntegracio/peticioIntegracio | Bloc de dades corresponent a la petició que genera la resposta |
+| respostaIntegracio/resposta | Bloc de dades corresponent a la resposta a la operació d’obtenció de PDF de tramitació |
+| //resposta/codiInstanciaTramit | Codi d'instància del tràmit generat |
+| //resposta/codiInstanciaServei | Codi d'instància de servei / fil d'execució associat a la instància de tràmit |
+| respostaIntegracio/resultat | Bloc que informa del resultat de l'operació. Per més detalls consulteu [3.1.2.1. Resultat de l’operació](#3121-Resultat-de-la-operació) |
 
 # 4. Exemple integració
 Exemple de com integrar-se amb el servei de tramitació de l’OVER. S’explicarà com utilitzar l'[OVER_INTEGRACIO](#311-Integració-sense-PDF-OVER_INTEGRACIO) sense necessitat de manipular formularis PDF. Els exemples van orientats a la integració amb la tramesa genèrica (TGEN).
