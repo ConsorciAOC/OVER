@@ -784,6 +784,7 @@ Si la documentació encara no està disponible, retornarà la següent resposta:
             <codiEns>800180001</codiEns>
           </peticioFormulariTramit>
           <dadesContingut>
+            <versio>1.0</versio>
             <formulari>
               <![CDATA[
 <PAG_DADES_INTEGRACIO xmlns="http://www.aoc.cat/over">
