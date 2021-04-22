@@ -520,6 +520,7 @@
 	<xs:element name="dadesContingut">
 		<xs:complexType>
 			<xs:sequence>
+				<xs:element name="versio" type="xs:decimal"/>
 				<xs:element name="formulari" type="xs:string"/>
 				<xs:element name="registreOrigen" type="TypeResultatRegistre" minOccurs="0"/>
 				<xs:element name="registreDesti" type="TypeResultatRegistre" minOccurs="0"/>
