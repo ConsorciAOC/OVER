@@ -30,7 +30,7 @@ Documentació d'integració d'OVER
 - [1. Introducció](#1-introducció)
 - [2. Transmissions de dades disponibles](#2-transmissions-de-dades-disponibles)
 - [3. Missatgeria del servei](#3-missatgeria-del-servei)
-   * [3.1. Descàrrega de la documentació d'un tràmit (OVER_DOCUMENTACIO)](#31-Descàrrega-de-la-documentació-tràmit-OVER_DOCUMENTACIO)
+   * [3.1. Descàrrega de la documentació d'un tràmit (OVER_DOCUMENTACIO)](#31-descàrrega-de-la-documentació-tràmit-over_documentacio)
       - [3.1.1. Petició dades específiques](#311-Petició-dades-específiques)
       - [3.1.2. Resposta dades específiques](#312-Resposta-dades-específiques)
           - [3.1.2.1. Resultat de l'operació](#3121-Resultat-de-la-operació)   
