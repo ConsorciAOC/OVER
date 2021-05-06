@@ -663,9 +663,9 @@ Aquesta documentació es pot recuperar per dues vies: [MUX_DESCARREGA](#441-mux_
 
 Amb la resposta de la consulta de [MUX_DESCARREGA](#441-mux_descarrega) o [OVER_DOCUMENTACIO](#31-Descàrrega-de-la-documentació-tràmit-OVER_DOCUMENTACIO) podreu descarregar els fitxers a partir del seu GUID.
 
-URL entorn de PRE: https://serveis3-pre.app.aoc.cat/CAOC-PCI30-OVER-TRAMITS/descarrega?guid=<GUID>
+URL entorn de PRE: ```https://serveis3-pre.app.aoc.cat/CAOC-PCI30-OVER-TRAMITS/descarrega?guid=<GUID>```
   
-URL entorn de PRO: https://serveis3.app.aoc.cat/CAOC-PCI30-OVER-TRAMITS/descarrega?guid=<GUID>
+URL entorn de PRO: ```https://serveis3.app.aoc.cat/CAOC-PCI30-OVER-TRAMITS/descarrega?guid=<GUID>```
 
 
 ### 4.4.1. MUX_DESCARREGA
