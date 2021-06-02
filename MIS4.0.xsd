@@ -1,0 +1,1082 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- edited with XMLSPY v2004 rel. 4 U (http://www.xmlspy.com) by Sergio Figueras (CONSORCI ADMINISTRACIO OBERTA DE CATALUNYA) -->
+<!-- Esquema Model d'Interoperabilitat Semàntica del formulari electrònic  v.4.0 (MIS)-->
+<xs:schema xmlns="http://www.aoc.cat/mis/v4" xmlns:xs="http://www.w3.org/2001/XMLSchema" targetNamespace="http://www.aoc.cat/mis/v4" elementFormDefault="qualified" attributeFormDefault="unqualified">
+	<!--++++++++++++++++++++++++++++++++++-->
+	<!-- Inclusió codificació idiomes segons  ISO 639-1-->
+	<!--++++++++++++++++++++++++++++++++++-->
+	<xs:simpleType name="TypeCodiIdiomaISO639">
+		<xs:restriction base="xs:string">
+			<xs:enumeration value="aa"/>
+			<xs:enumeration value="ab"/>
+			<xs:enumeration value="ae"/>
+			<xs:enumeration value="af"/>
+			<xs:enumeration value="ak"/>
+			<xs:enumeration value="am"/>
+			<xs:enumeration value="an"/>
+			<xs:enumeration value="ar"/>
+			<xs:enumeration value="as"/>
+			<xs:enumeration value="av"/>
+			<xs:enumeration value="ay"/>
+			<xs:enumeration value="az"/>
+			<xs:enumeration value="ba"/>
+			<xs:enumeration value="be"/>
+			<xs:enumeration value="bg"/>
+			<xs:enumeration value="bh"/>
+			<xs:enumeration value="bi"/>
+			<xs:enumeration value="bm"/>
+			<xs:enumeration value="bn"/>
+			<xs:enumeration value="bo"/>
+			<xs:enumeration value="br"/>
+			<xs:enumeration value="bs"/>
+			<xs:enumeration value="ca"/>
+			<xs:enumeration value="ce"/>
+			<xs:enumeration value="ch"/>
+			<xs:enumeration value="co"/>
+			<xs:enumeration value="cr"/>
+			<xs:enumeration value="cs"/>
+			<xs:enumeration value="cu"/>
+			<xs:enumeration value="cv"/>
+			<xs:enumeration value="cy"/>
+			<xs:enumeration value="da"/>
+			<xs:enumeration value="de"/>
+			<xs:enumeration value="dv"/>
+			<xs:enumeration value="dz"/>
+			<xs:enumeration value="ee"/>
+			<xs:enumeration value="el"/>
+			<xs:enumeration value="en"/>
+			<xs:enumeration value="eo"/>
+			<xs:enumeration value="es"/>
+			<xs:enumeration value="et"/>
+			<xs:enumeration value="eu"/>
+			<xs:enumeration value="fa"/>
+			<xs:enumeration value="ff"/>
+			<xs:enumeration value="fi"/>
+			<xs:enumeration value="fj"/>
+			<xs:enumeration value="fo"/>
+			<xs:enumeration value="fr"/>
+			<xs:enumeration value="fy"/>
+			<xs:enumeration value="ga"/>
+			<xs:enumeration value="gd"/>
+			<xs:enumeration value="gl"/>
+			<xs:enumeration value="gn"/>
+			<xs:enumeration value="gu"/>
+			<xs:enumeration value="gv"/>
+			<xs:enumeration value="ha"/>
+			<xs:enumeration value="he"/>
+			<xs:enumeration value="hi"/>
+			<xs:enumeration value="ho"/>
+			<xs:enumeration value="hr"/>
+			<xs:enumeration value="ht"/>
+			<xs:enumeration value="hu"/>
+			<xs:enumeration value="hy"/>
+			<xs:enumeration value="hz"/>
+			<xs:enumeration value="ia"/>
+			<xs:enumeration value="id"/>
+			<xs:enumeration value="ie"/>
+			<xs:enumeration value="ig"/>
+			<xs:enumeration value="ii"/>
+			<xs:enumeration value="ik"/>
+			<xs:enumeration value="io"/>
+			<xs:enumeration value="is"/>
+			<xs:enumeration value="it"/>
+			<xs:enumeration value="iu"/>
+			<xs:enumeration value="ja"/>
+			<xs:enumeration value="jv"/>
+			<xs:enumeration value="ka"/>
+			<xs:enumeration value="kg"/>
+			<xs:enumeration value="ki"/>
+			<xs:enumeration value="kj"/>
+			<xs:enumeration value="kk"/>
+			<xs:enumeration value="kl"/>
+			<xs:enumeration value="km"/>
+			<xs:enumeration value="kn"/>
+			<xs:enumeration value="ko"/>
+			<xs:enumeration value="kr"/>
+			<xs:enumeration value="ks"/>
+			<xs:enumeration value="ku"/>
+			<xs:enumeration value="kv"/>
+			<xs:enumeration value="kw"/>
+			<xs:enumeration value="ky"/>
+			<xs:enumeration value="la"/>
+			<xs:enumeration value="lb"/>
+			<xs:enumeration value="lg"/>
+			<xs:enumeration value="li"/>
+			<xs:enumeration value="ln"/>
+			<xs:enumeration value="lo"/>
+			<xs:enumeration value="lt"/>
+			<xs:enumeration value="lu"/>
+			<xs:enumeration value="lv"/>
+			<xs:enumeration value="mg"/>
+			<xs:enumeration value="mh"/>
+			<xs:enumeration value="mi"/>
+			<xs:enumeration value="mk"/>
+			<xs:enumeration value="ml"/>
+			<xs:enumeration value="mn"/>
+			<xs:enumeration value="mo"/>
+			<xs:enumeration value="mr"/>
+			<xs:enumeration value="ms"/>
+			<xs:enumeration value="mt"/>
+			<xs:enumeration value="my"/>
+			<xs:enumeration value="na"/>
+			<xs:enumeration value="nb"/>
+			<xs:enumeration value="nd"/>
+			<xs:enumeration value="ne"/>
+			<xs:enumeration value="ng"/>
+			<xs:enumeration value="nl"/>
+			<xs:enumeration value="nn"/>
+			<xs:enumeration value="no"/>
+			<xs:enumeration value="nr"/>
+			<xs:enumeration value="nv"/>
+			<xs:enumeration value="ny"/>
+			<xs:enumeration value="oc"/>
+			<xs:enumeration value="oj"/>
+			<xs:enumeration value="om"/>
+			<xs:enumeration value="or"/>
+			<xs:enumeration value="os"/>
+			<xs:enumeration value="pa"/>
+			<xs:enumeration value="pi"/>
+			<xs:enumeration value="pl"/>
+			<xs:enumeration value="ps"/>
+			<xs:enumeration value="pt"/>
+			<xs:enumeration value="qu"/>
+			<xs:enumeration value="rm"/>
+			<xs:enumeration value="rn"/>
+			<xs:enumeration value="ro"/>
+			<xs:enumeration value="ru"/>
+			<xs:enumeration value="rw"/>
+			<xs:enumeration value="sa"/>
+			<xs:enumeration value="sc"/>
+			<xs:enumeration value="sd"/>
+			<xs:enumeration value="se"/>
+			<xs:enumeration value="sg"/>
+			<xs:enumeration value="sh"/>
+			<xs:enumeration value="si"/>
+			<xs:enumeration value="sk"/>
+			<xs:enumeration value="sl"/>
+			<xs:enumeration value="sm"/>
+			<xs:enumeration value="sn"/>
+			<xs:enumeration value="so"/>
+			<xs:enumeration value="sq"/>
+			<xs:enumeration value="sr"/>
+			<xs:enumeration value="ss"/>
+			<xs:enumeration value="st"/>
+			<xs:enumeration value="su"/>
+			<xs:enumeration value="sv"/>
+			<xs:enumeration value="sw"/>
+			<xs:enumeration value="ta"/>
+			<xs:enumeration value="te"/>
+			<xs:enumeration value="tg"/>
+			<xs:enumeration value="th"/>
+			<xs:enumeration value="ti"/>
+			<xs:enumeration value="tk"/>
+			<xs:enumeration value="tl"/>
+			<xs:enumeration value="tn"/>
+			<xs:enumeration value="to"/>
+			<xs:enumeration value="tr"/>
+			<xs:enumeration value="ts"/>
+			<xs:enumeration value="tt"/>
+			<xs:enumeration value="tw"/>
+			<xs:enumeration value="ty"/>
+			<xs:enumeration value="ug"/>
+			<xs:enumeration value="uk"/>
+			<xs:enumeration value="ur"/>
+			<xs:enumeration value="uz"/>
+			<xs:enumeration value="ve"/>
+			<xs:enumeration value="vi"/>
+			<xs:enumeration value="vo"/>
+			<xs:enumeration value="wa"/>
+			<xs:enumeration value="wo"/>
+			<xs:enumeration value="xh"/>
+			<xs:enumeration value="yi"/>
+			<xs:enumeration value="yo"/>
+			<xs:enumeration value="za"/>
+			<xs:enumeration value="zh"/>
+			<xs:enumeration value="zu"/>
+		</xs:restriction>
+	</xs:simpleType>
+	<!--+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++-->
+	<!-- Inclusió codificació tipologies documentals Codi Llista Paisos segons norma ISO 3166-1-->
+	<!--+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++-->
+	<xs:simpleType name="TypeCodiLlistaPaisosISO3166">
+		<xs:restriction base="xs:string">
+							<xs:enumeration value="AF"/>
+							<xs:enumeration value="AL"/>
+							<xs:enumeration value="DE"/>
+							<xs:enumeration value="DZ"/>
+							<xs:enumeration value="AD"/>
+							<xs:enumeration value="AO"/>
+							<xs:enumeration value="AI"/>
+							<xs:enumeration value="AQ"/>
+							<xs:enumeration value="AG"/>
+							<xs:enumeration value="AN"/>
+							<xs:enumeration value="SA"/>
+							<xs:enumeration value="AR"/>
+							<xs:enumeration value="AM"/>
+							<xs:enumeration value="AW"/>
+							<xs:enumeration value="AU"/>
+							<xs:enumeration value="AT"/>
+							<xs:enumeration value="AZ"/>
+							<xs:enumeration value="BS"/>
+							<xs:enumeration value="BH"/>
+							<xs:enumeration value="BD"/>
+							<xs:enumeration value="BB"/>
+							<xs:enumeration value="BE"/>
+							<xs:enumeration value="BZ"/>						
+							<xs:enumeration value="BJ"/>
+							<xs:enumeration value="BM"/>
+							<xs:enumeration value="BT"/>
+							<xs:enumeration value="BY"/>
+							<xs:enumeration value="BO"/>
+							<xs:enumeration value="BA"/>
+							<xs:enumeration value="BW"/>
+							<xs:enumeration value="BR"/>
+							<xs:enumeration value="BN"/>
+							<xs:enumeration value="BG"/>
+							<xs:enumeration value="BF"/>
+							<xs:enumeration value="BI"/>
+							<xs:enumeration value="KH"/>
+							<xs:enumeration value="CM"/>
+							<xs:enumeration value="CA"/>
+							<xs:enumeration value="CV"/>
+							<xs:enumeration value="CO"/>
+							<xs:enumeration value="KM"/>
+							<xs:enumeration value="CD"/>
+							<xs:enumeration value="CG"/>
+							<xs:enumeration value="KR"/>
+							<xs:enumeration value="KP"/>
+							<xs:enumeration value="CI"/>
+							<xs:enumeration value="CR"/>
+							<xs:enumeration value="HR"/>
+							<xs:enumeration value="CU"/>
+							<xs:enumeration value="DK"/>
+							<xs:enumeration value="DJ"/>
+							<xs:enumeration value="DM"/>
+							<xs:enumeration value="EG"/>
+							<xs:enumeration value="SV"/>	
+							<xs:enumeration value="EC"/>
+							<xs:enumeration value="ER"/>	
+							<xs:enumeration value="SK"/>
+							<xs:enumeration value="SI"/>
+							<xs:enumeration value="ES"/>
+							<xs:enumeration value="US"/>
+							<xs:enumeration value="EE"/>
+							<xs:enumeration value="ET"/>
+							<xs:enumeration value="FJ"/>
+							<xs:enumeration value="PH"/>	
+							<xs:enumeration value="FI"/>	
+							<xs:enumeration value="FR"/>
+							<xs:enumeration value="GA"/>
+							<xs:enumeration value="GM"/>
+							<xs:enumeration value="GE"/>
+							<xs:enumeration value="GH"/>
+							<xs:enumeration value="GI"/>
+							<xs:enumeration value="GR"/>
+							<xs:enumeration value="GD"/>
+							<xs:enumeration value="GL"/>
+							<xs:enumeration value="GP"/>
+							<xs:enumeration value="GF"/>
+							<xs:enumeration value="GU"/>
+							<xs:enumeration value="GT"/>
+							<xs:enumeration value="GW"/>
+							<xs:enumeration value="GQ"/>
+							<xs:enumeration value="GN"/>
+							<xs:enumeration value="GY"/>
+							<xs:enumeration value="HT"/>
+							<xs:enumeration value="HN"/>
+							<xs:enumeration value="HK"/>
+							<xs:enumeration value="HU"/>
+							<xs:enumeration value="YE"/>
+							<xs:enumeration value="BV"/>
+							<xs:enumeration value="CX"/>
+							<xs:enumeration value="HM"/>
+							<xs:enumeration value="NF"/>
+							<xs:enumeration value="KY"/>
+							<xs:enumeration value="CC"/>
+							<xs:enumeration value="CK"/>
+							<xs:enumeration value="FO"/>
+							<xs:enumeration value="GS"/>
+							<xs:enumeration value="FK"/>
+							<xs:enumeration value="MP"/>
+							<xs:enumeration value="MH"/>
+							<xs:enumeration value="UM"/>
+							<xs:enumeration value="TC"/>
+							<xs:enumeration value="VI"/>
+							<xs:enumeration value="VG"/>
+							<xs:enumeration value="IN"/>
+							<xs:enumeration value="ID"/>
+							<xs:enumeration value="IR"/>
+							<xs:enumeration value="IQ"/>
+							<xs:enumeration value="IE"/>
+							<xs:enumeration value="IS"/>
+							<xs:enumeration value="IL"/>
+							<xs:enumeration value="IT"/>
+							<xs:enumeration value="YU"/>
+							<xs:enumeration value="JM"/>
+							<xs:enumeration value="JP"/>
+							<xs:enumeration value="JO"/>
+							<xs:enumeration value="KZ"/>
+							<xs:enumeration value="KE"/>
+							<xs:enumeration value="KG"/>
+							<xs:enumeration value="KI"/>
+							<xs:enumeration value="KW"/>
+							<xs:enumeration value="LA"/>	
+							<xs:enumeration value="LS"/>
+							<xs:enumeration value="LV"/>
+							<xs:enumeration value="LB"/>
+							<xs:enumeration value="LR"/>
+							<xs:enumeration value="LY"/>
+							<xs:enumeration value="LI"/>
+							<xs:enumeration value="LT"/>
+							<xs:enumeration value="LU"/>
+							<xs:enumeration value="MO"/>
+							<xs:enumeration value="MK"/>
+							<xs:enumeration value="MG"/>
+							<xs:enumeration value="MY"/>
+							<xs:enumeration value="MW"/>
+							<xs:enumeration value="MV"/>
+							<xs:enumeration value="ML"/>
+							<xs:enumeration value="MT"/>
+							<xs:enumeration value="MA"/>
+							<xs:enumeration value="MQ"/>
+							<xs:enumeration value="MU"/>
+							<xs:enumeration value="MR"/>
+							<xs:enumeration value="YT"/>
+							<xs:enumeration value="MX"/>
+							<xs:enumeration value="FM"/>
+							<xs:enumeration value="MZ"/>
+							<xs:enumeration value="MD"/>
+							<xs:enumeration value="MC"/>
+							<xs:enumeration value="MN"/>
+							<xs:enumeration value="MS"/>
+							<xs:enumeration value="MM"/>
+							<xs:enumeration value="NA"/>
+							<xs:enumeration value="NR"/>
+							<xs:enumeration value="NP"/>
+							<xs:enumeration value="NI"/>
+							<xs:enumeration value="NG"/>
+							<xs:enumeration value="NE"/>
+							<xs:enumeration value="NU"/>
+							<xs:enumeration value="NO"/>
+							<xs:enumeration value="NC"/>
+							<xs:enumeration value="NZ"/>
+							<xs:enumeration value="OM"/>
+							<xs:enumeration value="NL"/>
+							<xs:enumeration value="PK"/>
+							<xs:enumeration value="PW"/>
+							<xs:enumeration value="PS"/>
+							<xs:enumeration value="PA"/>
+							<xs:enumeration value="PG"/>
+							<xs:enumeration value="PY"/>
+							<xs:enumeration value="PE"/>
+							<xs:enumeration value="PN"/>
+							<xs:enumeration value="PF"/>
+							<xs:enumeration value="PL"/>
+							<xs:enumeration value="PT"/>
+							<xs:enumeration value="QA"/>
+							<xs:enumeration value="GB"/>
+							<xs:enumeration value="CF"/>
+							<xs:enumeration value="DO"/>
+							<xs:enumeration value="CZ"/>
+							<xs:enumeration value="RE"/>
+							<xs:enumeration value="RO"/>
+							<xs:enumeration value="RU"/>
+							<xs:enumeration value="RW"/>
+							<xs:enumeration value="EH"/>
+							<xs:enumeration value="KN"/>
+							<xs:enumeration value="SH"/>
+							<xs:enumeration value="LC"/>
+							<xs:enumeration value="PM"/>
+							<xs:enumeration value="VC"/>
+							<xs:enumeration value="SB"/>
+							<xs:enumeration value="AS"/>
+							<xs:enumeration value="WS"/>
+							<xs:enumeration value="SM"/>
+							<xs:enumeration value="ST"/>
+							<xs:enumeration value="SN"/>
+							<xs:enumeration value="SC"/>
+							<xs:enumeration value="SL"/>
+							<xs:enumeration value="SG"/>
+							<xs:enumeration value="SY"/>
+							<xs:enumeration value="SO"/>
+							<xs:enumeration value="LK"/>
+							<xs:enumeration value="ZA"/>
+							<xs:enumeration value="SD"/>
+							<xs:enumeration value="SE"/>
+							<xs:enumeration value="CH"/>
+							<xs:enumeration value="SR"/>
+							<xs:enumeration value="SJ"/>
+							<xs:enumeration value="SZ"/>
+							<xs:enumeration value="TJ"/>
+							<xs:enumeration value="TH"/>
+							<xs:enumeration value="TW"/>
+							<xs:enumeration value="TZ"/>
+							<xs:enumeration value="IO"/>
+							<xs:enumeration value="TF"/>
+							<xs:enumeration value="TP"/>
+							<xs:enumeration value="TG"/>
+							<xs:enumeration value="TK"/>
+							<xs:enumeration value="TO"/>
+							<xs:enumeration value="TT"/>
+							<xs:enumeration value="TN"/>
+							<xs:enumeration value="TM"/>
+							<xs:enumeration value="TR"/>
+							<xs:enumeration value="TV"/>
+							<xs:enumeration value="TD"/>
+							<xs:enumeration value="UA"/>
+							<xs:enumeration value="UG"/>
+							<xs:enumeration value="AE"/>
+							<xs:enumeration value="UY"/>
+							<xs:enumeration value="UZ"/>
+							<xs:enumeration value="VU"/>
+							<xs:enumeration value="VA"/>
+							<xs:enumeration value="VE"/>
+							<xs:enumeration value="VN"/>
+							<xs:enumeration value="WF"/>
+							<xs:enumeration value="CL"/>
+							<xs:enumeration value="CN"/>
+							<xs:enumeration value="CY"/>
+							<xs:enumeration value="ZM"/>
+							<xs:enumeration value="ZW"/>
+	</xs:restriction>
+	</xs:simpleType>
+	<!--+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++-->
+	<!-- Inclusió codificació tipologies documentals CodiLlistaTipologiesDocumentals.xsd-->
+	<!--+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++-->
+	<xs:simpleType name="TypeLlistaTipologiesDocumentals">
+		<xs:restriction base="xs:string">
+			<xs:enumeration value="act">
+				<xs:annotation>
+					<xs:documentation>Acta</xs:documentation>
+				</xs:annotation>
+			</xs:enumeration>
+			<xs:enumeration value="aco">
+				<xs:annotation>
+					<xs:documentation>Acord</xs:documentation>
+				</xs:annotation>
+			</xs:enumeration>
+			<xs:enumeration value="alb">
+				<xs:annotation>
+					<xs:documentation>Albarà</xs:documentation>
+				</xs:annotation>
+			</xs:enumeration>
+			<xs:enumeration value="ale">
+				<xs:annotation>
+					<xs:documentation>Al·legació</xs:documentation>
+				</xs:annotation>
+			</xs:enumeration>
+			<xs:enumeration value="ate">
+				<xs:annotation>
+					<xs:documentation>Atestat</xs:documentation>
+				</xs:annotation>
+			</xs:enumeration>
+			<xs:enumeration value="bur">
+				<xs:annotation>
+					<xs:documentation>Burofax</xs:documentation>
+				</xs:annotation>
+			</xs:enumeration>
+			<xs:enumeration value="car">
+				<xs:annotation>
+					<xs:documentation>Carta</xs:documentation>
+				</xs:annotation>
+			</xs:enumeration>
+			<xs:enumeration value="cat">
+				<xs:annotation>
+					<xs:documentation>Catàleg</xs:documentation>
+				</xs:annotation>
+			</xs:enumeration>
+			<xs:enumeration value="cer">
+				<xs:annotation>
+					<xs:documentation>Certificat</xs:documentation>
+				</xs:annotation>
+			</xs:enumeration>
+			<xs:enumeration value="cir">
+				<xs:annotation>
+					<xs:documentation>Circular</xs:documentation>
+				</xs:annotation>
+			</xs:enumeration>
+			<xs:enumeration value="cit">
+				<xs:annotation>
+					<xs:documentation>Citació</xs:documentation>
+				</xs:annotation>
+			</xs:enumeration>
+			<xs:enumeration value="com">
+				<xs:annotation>
+					<xs:documentation>Comunicat</xs:documentation>
+				</xs:annotation>
+			</xs:enumeration>
+			<xs:enumeration value="con">
+				<xs:annotation>
+					<xs:documentation>Conveni</xs:documentation>
+				</xs:annotation>
+			</xs:enumeration>
+			<xs:enumeration value="cov">
+				<xs:annotation>
+					<xs:documentation>Convocatòria</xs:documentation>
+				</xs:annotation>
+			</xs:enumeration>
+			<xs:enumeration value="den">
+				<xs:annotation>
+					<xs:documentation>Denúncia</xs:documentation>
+				</xs:annotation>
+			</xs:enumeration>
+			<xs:enumeration value="dil">
+				<xs:annotation>
+					<xs:documentation>Diligència</xs:documentation>
+				</xs:annotation>
+			</xs:enumeration>
+			<xs:enumeration value="doc">
+				<xs:annotation>
+					<xs:documentation>Document Administratiu</xs:documentation>
+				</xs:annotation>
+			</xs:enumeration>
+			<xs:enumeration value="enq">
+				<xs:annotation>
+					<xs:documentation>Enquesta</xs:documentation>
+				</xs:annotation>
+			</xs:enumeration>
+			<xs:enumeration value="est">
+				<xs:annotation>
+					<xs:documentation>Estadística</xs:documentation>
+				</xs:annotation>
+			</xs:enumeration>
+			<xs:enumeration value="esu">
+				<xs:annotation>
+					<xs:documentation>Estudi</xs:documentation>
+				</xs:annotation>
+			</xs:enumeration>
+			<xs:enumeration value="ext">
+				<xs:annotation>
+					<xs:documentation>Extracte</xs:documentation>
+				</xs:annotation>
+			</xs:enumeration>
+			<xs:enumeration value="fac">
+				<xs:annotation>
+					<xs:documentation>Factura</xs:documentation>
+				</xs:annotation>
+			</xs:enumeration>
+			<xs:enumeration value="fax">
+				<xs:annotation>
+					<xs:documentation>Fax</xs:documentation>
+				</xs:annotation>
+			</xs:enumeration>
+			<xs:enumeration value="fit">
+				<xs:annotation>
+					<xs:documentation>Fitxa</xs:documentation>
+				</xs:annotation>
+			</xs:enumeration>
+			<xs:enumeration value="fot">
+				<xs:annotation>
+					<xs:documentation>Fotografia</xs:documentation>
+				</xs:annotation>
+			</xs:enumeration>
+			<xs:enumeration value="inf">
+				<xs:annotation>
+					<xs:documentation>Informe</xs:documentation>
+				</xs:annotation>
+			</xs:enumeration>
+			<xs:enumeration value="ins">
+				<xs:annotation>
+					<xs:documentation>Instrucció</xs:documentation>
+				</xs:annotation>
+			</xs:enumeration>
+			<xs:enumeration value="inv">
+				<xs:annotation>
+					<xs:documentation>Inventari</xs:documentation>
+				</xs:annotation>
+			</xs:enumeration>
+			<xs:enumeration value="ini">
+				<xs:annotation>
+					<xs:documentation>Invitació</xs:documentation>
+				</xs:annotation>
+			</xs:enumeration>
+			<xs:enumeration value="lli">
+				<xs:annotation>
+					<xs:documentation>Llista/Llistat</xs:documentation>
+				</xs:annotation>
+			</xs:enumeration>
+			<xs:enumeration value="nom">
+				<xs:annotation>
+					<xs:documentation>Nomenament</xs:documentation>
+				</xs:annotation>
+			</xs:enumeration>
+			<xs:enumeration value="not">
+				<xs:annotation>
+					<xs:documentation>Notificació</xs:documentation>
+				</xs:annotation>
+			</xs:enumeration>
+			<xs:enumeration value="ofi">
+				<xs:annotation>
+					<xs:documentation>Ofici</xs:documentation>
+				</xs:annotation>
+			</xs:enumeration>
+			<xs:enumeration value="pac">
+				<xs:annotation>
+					<xs:documentation>Pacte</xs:documentation>
+				</xs:annotation>
+			</xs:enumeration>
+			<xs:enumeration value="pla">
+				<xs:annotation>
+					<xs:documentation>Pla</xs:documentation>
+				</xs:annotation>
+			</xs:enumeration>
+			<xs:enumeration value="pre">
+				<xs:annotation>
+					<xs:documentation>Pressupost</xs:documentation>
+				</xs:annotation>
+			</xs:enumeration>
+			<xs:enumeration value="pro">
+				<xs:annotation>
+					<xs:documentation>Programa</xs:documentation>
+				</xs:annotation>
+			</xs:enumeration>
+			<xs:enumeration value="prj">
+				<xs:annotation>
+					<xs:documentation>Projecte</xs:documentation>
+				</xs:annotation>
+			</xs:enumeration>
+			<xs:enumeration value="que">
+				<xs:annotation>
+					<xs:documentation>Queixa</xs:documentation>
+				</xs:annotation>
+			</xs:enumeration>
+				<xs:enumeration value="reb">
+				<xs:annotation>
+					<xs:documentation>Rebut</xs:documentation>
+				</xs:annotation>
+			</xs:enumeration>
+			<xs:enumeration value="rec">
+				<xs:annotation>
+					<xs:documentation>Reclamació</xs:documentation>
+				</xs:annotation>
+			</xs:enumeration>
+			<xs:enumeration value="reu">
+				<xs:annotation>
+					<xs:documentation>Recurs</xs:documentation>
+				</xs:annotation>
+			</xs:enumeration>
+			<xs:enumeration value="reg">
+				<xs:annotation>
+					<xs:documentation>Registre</xs:documentation>
+				</xs:annotation>
+			</xs:enumeration>
+			<xs:enumeration value="rel">
+				<xs:annotation>
+					<xs:documentation>Reglament</xs:documentation>
+				</xs:annotation>
+			</xs:enumeration>
+			<xs:enumeration value="req">
+				<xs:annotation>
+					<xs:documentation>Requeriment</xs:documentation>
+				</xs:annotation>
+			</xs:enumeration>
+			<xs:enumeration value="res">
+				<xs:annotation>
+					<xs:documentation>Resolució</xs:documentation>
+				</xs:annotation>
+			</xs:enumeration>
+			<xs:enumeration value="ret">
+				<xs:annotation>
+					<xs:documentation>Retall De Premsa</xs:documentation>
+				</xs:annotation>
+			</xs:enumeration>
+			<xs:enumeration value="sal">
+				<xs:annotation>
+					<xs:documentation>Saluda</xs:documentation>
+				</xs:annotation>
+			</xs:enumeration>
+			<xs:enumeration value="sol">
+				<xs:annotation>
+					<xs:documentation>Sol·licitud</xs:documentation>
+				</xs:annotation>
+			</xs:enumeration>
+			<xs:enumeration value="tel">
+				<xs:annotation>
+					<xs:documentation>Telegrama</xs:documentation>
+				</xs:annotation>
+			</xs:enumeration>
+		</xs:restriction>
+	</xs:simpleType>
+	<!--+++++++++-->
+	<!-- MIS     -->
+	<!--+++++++++-->
+	<xs:element name="Formulari">
+		<xs:complexType>
+			<xs:sequence>
+				<xs:element name="CapFormulari">
+					<xs:complexType>
+						<xs:sequence>
+							<!--veure esquema CodiLlistaIdiomasISO639-1.xsd -->
+							<xs:element name="Idioma" type="TypeCodiIdiomaISO639" default="ca"/>
+							<xs:element name="Origen" type="TypeOrigen"/>
+							<xs:element name="Desti" type="TypeDesti"/>
+							<xs:element name="ClassificacioFuncional" type="TypeFuncional"/>
+							<xs:element name="Seguretat" type="TypeSeguretat" minOccurs="0"/>
+							<xs:element name="InfoSignaturaDocument" type="TypeInfoSignaturaDocument" minOccurs="0" maxOccurs="unbounded"/>
+							<xs:element name="Observacions" minOccurs="0">
+								<xs:simpleType>
+									<xs:restriction base="xs:string">
+										<xs:minLength value="0"/>
+										<xs:maxLength value="500"/>
+									</xs:restriction>
+								</xs:simpleType>
+							</xs:element>
+							<xs:element name="Hash" minOccurs="0">
+								<xs:complexType>
+									<xs:simpleContent>
+										<xs:extension base="xs:string">
+											<xs:attribute name="Algoritme" type="xs:string" use="required"/>
+										</xs:extension>
+									</xs:simpleContent>
+								</xs:complexType>
+							</xs:element>
+							<xs:element name="VersioForm" minOccurs="0">
+								<xs:simpleType>
+									<xs:restriction base="xs:string">
+										<xs:maxLength value="5"/>
+									</xs:restriction>
+								</xs:simpleType>
+							</xs:element>
+							<xs:element name="CodiInstanciaTramit">
+								<xs:simpleType>
+									<xs:restriction base="xs:string"/>
+								</xs:simpleType>
+							</xs:element>
+							<xs:element name="CodiInstanciaTramitPredecessor">
+								<xs:simpleType>
+									<xs:restriction base="xs:string"/>
+								</xs:simpleType>
+							</xs:element>
+							<xs:element name="FilExecucio">
+								<xs:simpleType>
+									<xs:restriction base="xs:string"/>
+								</xs:simpleType>
+							</xs:element>
+						</xs:sequence>
+					</xs:complexType>
+				</xs:element>
+				<xs:element name="CosFormulari">
+					<xs:complexType>
+						<xs:sequence>
+							<!--+++++++++++++++++++++++++++++++++++-->
+							<!--Elements específics de cada un dels formularis-->
+							<!--+++++++++++++++++++++++++++++++++++-->
+						</xs:sequence>
+					</xs:complexType>
+				</xs:element>
+			</xs:sequence>
+		</xs:complexType>
+	</xs:element>
+	<!--++++++++++++-->
+	<!-- Tipus Origen -->
+	<!--++++++++++++-->
+	<xs:complexType name="TypeOrigen">
+		<xs:sequence>
+			<xs:element name="IdentificadorOrigen">
+				<xs:complexType>
+					<xs:simpleContent>
+						<xs:extension base="TypeIdentificador">
+							<xs:attribute name="TipusDocumentOrigen" type="TypeTipusDocument" use="required"/>
+							<xs:attribute name="PaisDocumentOrigen" type="TypeCodiLlistaPaisosISO3166" use="optional"/>
+						</xs:extension>
+						<!--Type al esquema CodiLlistaPaisosISO3166-1.xsd-->
+					</xs:simpleContent>
+				</xs:complexType>
+			</xs:element>
+			<!-- l'aparició d'aquest element està condicionat a que l'ens sigui administració pública-->
+			<!-- l'aparició d'aquest element està condicionat a que l'ens sigui administració pública-->
+			<xs:element name="SubIdentificador" minOccurs="0">
+				<xs:complexType>
+					<xs:simpleContent>
+						<xs:extension base="TypeSubIdentificador">
+							<xs:attribute name="TipusSubIdentificador" type="TypeTipusSubIdentificador" use="required"/>
+						</xs:extension>
+					</xs:simpleContent>
+				</xs:complexType>
+			</xs:element>
+			<xs:element name="CodiINE10" type="TypeCodiINE10" minOccurs="0"/>
+			<xs:element name="DadesRegistre" type="TypeDadesRegistre" minOccurs="0"/>
+			<xs:element name="ResultatRegistre" type="TypeResultatRegistre" minOccurs="0"/>
+		</xs:sequence>
+		<xs:attribute name="TipusOrigen" use="optional">
+			<!-- atribut 'optional' per compatibilitat amb OVER1 -->
+			<xs:simpleType>
+				<xs:restriction base="xs:string">
+					<xs:enumeration value="persona_fisica"/>
+					<xs:enumeration value="entitat"/>
+					<xs:enumeration value="institucio"/>
+					<!-- El tipus de subjecte correspon a una persona física-->
+					<!-- El tipus de subjecte correspon a una organització d'àmbit privat-->
+					<!-- El tipus de subjecte correspon a una organització d'àmbit públic-->
+				</xs:restriction>
+			</xs:simpleType>
+		</xs:attribute>
+	</xs:complexType>
+	<!--++++++++++-->
+	<!-- Tipus Desti   -->
+	<!--++++++++++-->
+	<xs:complexType name="TypeDesti">
+		<xs:sequence>
+			<xs:element name="IdentificadorDesti" type="TypeIdentificador"/>
+			<xs:element name="SubIdentificador" minOccurs="0">
+				<xs:complexType>
+					<xs:simpleContent>
+						<xs:extension base="TypeSubIdentificador">
+							<xs:attribute name="TipusSubIdentificador" type="TypeTipusSubIdentificador" use="required"/>
+						</xs:extension>
+					</xs:simpleContent>
+				</xs:complexType>
+			</xs:element>
+			<xs:element name="CodiINE10" type="TypeCodiINE10" minOccurs="0"/>
+			<xs:element name="DadesRegistre" type="TypeDadesRegistre" minOccurs="0"/>
+			<xs:element name="ResultatRegistre" type="TypeResultatRegistre" minOccurs="0"/>
+		</xs:sequence>
+		<xs:attribute name="TipusDesti" use="required">
+			<xs:simpleType>
+				<xs:restriction base="xs:string">
+					<xs:enumeration value="entitat"/>
+					<xs:enumeration value="institucio"/>
+					<!-- El tipus de subjecte correspon a una organització d'àmbit privat-->
+					<!-- El tipus de subjecte correspon a una organització d'àmbit públic-->
+				</xs:restriction>
+			</xs:simpleType>
+		</xs:attribute>
+	</xs:complexType>
+	<!--+++++++++++-->
+	<!-- Tipus ResultatRegistre-->
+	<!--++++++++++++-->
+	<xs:complexType name="TypeResultatRegistre">
+		<xs:sequence>
+			<xs:element name="DataRegistre">
+				<xs:simpleType>
+					<xs:restriction base="xs:dateTime"/>
+				</xs:simpleType>
+			</xs:element>
+			<xs:element name="AssentamentRegistre">
+				<xs:simpleType>
+					<xs:restriction base="xs:string">
+						<xs:maxLength value="100"/>
+					</xs:restriction>
+				</xs:simpleType>
+			</xs:element>
+			<xs:element name="EvidenciaRegistre" minOccurs="0">
+				<xs:simpleType>
+					<xs:restriction base="xs:base64Binary"/>
+				</xs:simpleType>
+			</xs:element>
+		</xs:sequence>
+		<xs:attribute name="TipusRegistre" use="required">
+			<xs:simpleType>
+				<xs:restriction base="xs:string">
+					<xs:maxLength value="20"/>
+				</xs:restriction>
+			</xs:simpleType>
+		</xs:attribute>
+	</xs:complexType>
+	<!--++++++++++-->
+	<!--Tipus Funcional-->
+	<!--++++++++++-->
+	<xs:complexType name="TypeFuncional">
+		<xs:sequence>
+			<xs:element name="CodiCataleg" minOccurs="0">
+				<xs:simpleType>
+					<xs:restriction base="xs:string">
+						<xs:maxLength value="10"/>
+					</xs:restriction>
+				</xs:simpleType>
+			</xs:element>
+			<xs:element name="CodiFuncionalServei" minOccurs="0">
+				<xs:simpleType>
+					<xs:restriction base="xs:string">
+						<xs:maxLength value="10"/>
+					</xs:restriction>
+				</xs:simpleType>
+			</xs:element>
+			<xs:element name="CodiFuncional">
+				<xs:simpleType>
+					<xs:restriction base="xs:string">
+						<xs:maxLength value="10"/>
+					</xs:restriction>
+				</xs:simpleType>
+			</xs:element>
+			<xs:element name="NomProcediment">
+				<xs:simpleType>
+					<xs:restriction base="xs:string">
+						<xs:minLength value="0"/>
+						<xs:maxLength value="150"/>
+					</xs:restriction>
+				</xs:simpleType>
+			</xs:element>
+			<!-- Type al esquema CodiLlistaTipologiesDocumentals .xsd-->
+			<xs:element name="TipusDocument" type="TypeLlistaTipologiesDocumentals"/>
+		</xs:sequence>
+	</xs:complexType>
+	<!--++++++++++++-->
+	<!--Tipus Seguretat-->
+	<!--++++++++++++-->
+	<xs:complexType name="TypeSeguretat">
+		<xs:sequence>
+			<xs:element name="SensibilitatDadesLOPD">
+				<xs:simpleType>
+					<xs:restriction base="xs:string">
+						<xs:enumeration value="basic"/>
+						<xs:enumeration value="mig"/>
+						<xs:enumeration value="alt"/>
+					</xs:restriction>
+				</xs:simpleType>
+			</xs:element>
+			<xs:element name="NivellClassificacioEvidencial">
+				<xs:simpleType>
+					<xs:restriction base="xs:integer">
+						<xs:pattern value="[0-6]"/>
+					</xs:restriction>
+				</xs:simpleType>
+			</xs:element>
+			<xs:element name="NivellSeguretat">
+				<xs:simpleType>
+					<xs:restriction base="xs:string">
+						<xs:enumeration value="public"/>
+						<xs:enumeration value="intern"/>
+						<xs:enumeration value="restringit"/>
+						<xs:enumeration value="confidencial"/>
+					</xs:restriction>
+				</xs:simpleType>
+			</xs:element>
+		</xs:sequence>
+	</xs:complexType>
+	<!--++++++++++++++++++++++-->
+	<!--Tipus InfoSignaturaDocument -->
+	<!--++++++++++++++++++++++-->
+	<xs:complexType name="TypeInfoSignaturaDocument">
+		<xs:sequence>
+			<xs:element name="TipusSignatura">
+				<xs:simpleType>
+					<xs:restriction base="xs:string">
+						<xs:enumeration value="embolcallant"/>
+						<xs:enumeration value="incrustada"/>
+						<xs:enumeration value="independent"/>
+					</xs:restriction>
+				</xs:simpleType>
+			</xs:element>
+			<xs:element name="SignaturaValida">
+				<xs:simpleType>
+					<xs:restriction base="xs:string">
+						<xs:enumeration value="si"/>
+						<xs:enumeration value="no"/>
+					</xs:restriction>
+				</xs:simpleType>
+			</xs:element>
+			<xs:element name="DataValidacio" minOccurs="0">
+				<xs:simpleType>
+					<xs:restriction base="xs:dateTime"/>
+				</xs:simpleType>
+			</xs:element>
+			<xs:element name="EvidenciaValidacio" minOccurs="0">
+				<xs:simpleType>
+					<xs:restriction base="xs:string"/>
+				</xs:simpleType>
+			</xs:element>
+			<xs:element name="DadesSignatari">
+				<xs:complexType>
+					<xs:sequence>
+						<xs:element name="NomSignatari" type="TypeNomSignatari"/>
+						<xs:element name="CognomsSignatari" type="TypeCognomsSignatari"/>
+						<xs:element name="IdentificacioSignatari" type="TypeIdentificadorSignatari"/>
+					</xs:sequence>
+				</xs:complexType>
+			</xs:element>
+		</xs:sequence>
+	</xs:complexType>
+	<!--+++++++++++++++-->
+	<!--Tipus Indentificador  -->
+	<!--+++++++++++++++-->
+	<xs:simpleType name="TypeIdentificador">
+		<xs:restriction base="xs:string">
+			<xs:maxLength value="20"/>
+		</xs:restriction>
+	</xs:simpleType>
+	<!--++++++++++++-->
+	<!--Tipus Document -->
+	<!--++++++++++++-->
+	<xs:simpleType name="TypeTipusDocument">
+		<xs:restriction base="xs:string">
+			<xs:enumeration value="nif"/>
+			<xs:enumeration value="nie"/>
+			<xs:enumeration value="cif"/>
+			<xs:enumeration value="altres"/>
+		</xs:restriction>
+	</xs:simpleType>
+	<!--++++++++++++++-->
+	<!-- Tipus Sub identitat-->
+	<!--++++++++++++++-->
+	<xs:simpleType name="TypeSubIdentificador">
+		<xs:restriction base="xs:string">
+			<xs:maxLength value="20"/>
+		</xs:restriction>
+	</xs:simpleType>
+	<!--+++++++++++++++++++++++++++++++++++++++++++-->
+	<!-- Tipus Tipus Sub Identificador tant per origen com per desti-->
+	<!--+++++++++++++++++++++++++++++++++++++++++++-->
+	<xs:simpleType name="TypeTipusSubIdentificador">
+		<xs:restriction base="xs:string">
+			<xs:maxLength value="20"/>
+		</xs:restriction>
+	</xs:simpleType>
+	<!--++++++++++++++-->
+	<!-- Tipus Codi INE 10 -->
+	<!--++++++++++++++-->
+	<xs:simpleType name="TypeCodiINE10">
+		<xs:restriction base="xs:string">
+			<xs:maxLength value="10"/>
+		</xs:restriction>
+	</xs:simpleType>
+	<!--+++++++++++++++++-->
+	<!-- Tipus unitat de registre  -->
+	<!--+++++++++++++++++-->
+	<xs:simpleType name="TypeUnitatRegistre">
+		<xs:restriction base="xs:string">
+			<xs:maxLength value="20"/>
+		</xs:restriction>
+	</xs:simpleType>
+	<!--+++++++++++++++++++++++++++++++++++-->
+	<!-- Tipus oficina registre  per a registres telemàtics -->
+	<!--+++++++++++++++++++++++++++++++++++-->
+	<xs:simpleType name="TypeOficinaRegistre">
+		<xs:restriction base="xs:string">
+			<xs:pattern value="\d{4}"/>
+		</xs:restriction>
+	</xs:simpleType>
+	<!--+++++++++++++++-->
+	<!-- Tipus Nom Signatari-->
+	<!--+++++++++++++++-->
+	<xs:simpleType name="TypeNomSignatari">
+		<xs:restriction base="xs:string">
+			<xs:maxLength value="35"/>
+		</xs:restriction>
+	</xs:simpleType>
+	<!--++++++++++++++++++-->
+	<!-- Tipus Cognoms Signatari-->
+	<!--+++++++++++++++++++-->
+	<xs:simpleType name="TypeCognomsSignatari">
+		<xs:restriction base="xs:string">
+			<xs:maxLength value="100"/>
+		</xs:restriction>
+	</xs:simpleType>
+	<!--+++++++++++++++++++++-->
+	<!-- Tipus Identificador Signatari-->
+	<!--+++++++++++++++++++++-->
+	<xs:simpleType name="TypeIdentificadorSignatari">
+		<xs:restriction base="xs:string">
+			<xs:maxLength value="15"/>
+		</xs:restriction>
+	</xs:simpleType>
+	<!--+++++++++++++++++++++-->
+	<!-- Tipus DadesRegistre-->
+	<!--+++++++++++++++++++++-->
+	<xs:complexType name="TypeDadesRegistre">
+		<xs:sequence>
+			<xs:element name="UnitatRegistre" type="TypeUnitatRegistre"/>
+			<xs:element name="OficinaRegistre" type="TypeOficinaRegistre" minOccurs="0"/>
+		</xs:sequence>
+	</xs:complexType>
+</xs:schema>
