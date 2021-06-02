@@ -42,6 +42,7 @@ Documentació d'integració d'OVER
       - [3.3.2. Resposta dades específiques](#332-resposta-dades-específiques)
    * [3.4. Tramitació (OVER_TRAMITACIO)](#34-tramitació-over_tramitacio)
       - [3.4.1. Petició dades específiques](#341-petició-dades-específiques)
+          - [3.4.1.1. Validació MIS](#3411-validació-mis) 
       - [3.4.2. Resposta dades específiques](#342-resposta-dades-específiques)
    * [3.5. Actualització d'informació d'un tràmit (OVER_ACTUALITZACIO)](#35-actualització-informació-tràmit-over_actualitzacio)
       - [3.5.1. Petició dades específiques](#351-petició-dades-específiques)
@@ -273,6 +274,39 @@ Per identificar el fitxer corresponent al formulari de tramitació, caldrà alin
 
 #### 3.4.1.1 Validació MIS
 El formulari PDF informat a //peticioExecucioTramit/formulari/contingut, //peticioExecucioTramit/formulari/ruta o //peticioExecucioTramit/formulari/id, a les seves metadades XML cal que contingui l'element MIS. Aquest ha de complir l'schema [MIS4.0.xsd](MIS4.0.xsd).
+
+Exemple de MIS:
+```xml
+<Formulari xmlns="http://www.aoc.cat/mis/v4">
+	<CapFormulari>
+		<Idioma>ca</Idioma>
+		<Origen TipusOrigen="institucio">
+			<IdentificadorOrigen TipusDocumentOrigen="nif">P0821000G</IdentificadorOrigen>
+			<CodiINE10>821140003</CodiINE10>
+			<ResultatRegistre TipusRegistre="EACAT">
+				<DataRegistre>2021-05-31T10:03:12.000+02:00</DataRegistre>
+				<AssentamentRegistre>S2021010111</AssentamentRegistre>
+			</ResultatRegistre>
+		</Origen>
+		<Desti TipusDesti="institucio">
+			<IdentificadorDesti>P5800011H</IdentificadorDesti>
+			<CodiINE10>8101150006</CodiINE10>
+		</Desti>
+		<ClassificacioFuncional>
+			<CodiCataleg>8101150006</CodiCataleg>
+			<CodiFuncionalServei>TGEN0001</CodiFuncionalServei>
+			<CodiFuncional>TGEN0001</CodiFuncional>
+			<NomProcediment>Tramesa genèrica</NomProcediment>
+			<TipusDocument>ofi</TipusDocument>
+		</ClassificacioFuncional>
+		<VersioForm>02.00</VersioForm>
+		<CodiInstanciaTramit>1010111</CodiInstanciaTramit>
+		<CodiInstanciaTramitPredecessor/>
+		<FilExecucio>1010111</FilExecucio>
+	</CapFormulari>
+	<CosFormulari/>
+</Formulari>
+```
 
 ### 3.4.2. Resposta dades específiques
 <p align="center">
