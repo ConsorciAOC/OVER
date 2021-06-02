@@ -265,11 +265,14 @@ Així, amb aquesta modalitat, es poden executar tant tràmits inicials com tràm
 | peticioExecucioTramit/codiInstanciaTramit | Codi d'instància de tràmit |
 | peticioExecucioTramit/formulari/contingut | Per a la transmissió del contingut del PDF, utilitzar l'estàndard MTOM |
 | peticioExecucioTramit/formulari/ruta | Alternativa a contingut. Ruta del PDF de tramitació |
-| peticioExecucioTramit/formulari/id | Identificador d'adjunt. Únic en la petició.
+| peticioExecucioTramit/formulari/id | Identificador d'adjunt. Únic en la petició |
 
 Alternativament a contingut i ruta, es poden transferir tant el formulari de tramitació com els  adjunts seguint l'estàndard MTOM. En aquest cas cal informar el formulari de tramitació i els adjunts en l'element Contenido del bloc de dades genèriques Ficheros destinat a aquest efecte .
 
-Per identificar el fitxer corresponent al formulari de tramitació, caldrà alinear l'atribut Fichero@Id del bloc genèric amb l'element id de les dades específiques de la sol·licitud |
+Per identificar el fitxer corresponent al formulari de tramitació, caldrà alinear l'atribut Fichero@Id del bloc genèric amb l'element id de les dades específiques de la sol·licitud.
+
+#### 3.4.1.1 Validació MIS
+El formulari PDF informat a //peticioExecucioTramit/formulari/contingut, //peticioExecucioTramit/formulari/ruta o //peticioExecucioTramit/formulari/id, a les seves metadades XML cal que contingui l'element MIS. Aquest ha de complir l'schema [MIS4.0.xsd](MIS4.0.xsd).
 
 ### 3.4.2. Resposta dades específiques
 <p align="center">
