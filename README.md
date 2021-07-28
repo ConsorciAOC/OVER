@@ -426,7 +426,7 @@ Permet llistar expedients de tramitacions realitzades a partir de paràmetres cl
 | //instanciaServei/nTramits | Nombre de tràmits que conté l'expedient |
 | respostaLlistatExpedients/resultat | Bloc que informa del resultat de l'operació. Per més detalls consulteu [3.1.2.1. Resultat de l'operació](#3121-Resultat-de-la-operació) |
 
-## 3.8. Consulta expedient OVER_CONSULTA_EXPEDIENT
+## 3.8. Consulta expedient OVER_CONSULTA_EXPEDIENTS
 Permet consultar les tramitacions i informació relacionada sobre un expedient. Només mostrarà les dades de l'ens autoritzat a la petició.
 
 ### 3.8.1. Petició dades específiques
