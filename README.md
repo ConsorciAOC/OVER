@@ -695,7 +695,7 @@ Una vegada la tramitació s'hagi efectuat, podreu recuperar la documentació gen
 
 •	TIQUET: PDF_ORIGINAL + dades rellevants de la tramitació (identificadors, data, registre,...)
 
-Aquesta documentació es pot recuperar per dues vies: [MUX_DESCARREGA](#441-mux_descarrega) (requereix [OVER_CONSULTA_EXPEDIENT](#38-Consulta-expedient-OVER_CONSULTA_EXPEDIENT) previ) o [OVER_DOCUMENTACIO](#31-Descàrrega-de-la-documentació-tràmit-OVER_DOCUMENTACIO).
+Aquesta documentació es pot recuperar per dues vies: [MUX_DESCARREGA](#441-mux_descarrega) (requereix [OVER_CONSULTA_EXPEDIENT](#38-consulta-expedient-over_consulta_expedients) previ) o [OVER_DOCUMENTACIO](#31-Descàrrega-de-la-documentació-tràmit-OVER_DOCUMENTACIO).
 
 
 Amb la resposta de la consulta de [MUX_DESCARREGA](#441-mux_descarrega) o [OVER_DOCUMENTACIO](#31-Descàrrega-de-la-documentació-tràmit-OVER_DOCUMENTACIO) podreu descarregar els fitxers a partir del seu GUID.
