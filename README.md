@@ -546,6 +546,7 @@ Mètode de tramitació mitjançant integració sense necessitat d'omplir i manip
 | peticioIntegracio/dadesContingut | Bloc de dades corresponent al contingut de les dades del formulari |
 | //dadesContingut/versio | Versió del tràmit al que es vol integrar. Per defecte, versió 1.0 |
 | //dadesContingut/formulari | Cos del formulari en format XML. Ha de complir l'schema del tràmit funcional que es vol tramitar. Incloure l'element dintre d'una secció CDATA |
+| //dadesContingut/aliesNomTramit | Títol o nom procediment del tràmit |
 | //dadesContingut/registreOrigen | Bloc de dades corresponent al registre d'origen en cas que es disposi i no vulgui que MUX torni a registrar de nou |
 | //registreOrigen/dataRegistre | Data del registre d'origen |
 | //registreOrigen/assentamentRegistre | Número d'assentament d'origen |
