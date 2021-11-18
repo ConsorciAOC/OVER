@@ -106,6 +106,9 @@
 													<xs:enumeration value="PDF_DESCARREGA"/>
 													<xs:enumeration value="PDF_ORIGINAL"/>
 													<xs:enumeration value="TIQUET"/>
+													<xs:enumeration value="INT_PETICIO"/>
+													<xs:enumeration value="XML_TRAMIT"/>
+													<xs:enumeration value="XML_TRAMIT_SIGNAT"/>
 												</xs:restriction>
 											</xs:simpleType>
 										</xs:element>
