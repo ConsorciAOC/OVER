@@ -686,15 +686,15 @@ La signatura que es generarà serà XADES Enveloped amb segell de temps.
 
 Una vegada la tramitació s'hagi efectuat, podreu recuperar la documentació generada relacionada amb la tramitació. Els documents que s'obtindran seran:
 
-•	XML_TRAMIT: Les dades que composen el tràmit, generades a partir de les dades rebudes. Reposta en format XML.
+•	XML_TRAMIT: Les dades que composen el tràmit, generades a partir de les dades rebudes. Resposta en format XML.
 
-•	XML_TRAMIT_SIGNAT: XML_TRAMIT signat amb el certificat cedit o per defecte el del Consorci AOC. Reposta en format XML.
+•	XML_TRAMIT_SIGNAT: XML_TRAMIT signat amb el certificat cedit o per defecte el del Consorci AOC. Resposta en format XML.
 
-•	PDF_ORIGINAL: PDF planxat amb les dades rebudes. Reposta en format PDF.
+•	PDF_ORIGINAL: PDF planxat amb les dades rebudes. Resposta en format PDF.
 
 •	ADJUNT: Documentació enviada per MTOM.
 
-•	TIQUET: PDF_ORIGINAL + dades rellevants de la tramitació (identificadors, data, registre,...). Reposta en format PDF.
+•	TIQUET: PDF_ORIGINAL + dades rellevants de la tramitació (identificadors, data, registre,...). Resposta en format PDF.
 
 Aquesta documentació es pot recuperar per dues vies: [MUX_DESCARREGA](#441-mux_descarrega) (requereix [OVER_CONSULTA_EXPEDIENT](#38-consulta-expedient-over_consulta_expedients) previ) o [OVER_DOCUMENTACIO](#31-Descàrrega-de-la-documentació-tràmit-OVER_DOCUMENTACIO).
 
