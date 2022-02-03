@@ -695,7 +695,7 @@ Format i caràcters acceptats:
 
 	- Guió
 
-	- Underscore
+	- Guió baix
 
 	- Accents
 
