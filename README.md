@@ -676,6 +676,7 @@ La documentació que es vulgui annexar a la tramitació, caldrà fer-la via MTOM
 </p> 
 
 
+
 Format i caràcters acceptats:  
 
 - El nom de l'arxiu (nom + extensió), ha de ser major o igual de 5 i menor o igual de 150 caràcters. L'extensió com a mínim hauria de ser de 2 caràcters.
