@@ -683,12 +683,19 @@ Format i caràcters acceptats:
 - S'accepten els següents caràcters:
 
 •	a-z (incloent ç, l·l)
+
 •	A-Z (incloent Ç, L·L)
+
 •	0-9
+
 •	Espai
+
 •	Punt
+
 •	Guió
+
 •	Underscore
+
 •	Accents
 
 
