@@ -682,21 +682,21 @@ Format i caràcters acceptats:
 
 - S'accepten els següents caràcters:
 
-•	a-z (incloent ç, l·l)
+	- a-z (incloent ç, l·l)
 
-•	A-Z (incloent Ç, L·L)
+	- A-Z (incloent Ç, L·L)
 
-•	0-9
+	- 0-9
 
-•	Espai
+	- Espai
 
-•	Punt
+	- Punt
 
-•	Guió
+	- Guió
 
-•	Underscore
+	- Underscore
 
-•	Accents
+	- Accents
 
 
 ## 4.3. Signatura
