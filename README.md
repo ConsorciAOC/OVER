@@ -914,6 +914,7 @@ Si la documentació encara no està disponible, retornarà la següent resposta:
     <REFERENCIA_EXTERNA>Es tracta d'un camp de contingut lliure</REFERENCIA_EXTERNA>
     <OBSERVACIONS>L'objectiu d'aquesta obra és observar una sèrie de fenòmens lingüístics del català actual</OBSERVACIONS>
     <DOCUMENTACIO_ADJUNTA>SENSE_DOCUMENTACIO_ADJUNTA</DOCUMENTACIO_ADJUNTA>
+    <ADRECA_OF_REG_DESTI>Carrer camí de Sant Jordi, 72</ADRECA_OF_REG_DESTI>
   </INFORMACIO_COMPLEMENTARIA>
   <DOCUMENTACIO_FORMAT_ELECTRONIC_URL_DESCARREGA>
     <DOCUMENTACIO>
