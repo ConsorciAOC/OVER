@@ -535,7 +535,7 @@ Permet llistar tràmits funcionals a partir d'un catàleg i servei.
 ## 3.11. Integració sense PDF OVER_INTEGRACIO
 Mètode de tramitació mitjançant integració sense necessitat d'omplir i manipular formularis PDF.
 
-Nota: Cal especficar fora de les dades específiques la informació referent a les dades del funcionari. Els elements NombreCompletoFuncionario i NifFuncionario són obligatoris. 
+<b>Nota:<b> Cal especficar fora de les dades específiques la informació referent a les dades del funcionari. Els elements NombreCompletoFuncionario i NifFuncionario són obligatoris. 
 ```xml
 <Funcionario>
 	<NombreCompletoFuncionario>Nom complert funcionari</NombreCompletoFuncionario>
