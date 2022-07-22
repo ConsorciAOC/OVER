@@ -542,7 +542,7 @@ Nota: Cal especficar fora de les dades específiques la informació referent a l
         <NifFuncionario>00000000Z</NifFuncionario>
 </Funcionario>     
 ```
-Exemple de missatgeria informant de les dades del funcionari. [OVER_INTEGRACIO](#311-Integració-sense-PDF-OVER_INTEGRACIO)
+Exemple de missatgeria informant de les dades del funcionari. [OVER_INTEGRACIO] (#451-over_integracio-petició)
 
 ### 3.11.1. Petició dades específiques
 <p align="center">
