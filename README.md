@@ -659,8 +659,8 @@ Dades en format XML que representen el contingut del formulari. Aquestes han de 
 
 ### 4.2.3. Registre entrada sortida
 
-El procés de tramitació sempre farà un registre d'entrada. En cas de disposar de registre, pots informar-lo i quan aquest es tramiti no es farà un nou registre.
-El registre de sortida no està habilitat. No es pot informar del registre destí.
+El procés de tramitació sempre farà un registre d'entrada i de sortida. En cas de disposar de registre, pots informar-lo i quan aquest es tramiti no es farà un nou registre.
+El registre destí no està habilitat. No es pot informar del registre destí.
 
 <b>Exemple de registre de sortida:</b>
 
