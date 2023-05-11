@@ -560,7 +560,7 @@ Exemple de missatgeria informant de les dades del funcionari. [EXEMPLE_OVER_INTE
 | //registreOrigen/dataRegistre | Data del registre d'origen |
 | //registreOrigen/assentamentRegistre | Número d'assentament d'origen |
 | //registreOrigen/evidenciaRegistre | Evidència de registre d'origen en Base64 |
-| //dadesContingut/registreDesti | Bloc de dades corresponent al registre de destí en cas que es disposi i no vulgui que MUX torni a registrar de nou |
+| //dadesContingut/registreDesti | (Bloc de dades no habilitat, no es pot informar del registre destí) Bloc de dades corresponent al registre de destí en cas que es disposi i no vulgui que MUX torni a registrar de nou |
 | //registreDesti/dataRegistre | Data del registre de destí |
 | //registreDesti/assentamentRegistre | Número d'assentament de destí |
 | //registreDesti/evidenciaRegistre | Evidència de registre de destí en Base64 |
@@ -659,9 +659,10 @@ Dades en format XML que representen el contingut del formulari. Aquestes han de 
 
 ### 4.2.3. Registre entrada sortida
 
-El procés de tramitació sempre farà un registre d'entrada i un de sortida. En cas de disposar de registre, pots informar-lo i quan aquest es tramiti no es farà un nou registre.
+El procés de tramitació sempre farà un registre d'entrada. En cas de disposar de registre, pots informar-lo i quan aquest es tramiti no es farà un nou registre.
+El registre de sortida no està habilitat. No es pot informar del registre destí.
 
-<b>Exemple de registre de sortida i entrada:</b>
+<b>Exemple de registre de sortida:</b>
 
 ```xml
 <registreOrigen tipusRegistre="SARCAT">
@@ -669,11 +670,6 @@ El procés de tramitació sempre farà un registre d'entrada i un de sortida. En
   <assentamentRegistre>REG_SORT_1234</assentamentRegistre>
   <evidenciaRegistre>PGVudjpFbnZlbG9...</evidenciaRegistre>
 </registreOrigen>
-<registreDesti tipusRegistre="EACAT">
-  <dataRegistre>2017-07-24T23:59:59</dataRegistre>
-  <assentamentRegistre>REG_ENT_1234</assentamentRegistre>
-  <evidenciaRegistre>PGVudjpFbnZlbG9...</evidenciaRegistre>
-</registreDesti>
 ```
 
 ### 4.2.4. Documentació annexa
